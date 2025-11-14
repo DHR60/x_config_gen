@@ -1,0 +1,19 @@
+name: x_config_gen
+description: A tool for generating Xray and sing-box configs.
+version: 0.0.1
+repository: https://github.com/DHR60/x_config_gen
+
+environment:
+  sdk: '^3.8.0'
+
+# Add regular dependencies here.
+dependencies:
+  freezed_annotation: ^3.1.0
+  json_annotation: ^4.9.0
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.25.6
+  build_runner: ^2.10.2
+  freezed: ^3.2.3
+  json_serializable: ^6.11.1
