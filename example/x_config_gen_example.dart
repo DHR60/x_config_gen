@@ -66,6 +66,66 @@ void main() {
         ),
       ),
     ],
+    outbounds: [
+      Outbound4Ray(
+        tag: 'direct',
+        protocol: 'freedom',
+        settings: OutboundSettings4Ray.freedom(
+          settings: FreedomOutboundSettings4Ray(
+            domainStrategy: 'UseIP',
+          ),
+        ),
+      ),
+      Outbound4Ray(
+        tag: 'blocked',
+        protocol: 'blackhole',
+        settings: OutboundSettings4Ray.blackhole(
+          settings: BlackholeOutboundSettings4Ray(
+            response: BlackholeOutboundResponse4Ray(
+              type: 'http',
+            ),
+          ),
+        ),
+      ),
+      Outbound4Ray(
+        tag: 'socks-outbound',
+        protocol: 'socks',
+        settings: OutboundSettings4Ray.socks(
+          settings: SocksOutboundSettings4Ray(
+            address: '192.168.1.1',
+            port: 1080,
+          ),
+        ),
+      ),
+      Outbound4Ray(
+        tag: 'vless-outbound',
+        protocol: 'vless',
+        settings: OutboundSettings4Ray.vless(
+          settings: VlessOutboundSettings4Ray(
+            address: 'vless.example.com',
+            port: 443,
+            id: 'uuid-vless-user',
+            encryption: 'none',
+            flow: 'xtls-rprx-vision',
+            level: 0,
+            reverse: VlessOutboundReverse4Ray(
+              tag: 'vless-reverse-inbound',
+            ),
+          ),
+        ),
+        streamSettings: StreamSettings4Ray(
+          network: 'raw',
+          security: 'tls',
+          tlsSettings: Tls4Ray(
+            allowInsecure: false,
+            serverName: 'vless.example.com',
+          ),
+          sockopt: Sockopt4Ray(
+            dialerProxy: 'socks-outbound',
+          ),
+        ),
+      ),
+    ],
   );
 
   // print config as json

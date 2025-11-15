@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'package:x_config_gen/src/xray/inbounds/settings/inbound_settings.dart';
 import 'package:x_config_gen/src/xray/inbounds/sniff.dart';
 import 'package:x_config_gen/src/xray/transport/stream_settings.dart';

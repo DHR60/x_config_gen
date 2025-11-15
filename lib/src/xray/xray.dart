@@ -6,6 +6,7 @@ import 'package:x_config_gen/src/xray/api/api.dart';
 import 'package:x_config_gen/src/xray/dns/dns.dart';
 import 'package:x_config_gen/src/xray/fakedns/fakedns.dart';
 import 'package:x_config_gen/src/xray/inbounds/inbound.dart';
+import 'package:x_config_gen/src/xray/outbounds/outbound.dart';
 
 export 'package:x_config_gen/src/xray/version/version.dart';
 export 'package:x_config_gen/src/xray/log/log.dart';
@@ -13,6 +14,7 @@ export 'package:x_config_gen/src/xray/api/api.dart';
 export 'package:x_config_gen/src/xray/dns/dns.dart';
 export 'package:x_config_gen/src/xray/fakedns/fakedns.dart';
 export 'package:x_config_gen/src/xray/inbounds/inbound.dart';
+export 'package:x_config_gen/src/xray/outbounds/outbound.dart';
 
 part 'xray.freezed.dart';
 part 'xray.g.dart';
@@ -27,6 +29,7 @@ abstract class XrayConfig with _$XrayConfig {
     Dns4Ray? dns,
     FakeDns4Ray? fakeDns,
     List<Inbound4Ray>? inbounds,
+    List<Outbound4Ray>? outbounds,
   }) = _XrayConfig;
 
   factory XrayConfig.fromJson(Map<String, dynamic> json) =>
