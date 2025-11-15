@@ -33,6 +33,16 @@ _StreamSettings4Ray _$StreamSettings4RayFromJson(
       : GrpcTransport4Ray.fromJson(
           json['grpcSettings'] as Map<String, dynamic>,
         ),
+  wsSettings: json['wsSettings'] == null
+      ? null
+      : WebSocketTransport4Ray.fromJson(
+          json['wsSettings'] as Map<String, dynamic>,
+        ),
+  httpSettings: json['httpSettings'] == null
+      ? null
+      : HttpUpgradeTransport4Ray.fromJson(
+          json['httpSettings'] as Map<String, dynamic>,
+        ),
   sockopt: json['sockopt'] == null
       ? null
       : Sockopt4Ray.fromJson(json['sockopt'] as Map<String, dynamic>),
@@ -48,5 +58,7 @@ Map<String, dynamic> _$StreamSettings4RayToJson(_StreamSettings4Ray instance) =>
       'xhttpSettings': ?instance.xhttpSettings?.toJson(),
       'kcpSettings': ?instance.kcpSettings?.toJson(),
       'grpcSettings': ?instance.grpcSettings?.toJson(),
+      'wsSettings': ?instance.wsSettings?.toJson(),
+      'httpSettings': ?instance.httpSettings?.toJson(),
       'sockopt': ?instance.sockopt?.toJson(),
     };

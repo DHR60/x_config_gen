@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$StreamSettings4Ray {
 
- String? get network; String? get security; Tls4Ray? get tlsSettings; Reality4Ray? get realitySettings; RawTransport4Ray? get rawSettings; XHttpTransport4Ray? get xhttpSettings; KcpTransport4Ray? get kcpSettings; GrpcTransport4Ray? get grpcSettings; Sockopt4Ray? get sockopt;
+ String? get network; String? get security; Tls4Ray? get tlsSettings; Reality4Ray? get realitySettings; RawTransport4Ray? get rawSettings; XHttpTransport4Ray? get xhttpSettings; KcpTransport4Ray? get kcpSettings; GrpcTransport4Ray? get grpcSettings; WebSocketTransport4Ray? get wsSettings; HttpUpgradeTransport4Ray? get httpSettings; Sockopt4Ray? get sockopt;
 /// Create a copy of StreamSettings4Ray
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $StreamSettings4RayCopyWith<StreamSettings4Ray> get copyWith => _$StreamSettings
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamSettings4Ray&&(identical(other.network, network) || other.network == network)&&(identical(other.security, security) || other.security == security)&&(identical(other.tlsSettings, tlsSettings) || other.tlsSettings == tlsSettings)&&(identical(other.realitySettings, realitySettings) || other.realitySettings == realitySettings)&&(identical(other.rawSettings, rawSettings) || other.rawSettings == rawSettings)&&(identical(other.xhttpSettings, xhttpSettings) || other.xhttpSettings == xhttpSettings)&&(identical(other.kcpSettings, kcpSettings) || other.kcpSettings == kcpSettings)&&(identical(other.grpcSettings, grpcSettings) || other.grpcSettings == grpcSettings)&&(identical(other.sockopt, sockopt) || other.sockopt == sockopt));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is StreamSettings4Ray&&(identical(other.network, network) || other.network == network)&&(identical(other.security, security) || other.security == security)&&(identical(other.tlsSettings, tlsSettings) || other.tlsSettings == tlsSettings)&&(identical(other.realitySettings, realitySettings) || other.realitySettings == realitySettings)&&(identical(other.rawSettings, rawSettings) || other.rawSettings == rawSettings)&&(identical(other.xhttpSettings, xhttpSettings) || other.xhttpSettings == xhttpSettings)&&(identical(other.kcpSettings, kcpSettings) || other.kcpSettings == kcpSettings)&&(identical(other.grpcSettings, grpcSettings) || other.grpcSettings == grpcSettings)&&(identical(other.wsSettings, wsSettings) || other.wsSettings == wsSettings)&&(identical(other.httpSettings, httpSettings) || other.httpSettings == httpSettings)&&(identical(other.sockopt, sockopt) || other.sockopt == sockopt));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,network,security,tlsSettings,realitySettings,rawSettings,xhttpSettings,kcpSettings,grpcSettings,sockopt);
+int get hashCode => Object.hash(runtimeType,network,security,tlsSettings,realitySettings,rawSettings,xhttpSettings,kcpSettings,grpcSettings,wsSettings,httpSettings,sockopt);
 
 @override
 String toString() {
-  return 'StreamSettings4Ray(network: $network, security: $security, tlsSettings: $tlsSettings, realitySettings: $realitySettings, rawSettings: $rawSettings, xhttpSettings: $xhttpSettings, kcpSettings: $kcpSettings, grpcSettings: $grpcSettings, sockopt: $sockopt)';
+  return 'StreamSettings4Ray(network: $network, security: $security, tlsSettings: $tlsSettings, realitySettings: $realitySettings, rawSettings: $rawSettings, xhttpSettings: $xhttpSettings, kcpSettings: $kcpSettings, grpcSettings: $grpcSettings, wsSettings: $wsSettings, httpSettings: $httpSettings, sockopt: $sockopt)';
 }
 
 
@@ -48,11 +48,11 @@ abstract mixin class $StreamSettings4RayCopyWith<$Res>  {
   factory $StreamSettings4RayCopyWith(StreamSettings4Ray value, $Res Function(StreamSettings4Ray) _then) = _$StreamSettings4RayCopyWithImpl;
 @useResult
 $Res call({
- String? network, String? security, Tls4Ray? tlsSettings, Reality4Ray? realitySettings, RawTransport4Ray? rawSettings, XHttpTransport4Ray? xhttpSettings, KcpTransport4Ray? kcpSettings, GrpcTransport4Ray? grpcSettings, Sockopt4Ray? sockopt
+ String? network, String? security, Tls4Ray? tlsSettings, Reality4Ray? realitySettings, RawTransport4Ray? rawSettings, XHttpTransport4Ray? xhttpSettings, KcpTransport4Ray? kcpSettings, GrpcTransport4Ray? grpcSettings, WebSocketTransport4Ray? wsSettings, HttpUpgradeTransport4Ray? httpSettings, Sockopt4Ray? sockopt
 });
 
 
-$Tls4RayCopyWith<$Res>? get tlsSettings;$Reality4RayCopyWith<$Res>? get realitySettings;$RawTransport4RayCopyWith<$Res>? get rawSettings;$XHttpTransport4RayCopyWith<$Res>? get xhttpSettings;$KcpTransport4RayCopyWith<$Res>? get kcpSettings;$GrpcTransport4RayCopyWith<$Res>? get grpcSettings;$Sockopt4RayCopyWith<$Res>? get sockopt;
+$Tls4RayCopyWith<$Res>? get tlsSettings;$Reality4RayCopyWith<$Res>? get realitySettings;$RawTransport4RayCopyWith<$Res>? get rawSettings;$XHttpTransport4RayCopyWith<$Res>? get xhttpSettings;$KcpTransport4RayCopyWith<$Res>? get kcpSettings;$GrpcTransport4RayCopyWith<$Res>? get grpcSettings;$WebSocketTransport4RayCopyWith<$Res>? get wsSettings;$HttpUpgradeTransport4RayCopyWith<$Res>? get httpSettings;$Sockopt4RayCopyWith<$Res>? get sockopt;
 
 }
 /// @nodoc
@@ -65,7 +65,7 @@ class _$StreamSettings4RayCopyWithImpl<$Res>
 
 /// Create a copy of StreamSettings4Ray
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? network = freezed,Object? security = freezed,Object? tlsSettings = freezed,Object? realitySettings = freezed,Object? rawSettings = freezed,Object? xhttpSettings = freezed,Object? kcpSettings = freezed,Object? grpcSettings = freezed,Object? sockopt = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? network = freezed,Object? security = freezed,Object? tlsSettings = freezed,Object? realitySettings = freezed,Object? rawSettings = freezed,Object? xhttpSettings = freezed,Object? kcpSettings = freezed,Object? grpcSettings = freezed,Object? wsSettings = freezed,Object? httpSettings = freezed,Object? sockopt = freezed,}) {
   return _then(_self.copyWith(
 network: freezed == network ? _self.network : network // ignore: cast_nullable_to_non_nullable
 as String?,security: freezed == security ? _self.security : security // ignore: cast_nullable_to_non_nullable
@@ -75,7 +75,9 @@ as Reality4Ray?,rawSettings: freezed == rawSettings ? _self.rawSettings : rawSet
 as RawTransport4Ray?,xhttpSettings: freezed == xhttpSettings ? _self.xhttpSettings : xhttpSettings // ignore: cast_nullable_to_non_nullable
 as XHttpTransport4Ray?,kcpSettings: freezed == kcpSettings ? _self.kcpSettings : kcpSettings // ignore: cast_nullable_to_non_nullable
 as KcpTransport4Ray?,grpcSettings: freezed == grpcSettings ? _self.grpcSettings : grpcSettings // ignore: cast_nullable_to_non_nullable
-as GrpcTransport4Ray?,sockopt: freezed == sockopt ? _self.sockopt : sockopt // ignore: cast_nullable_to_non_nullable
+as GrpcTransport4Ray?,wsSettings: freezed == wsSettings ? _self.wsSettings : wsSettings // ignore: cast_nullable_to_non_nullable
+as WebSocketTransport4Ray?,httpSettings: freezed == httpSettings ? _self.httpSettings : httpSettings // ignore: cast_nullable_to_non_nullable
+as HttpUpgradeTransport4Ray?,sockopt: freezed == sockopt ? _self.sockopt : sockopt // ignore: cast_nullable_to_non_nullable
 as Sockopt4Ray?,
   ));
 }
@@ -150,6 +152,30 @@ $GrpcTransport4RayCopyWith<$Res>? get grpcSettings {
 
   return $GrpcTransport4RayCopyWith<$Res>(_self.grpcSettings!, (value) {
     return _then(_self.copyWith(grpcSettings: value));
+  });
+}/// Create a copy of StreamSettings4Ray
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$WebSocketTransport4RayCopyWith<$Res>? get wsSettings {
+    if (_self.wsSettings == null) {
+    return null;
+  }
+
+  return $WebSocketTransport4RayCopyWith<$Res>(_self.wsSettings!, (value) {
+    return _then(_self.copyWith(wsSettings: value));
+  });
+}/// Create a copy of StreamSettings4Ray
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$HttpUpgradeTransport4RayCopyWith<$Res>? get httpSettings {
+    if (_self.httpSettings == null) {
+    return null;
+  }
+
+  return $HttpUpgradeTransport4RayCopyWith<$Res>(_self.httpSettings!, (value) {
+    return _then(_self.copyWith(httpSettings: value));
   });
 }/// Create a copy of StreamSettings4Ray
 /// with the given fields replaced by the non-null parameter values.
@@ -245,10 +271,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? network,  String? security,  Tls4Ray? tlsSettings,  Reality4Ray? realitySettings,  RawTransport4Ray? rawSettings,  XHttpTransport4Ray? xhttpSettings,  KcpTransport4Ray? kcpSettings,  GrpcTransport4Ray? grpcSettings,  Sockopt4Ray? sockopt)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? network,  String? security,  Tls4Ray? tlsSettings,  Reality4Ray? realitySettings,  RawTransport4Ray? rawSettings,  XHttpTransport4Ray? xhttpSettings,  KcpTransport4Ray? kcpSettings,  GrpcTransport4Ray? grpcSettings,  WebSocketTransport4Ray? wsSettings,  HttpUpgradeTransport4Ray? httpSettings,  Sockopt4Ray? sockopt)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _StreamSettings4Ray() when $default != null:
-return $default(_that.network,_that.security,_that.tlsSettings,_that.realitySettings,_that.rawSettings,_that.xhttpSettings,_that.kcpSettings,_that.grpcSettings,_that.sockopt);case _:
+return $default(_that.network,_that.security,_that.tlsSettings,_that.realitySettings,_that.rawSettings,_that.xhttpSettings,_that.kcpSettings,_that.grpcSettings,_that.wsSettings,_that.httpSettings,_that.sockopt);case _:
   return orElse();
 
 }
@@ -266,10 +292,10 @@ return $default(_that.network,_that.security,_that.tlsSettings,_that.realitySett
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? network,  String? security,  Tls4Ray? tlsSettings,  Reality4Ray? realitySettings,  RawTransport4Ray? rawSettings,  XHttpTransport4Ray? xhttpSettings,  KcpTransport4Ray? kcpSettings,  GrpcTransport4Ray? grpcSettings,  Sockopt4Ray? sockopt)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? network,  String? security,  Tls4Ray? tlsSettings,  Reality4Ray? realitySettings,  RawTransport4Ray? rawSettings,  XHttpTransport4Ray? xhttpSettings,  KcpTransport4Ray? kcpSettings,  GrpcTransport4Ray? grpcSettings,  WebSocketTransport4Ray? wsSettings,  HttpUpgradeTransport4Ray? httpSettings,  Sockopt4Ray? sockopt)  $default,) {final _that = this;
 switch (_that) {
 case _StreamSettings4Ray():
-return $default(_that.network,_that.security,_that.tlsSettings,_that.realitySettings,_that.rawSettings,_that.xhttpSettings,_that.kcpSettings,_that.grpcSettings,_that.sockopt);case _:
+return $default(_that.network,_that.security,_that.tlsSettings,_that.realitySettings,_that.rawSettings,_that.xhttpSettings,_that.kcpSettings,_that.grpcSettings,_that.wsSettings,_that.httpSettings,_that.sockopt);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -286,10 +312,10 @@ return $default(_that.network,_that.security,_that.tlsSettings,_that.realitySett
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? network,  String? security,  Tls4Ray? tlsSettings,  Reality4Ray? realitySettings,  RawTransport4Ray? rawSettings,  XHttpTransport4Ray? xhttpSettings,  KcpTransport4Ray? kcpSettings,  GrpcTransport4Ray? grpcSettings,  Sockopt4Ray? sockopt)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? network,  String? security,  Tls4Ray? tlsSettings,  Reality4Ray? realitySettings,  RawTransport4Ray? rawSettings,  XHttpTransport4Ray? xhttpSettings,  KcpTransport4Ray? kcpSettings,  GrpcTransport4Ray? grpcSettings,  WebSocketTransport4Ray? wsSettings,  HttpUpgradeTransport4Ray? httpSettings,  Sockopt4Ray? sockopt)?  $default,) {final _that = this;
 switch (_that) {
 case _StreamSettings4Ray() when $default != null:
-return $default(_that.network,_that.security,_that.tlsSettings,_that.realitySettings,_that.rawSettings,_that.xhttpSettings,_that.kcpSettings,_that.grpcSettings,_that.sockopt);case _:
+return $default(_that.network,_that.security,_that.tlsSettings,_that.realitySettings,_that.rawSettings,_that.xhttpSettings,_that.kcpSettings,_that.grpcSettings,_that.wsSettings,_that.httpSettings,_that.sockopt);case _:
   return null;
 
 }
@@ -301,7 +327,7 @@ return $default(_that.network,_that.security,_that.tlsSettings,_that.realitySett
 
 @JsonSerializable(explicitToJson: true)
 class _StreamSettings4Ray implements StreamSettings4Ray {
-  const _StreamSettings4Ray({this.network, this.security, this.tlsSettings, this.realitySettings, this.rawSettings, this.xhttpSettings, this.kcpSettings, this.grpcSettings, this.sockopt});
+  const _StreamSettings4Ray({this.network, this.security, this.tlsSettings, this.realitySettings, this.rawSettings, this.xhttpSettings, this.kcpSettings, this.grpcSettings, this.wsSettings, this.httpSettings, this.sockopt});
   factory _StreamSettings4Ray.fromJson(Map<String, dynamic> json) => _$StreamSettings4RayFromJson(json);
 
 @override final  String? network;
@@ -312,6 +338,8 @@ class _StreamSettings4Ray implements StreamSettings4Ray {
 @override final  XHttpTransport4Ray? xhttpSettings;
 @override final  KcpTransport4Ray? kcpSettings;
 @override final  GrpcTransport4Ray? grpcSettings;
+@override final  WebSocketTransport4Ray? wsSettings;
+@override final  HttpUpgradeTransport4Ray? httpSettings;
 @override final  Sockopt4Ray? sockopt;
 
 /// Create a copy of StreamSettings4Ray
@@ -327,16 +355,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _StreamSettings4Ray&&(identical(other.network, network) || other.network == network)&&(identical(other.security, security) || other.security == security)&&(identical(other.tlsSettings, tlsSettings) || other.tlsSettings == tlsSettings)&&(identical(other.realitySettings, realitySettings) || other.realitySettings == realitySettings)&&(identical(other.rawSettings, rawSettings) || other.rawSettings == rawSettings)&&(identical(other.xhttpSettings, xhttpSettings) || other.xhttpSettings == xhttpSettings)&&(identical(other.kcpSettings, kcpSettings) || other.kcpSettings == kcpSettings)&&(identical(other.grpcSettings, grpcSettings) || other.grpcSettings == grpcSettings)&&(identical(other.sockopt, sockopt) || other.sockopt == sockopt));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _StreamSettings4Ray&&(identical(other.network, network) || other.network == network)&&(identical(other.security, security) || other.security == security)&&(identical(other.tlsSettings, tlsSettings) || other.tlsSettings == tlsSettings)&&(identical(other.realitySettings, realitySettings) || other.realitySettings == realitySettings)&&(identical(other.rawSettings, rawSettings) || other.rawSettings == rawSettings)&&(identical(other.xhttpSettings, xhttpSettings) || other.xhttpSettings == xhttpSettings)&&(identical(other.kcpSettings, kcpSettings) || other.kcpSettings == kcpSettings)&&(identical(other.grpcSettings, grpcSettings) || other.grpcSettings == grpcSettings)&&(identical(other.wsSettings, wsSettings) || other.wsSettings == wsSettings)&&(identical(other.httpSettings, httpSettings) || other.httpSettings == httpSettings)&&(identical(other.sockopt, sockopt) || other.sockopt == sockopt));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,network,security,tlsSettings,realitySettings,rawSettings,xhttpSettings,kcpSettings,grpcSettings,sockopt);
+int get hashCode => Object.hash(runtimeType,network,security,tlsSettings,realitySettings,rawSettings,xhttpSettings,kcpSettings,grpcSettings,wsSettings,httpSettings,sockopt);
 
 @override
 String toString() {
-  return 'StreamSettings4Ray(network: $network, security: $security, tlsSettings: $tlsSettings, realitySettings: $realitySettings, rawSettings: $rawSettings, xhttpSettings: $xhttpSettings, kcpSettings: $kcpSettings, grpcSettings: $grpcSettings, sockopt: $sockopt)';
+  return 'StreamSettings4Ray(network: $network, security: $security, tlsSettings: $tlsSettings, realitySettings: $realitySettings, rawSettings: $rawSettings, xhttpSettings: $xhttpSettings, kcpSettings: $kcpSettings, grpcSettings: $grpcSettings, wsSettings: $wsSettings, httpSettings: $httpSettings, sockopt: $sockopt)';
 }
 
 
@@ -347,11 +375,11 @@ abstract mixin class _$StreamSettings4RayCopyWith<$Res> implements $StreamSettin
   factory _$StreamSettings4RayCopyWith(_StreamSettings4Ray value, $Res Function(_StreamSettings4Ray) _then) = __$StreamSettings4RayCopyWithImpl;
 @override @useResult
 $Res call({
- String? network, String? security, Tls4Ray? tlsSettings, Reality4Ray? realitySettings, RawTransport4Ray? rawSettings, XHttpTransport4Ray? xhttpSettings, KcpTransport4Ray? kcpSettings, GrpcTransport4Ray? grpcSettings, Sockopt4Ray? sockopt
+ String? network, String? security, Tls4Ray? tlsSettings, Reality4Ray? realitySettings, RawTransport4Ray? rawSettings, XHttpTransport4Ray? xhttpSettings, KcpTransport4Ray? kcpSettings, GrpcTransport4Ray? grpcSettings, WebSocketTransport4Ray? wsSettings, HttpUpgradeTransport4Ray? httpSettings, Sockopt4Ray? sockopt
 });
 
 
-@override $Tls4RayCopyWith<$Res>? get tlsSettings;@override $Reality4RayCopyWith<$Res>? get realitySettings;@override $RawTransport4RayCopyWith<$Res>? get rawSettings;@override $XHttpTransport4RayCopyWith<$Res>? get xhttpSettings;@override $KcpTransport4RayCopyWith<$Res>? get kcpSettings;@override $GrpcTransport4RayCopyWith<$Res>? get grpcSettings;@override $Sockopt4RayCopyWith<$Res>? get sockopt;
+@override $Tls4RayCopyWith<$Res>? get tlsSettings;@override $Reality4RayCopyWith<$Res>? get realitySettings;@override $RawTransport4RayCopyWith<$Res>? get rawSettings;@override $XHttpTransport4RayCopyWith<$Res>? get xhttpSettings;@override $KcpTransport4RayCopyWith<$Res>? get kcpSettings;@override $GrpcTransport4RayCopyWith<$Res>? get grpcSettings;@override $WebSocketTransport4RayCopyWith<$Res>? get wsSettings;@override $HttpUpgradeTransport4RayCopyWith<$Res>? get httpSettings;@override $Sockopt4RayCopyWith<$Res>? get sockopt;
 
 }
 /// @nodoc
@@ -364,7 +392,7 @@ class __$StreamSettings4RayCopyWithImpl<$Res>
 
 /// Create a copy of StreamSettings4Ray
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? network = freezed,Object? security = freezed,Object? tlsSettings = freezed,Object? realitySettings = freezed,Object? rawSettings = freezed,Object? xhttpSettings = freezed,Object? kcpSettings = freezed,Object? grpcSettings = freezed,Object? sockopt = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? network = freezed,Object? security = freezed,Object? tlsSettings = freezed,Object? realitySettings = freezed,Object? rawSettings = freezed,Object? xhttpSettings = freezed,Object? kcpSettings = freezed,Object? grpcSettings = freezed,Object? wsSettings = freezed,Object? httpSettings = freezed,Object? sockopt = freezed,}) {
   return _then(_StreamSettings4Ray(
 network: freezed == network ? _self.network : network // ignore: cast_nullable_to_non_nullable
 as String?,security: freezed == security ? _self.security : security // ignore: cast_nullable_to_non_nullable
@@ -374,7 +402,9 @@ as Reality4Ray?,rawSettings: freezed == rawSettings ? _self.rawSettings : rawSet
 as RawTransport4Ray?,xhttpSettings: freezed == xhttpSettings ? _self.xhttpSettings : xhttpSettings // ignore: cast_nullable_to_non_nullable
 as XHttpTransport4Ray?,kcpSettings: freezed == kcpSettings ? _self.kcpSettings : kcpSettings // ignore: cast_nullable_to_non_nullable
 as KcpTransport4Ray?,grpcSettings: freezed == grpcSettings ? _self.grpcSettings : grpcSettings // ignore: cast_nullable_to_non_nullable
-as GrpcTransport4Ray?,sockopt: freezed == sockopt ? _self.sockopt : sockopt // ignore: cast_nullable_to_non_nullable
+as GrpcTransport4Ray?,wsSettings: freezed == wsSettings ? _self.wsSettings : wsSettings // ignore: cast_nullable_to_non_nullable
+as WebSocketTransport4Ray?,httpSettings: freezed == httpSettings ? _self.httpSettings : httpSettings // ignore: cast_nullable_to_non_nullable
+as HttpUpgradeTransport4Ray?,sockopt: freezed == sockopt ? _self.sockopt : sockopt // ignore: cast_nullable_to_non_nullable
 as Sockopt4Ray?,
   ));
 }
@@ -450,6 +480,30 @@ $GrpcTransport4RayCopyWith<$Res>? get grpcSettings {
 
   return $GrpcTransport4RayCopyWith<$Res>(_self.grpcSettings!, (value) {
     return _then(_self.copyWith(grpcSettings: value));
+  });
+}/// Create a copy of StreamSettings4Ray
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$WebSocketTransport4RayCopyWith<$Res>? get wsSettings {
+    if (_self.wsSettings == null) {
+    return null;
+  }
+
+  return $WebSocketTransport4RayCopyWith<$Res>(_self.wsSettings!, (value) {
+    return _then(_self.copyWith(wsSettings: value));
+  });
+}/// Create a copy of StreamSettings4Ray
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$HttpUpgradeTransport4RayCopyWith<$Res>? get httpSettings {
+    if (_self.httpSettings == null) {
+    return null;
+  }
+
+  return $HttpUpgradeTransport4RayCopyWith<$Res>(_self.httpSettings!, (value) {
+    return _then(_self.copyWith(httpSettings: value));
   });
 }/// Create a copy of StreamSettings4Ray
 /// with the given fields replaced by the non-null parameter values.
