@@ -13,22 +13,22 @@ part of 'dns_server_object.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-mixin _$DnsServerObject {
+mixin _$DnsServerObject4Ray {
 
  String? get tag; String get address; int? get port; MultiValueString? get domains; MultiValueString? get expectedIPs; MultiValueString? get unexpectedIPs; bool? get skipFallback; String? get clientIP; String? get queryStrategy; int? get timeoutMs; bool? get disableCache; bool? get finalQuery;
-/// Create a copy of DnsServerObject
+/// Create a copy of DnsServerObject4Ray
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-$DnsServerObjectCopyWith<DnsServerObject> get copyWith => _$DnsServerObjectCopyWithImpl<DnsServerObject>(this as DnsServerObject, _$identity);
+$DnsServerObject4RayCopyWith<DnsServerObject4Ray> get copyWith => _$DnsServerObject4RayCopyWithImpl<DnsServerObject4Ray>(this as DnsServerObject4Ray, _$identity);
 
-  /// Serializes this DnsServerObject to a JSON map.
+  /// Serializes this DnsServerObject4Ray to a JSON map.
   Map<String, dynamic> toJson();
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is DnsServerObject&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.address, address) || other.address == address)&&(identical(other.port, port) || other.port == port)&&(identical(other.domains, domains) || other.domains == domains)&&(identical(other.expectedIPs, expectedIPs) || other.expectedIPs == expectedIPs)&&(identical(other.unexpectedIPs, unexpectedIPs) || other.unexpectedIPs == unexpectedIPs)&&(identical(other.skipFallback, skipFallback) || other.skipFallback == skipFallback)&&(identical(other.clientIP, clientIP) || other.clientIP == clientIP)&&(identical(other.queryStrategy, queryStrategy) || other.queryStrategy == queryStrategy)&&(identical(other.timeoutMs, timeoutMs) || other.timeoutMs == timeoutMs)&&(identical(other.disableCache, disableCache) || other.disableCache == disableCache)&&(identical(other.finalQuery, finalQuery) || other.finalQuery == finalQuery));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is DnsServerObject4Ray&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.address, address) || other.address == address)&&(identical(other.port, port) || other.port == port)&&(identical(other.domains, domains) || other.domains == domains)&&(identical(other.expectedIPs, expectedIPs) || other.expectedIPs == expectedIPs)&&(identical(other.unexpectedIPs, unexpectedIPs) || other.unexpectedIPs == unexpectedIPs)&&(identical(other.skipFallback, skipFallback) || other.skipFallback == skipFallback)&&(identical(other.clientIP, clientIP) || other.clientIP == clientIP)&&(identical(other.queryStrategy, queryStrategy) || other.queryStrategy == queryStrategy)&&(identical(other.timeoutMs, timeoutMs) || other.timeoutMs == timeoutMs)&&(identical(other.disableCache, disableCache) || other.disableCache == disableCache)&&(identical(other.finalQuery, finalQuery) || other.finalQuery == finalQuery));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -37,15 +37,15 @@ int get hashCode => Object.hash(runtimeType,tag,address,port,domains,expectedIPs
 
 @override
 String toString() {
-  return 'DnsServerObject(tag: $tag, address: $address, port: $port, domains: $domains, expectedIPs: $expectedIPs, unexpectedIPs: $unexpectedIPs, skipFallback: $skipFallback, clientIP: $clientIP, queryStrategy: $queryStrategy, timeoutMs: $timeoutMs, disableCache: $disableCache, finalQuery: $finalQuery)';
+  return 'DnsServerObject4Ray(tag: $tag, address: $address, port: $port, domains: $domains, expectedIPs: $expectedIPs, unexpectedIPs: $unexpectedIPs, skipFallback: $skipFallback, clientIP: $clientIP, queryStrategy: $queryStrategy, timeoutMs: $timeoutMs, disableCache: $disableCache, finalQuery: $finalQuery)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $DnsServerObjectCopyWith<$Res>  {
-  factory $DnsServerObjectCopyWith(DnsServerObject value, $Res Function(DnsServerObject) _then) = _$DnsServerObjectCopyWithImpl;
+abstract mixin class $DnsServerObject4RayCopyWith<$Res>  {
+  factory $DnsServerObject4RayCopyWith(DnsServerObject4Ray value, $Res Function(DnsServerObject4Ray) _then) = _$DnsServerObject4RayCopyWithImpl;
 @useResult
 $Res call({
  String? tag, String address, int? port, MultiValueString? domains, MultiValueString? expectedIPs, MultiValueString? unexpectedIPs, bool? skipFallback, String? clientIP, String? queryStrategy, int? timeoutMs, bool? disableCache, bool? finalQuery
@@ -56,14 +56,14 @@ $MultiValueStringCopyWith<$Res>? get domains;$MultiValueStringCopyWith<$Res>? ge
 
 }
 /// @nodoc
-class _$DnsServerObjectCopyWithImpl<$Res>
-    implements $DnsServerObjectCopyWith<$Res> {
-  _$DnsServerObjectCopyWithImpl(this._self, this._then);
+class _$DnsServerObject4RayCopyWithImpl<$Res>
+    implements $DnsServerObject4RayCopyWith<$Res> {
+  _$DnsServerObject4RayCopyWithImpl(this._self, this._then);
 
-  final DnsServerObject _self;
-  final $Res Function(DnsServerObject) _then;
+  final DnsServerObject4Ray _self;
+  final $Res Function(DnsServerObject4Ray) _then;
 
-/// Create a copy of DnsServerObject
+/// Create a copy of DnsServerObject4Ray
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? tag = freezed,Object? address = null,Object? port = freezed,Object? domains = freezed,Object? expectedIPs = freezed,Object? unexpectedIPs = freezed,Object? skipFallback = freezed,Object? clientIP = freezed,Object? queryStrategy = freezed,Object? timeoutMs = freezed,Object? disableCache = freezed,Object? finalQuery = freezed,}) {
   return _then(_self.copyWith(
@@ -82,7 +82,7 @@ as bool?,finalQuery: freezed == finalQuery ? _self.finalQuery : finalQuery // ig
 as bool?,
   ));
 }
-/// Create a copy of DnsServerObject
+/// Create a copy of DnsServerObject4Ray
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
@@ -94,7 +94,7 @@ $MultiValueStringCopyWith<$Res>? get domains {
   return $MultiValueStringCopyWith<$Res>(_self.domains!, (value) {
     return _then(_self.copyWith(domains: value));
   });
-}/// Create a copy of DnsServerObject
+}/// Create a copy of DnsServerObject4Ray
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
@@ -106,7 +106,7 @@ $MultiValueStringCopyWith<$Res>? get expectedIPs {
   return $MultiValueStringCopyWith<$Res>(_self.expectedIPs!, (value) {
     return _then(_self.copyWith(expectedIPs: value));
   });
-}/// Create a copy of DnsServerObject
+}/// Create a copy of DnsServerObject4Ray
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
@@ -122,8 +122,8 @@ $MultiValueStringCopyWith<$Res>? get unexpectedIPs {
 }
 
 
-/// Adds pattern-matching-related methods to [DnsServerObject].
-extension DnsServerObjectPatterns on DnsServerObject {
+/// Adds pattern-matching-related methods to [DnsServerObject4Ray].
+extension DnsServerObject4RayPatterns on DnsServerObject4Ray {
 /// A variant of `map` that fallback to returning `orElse`.
 ///
 /// It is equivalent to doing:
@@ -136,10 +136,10 @@ extension DnsServerObjectPatterns on DnsServerObject {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _DnsServerObject value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _DnsServerObject4Ray value)?  $default,{required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _DnsServerObject() when $default != null:
+case _DnsServerObject4Ray() when $default != null:
 return $default(_that);case _:
   return orElse();
 
@@ -158,10 +158,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _DnsServerObject value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _DnsServerObject4Ray value)  $default,){
 final _that = this;
 switch (_that) {
-case _DnsServerObject():
+case _DnsServerObject4Ray():
 return $default(_that);case _:
   throw StateError('Unexpected subclass');
 
@@ -179,10 +179,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _DnsServerObject value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _DnsServerObject4Ray value)?  $default,){
 final _that = this;
 switch (_that) {
-case _DnsServerObject() when $default != null:
+case _DnsServerObject4Ray() when $default != null:
 return $default(_that);case _:
   return null;
 
@@ -202,7 +202,7 @@ return $default(_that);case _:
 
 @optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? tag,  String address,  int? port,  MultiValueString? domains,  MultiValueString? expectedIPs,  MultiValueString? unexpectedIPs,  bool? skipFallback,  String? clientIP,  String? queryStrategy,  int? timeoutMs,  bool? disableCache,  bool? finalQuery)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _DnsServerObject() when $default != null:
+case _DnsServerObject4Ray() when $default != null:
 return $default(_that.tag,_that.address,_that.port,_that.domains,_that.expectedIPs,_that.unexpectedIPs,_that.skipFallback,_that.clientIP,_that.queryStrategy,_that.timeoutMs,_that.disableCache,_that.finalQuery);case _:
   return orElse();
 
@@ -223,7 +223,7 @@ return $default(_that.tag,_that.address,_that.port,_that.domains,_that.expectedI
 
 @optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? tag,  String address,  int? port,  MultiValueString? domains,  MultiValueString? expectedIPs,  MultiValueString? unexpectedIPs,  bool? skipFallback,  String? clientIP,  String? queryStrategy,  int? timeoutMs,  bool? disableCache,  bool? finalQuery)  $default,) {final _that = this;
 switch (_that) {
-case _DnsServerObject():
+case _DnsServerObject4Ray():
 return $default(_that.tag,_that.address,_that.port,_that.domains,_that.expectedIPs,_that.unexpectedIPs,_that.skipFallback,_that.clientIP,_that.queryStrategy,_that.timeoutMs,_that.disableCache,_that.finalQuery);case _:
   throw StateError('Unexpected subclass');
 
@@ -243,7 +243,7 @@ return $default(_that.tag,_that.address,_that.port,_that.domains,_that.expectedI
 
 @optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? tag,  String address,  int? port,  MultiValueString? domains,  MultiValueString? expectedIPs,  MultiValueString? unexpectedIPs,  bool? skipFallback,  String? clientIP,  String? queryStrategy,  int? timeoutMs,  bool? disableCache,  bool? finalQuery)?  $default,) {final _that = this;
 switch (_that) {
-case _DnsServerObject() when $default != null:
+case _DnsServerObject4Ray() when $default != null:
 return $default(_that.tag,_that.address,_that.port,_that.domains,_that.expectedIPs,_that.unexpectedIPs,_that.skipFallback,_that.clientIP,_that.queryStrategy,_that.timeoutMs,_that.disableCache,_that.finalQuery);case _:
   return null;
 
@@ -255,9 +255,9 @@ return $default(_that.tag,_that.address,_that.port,_that.domains,_that.expectedI
 /// @nodoc
 @JsonSerializable()
 
-class _DnsServerObject implements DnsServerObject {
-  const _DnsServerObject({this.tag, required this.address, this.port, this.domains, this.expectedIPs, this.unexpectedIPs, this.skipFallback, this.clientIP, this.queryStrategy, this.timeoutMs, this.disableCache, this.finalQuery});
-  factory _DnsServerObject.fromJson(Map<String, dynamic> json) => _$DnsServerObjectFromJson(json);
+class _DnsServerObject4Ray implements DnsServerObject4Ray {
+  const _DnsServerObject4Ray({this.tag, required this.address, this.port, this.domains, this.expectedIPs, this.unexpectedIPs, this.skipFallback, this.clientIP, this.queryStrategy, this.timeoutMs, this.disableCache, this.finalQuery});
+  factory _DnsServerObject4Ray.fromJson(Map<String, dynamic> json) => _$DnsServerObject4RayFromJson(json);
 
 @override final  String? tag;
 @override final  String address;
@@ -272,20 +272,20 @@ class _DnsServerObject implements DnsServerObject {
 @override final  bool? disableCache;
 @override final  bool? finalQuery;
 
-/// Create a copy of DnsServerObject
+/// Create a copy of DnsServerObject4Ray
 /// with the given fields replaced by the non-null parameter values.
 @override @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-_$DnsServerObjectCopyWith<_DnsServerObject> get copyWith => __$DnsServerObjectCopyWithImpl<_DnsServerObject>(this, _$identity);
+_$DnsServerObject4RayCopyWith<_DnsServerObject4Ray> get copyWith => __$DnsServerObject4RayCopyWithImpl<_DnsServerObject4Ray>(this, _$identity);
 
 @override
 Map<String, dynamic> toJson() {
-  return _$DnsServerObjectToJson(this, );
+  return _$DnsServerObject4RayToJson(this, );
 }
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _DnsServerObject&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.address, address) || other.address == address)&&(identical(other.port, port) || other.port == port)&&(identical(other.domains, domains) || other.domains == domains)&&(identical(other.expectedIPs, expectedIPs) || other.expectedIPs == expectedIPs)&&(identical(other.unexpectedIPs, unexpectedIPs) || other.unexpectedIPs == unexpectedIPs)&&(identical(other.skipFallback, skipFallback) || other.skipFallback == skipFallback)&&(identical(other.clientIP, clientIP) || other.clientIP == clientIP)&&(identical(other.queryStrategy, queryStrategy) || other.queryStrategy == queryStrategy)&&(identical(other.timeoutMs, timeoutMs) || other.timeoutMs == timeoutMs)&&(identical(other.disableCache, disableCache) || other.disableCache == disableCache)&&(identical(other.finalQuery, finalQuery) || other.finalQuery == finalQuery));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _DnsServerObject4Ray&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.address, address) || other.address == address)&&(identical(other.port, port) || other.port == port)&&(identical(other.domains, domains) || other.domains == domains)&&(identical(other.expectedIPs, expectedIPs) || other.expectedIPs == expectedIPs)&&(identical(other.unexpectedIPs, unexpectedIPs) || other.unexpectedIPs == unexpectedIPs)&&(identical(other.skipFallback, skipFallback) || other.skipFallback == skipFallback)&&(identical(other.clientIP, clientIP) || other.clientIP == clientIP)&&(identical(other.queryStrategy, queryStrategy) || other.queryStrategy == queryStrategy)&&(identical(other.timeoutMs, timeoutMs) || other.timeoutMs == timeoutMs)&&(identical(other.disableCache, disableCache) || other.disableCache == disableCache)&&(identical(other.finalQuery, finalQuery) || other.finalQuery == finalQuery));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -294,15 +294,15 @@ int get hashCode => Object.hash(runtimeType,tag,address,port,domains,expectedIPs
 
 @override
 String toString() {
-  return 'DnsServerObject(tag: $tag, address: $address, port: $port, domains: $domains, expectedIPs: $expectedIPs, unexpectedIPs: $unexpectedIPs, skipFallback: $skipFallback, clientIP: $clientIP, queryStrategy: $queryStrategy, timeoutMs: $timeoutMs, disableCache: $disableCache, finalQuery: $finalQuery)';
+  return 'DnsServerObject4Ray(tag: $tag, address: $address, port: $port, domains: $domains, expectedIPs: $expectedIPs, unexpectedIPs: $unexpectedIPs, skipFallback: $skipFallback, clientIP: $clientIP, queryStrategy: $queryStrategy, timeoutMs: $timeoutMs, disableCache: $disableCache, finalQuery: $finalQuery)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class _$DnsServerObjectCopyWith<$Res> implements $DnsServerObjectCopyWith<$Res> {
-  factory _$DnsServerObjectCopyWith(_DnsServerObject value, $Res Function(_DnsServerObject) _then) = __$DnsServerObjectCopyWithImpl;
+abstract mixin class _$DnsServerObject4RayCopyWith<$Res> implements $DnsServerObject4RayCopyWith<$Res> {
+  factory _$DnsServerObject4RayCopyWith(_DnsServerObject4Ray value, $Res Function(_DnsServerObject4Ray) _then) = __$DnsServerObject4RayCopyWithImpl;
 @override @useResult
 $Res call({
  String? tag, String address, int? port, MultiValueString? domains, MultiValueString? expectedIPs, MultiValueString? unexpectedIPs, bool? skipFallback, String? clientIP, String? queryStrategy, int? timeoutMs, bool? disableCache, bool? finalQuery
@@ -313,17 +313,17 @@ $Res call({
 
 }
 /// @nodoc
-class __$DnsServerObjectCopyWithImpl<$Res>
-    implements _$DnsServerObjectCopyWith<$Res> {
-  __$DnsServerObjectCopyWithImpl(this._self, this._then);
+class __$DnsServerObject4RayCopyWithImpl<$Res>
+    implements _$DnsServerObject4RayCopyWith<$Res> {
+  __$DnsServerObject4RayCopyWithImpl(this._self, this._then);
 
-  final _DnsServerObject _self;
-  final $Res Function(_DnsServerObject) _then;
+  final _DnsServerObject4Ray _self;
+  final $Res Function(_DnsServerObject4Ray) _then;
 
-/// Create a copy of DnsServerObject
+/// Create a copy of DnsServerObject4Ray
 /// with the given fields replaced by the non-null parameter values.
 @override @pragma('vm:prefer-inline') $Res call({Object? tag = freezed,Object? address = null,Object? port = freezed,Object? domains = freezed,Object? expectedIPs = freezed,Object? unexpectedIPs = freezed,Object? skipFallback = freezed,Object? clientIP = freezed,Object? queryStrategy = freezed,Object? timeoutMs = freezed,Object? disableCache = freezed,Object? finalQuery = freezed,}) {
-  return _then(_DnsServerObject(
+  return _then(_DnsServerObject4Ray(
 tag: freezed == tag ? _self.tag : tag // ignore: cast_nullable_to_non_nullable
 as String?,address: null == address ? _self.address : address // ignore: cast_nullable_to_non_nullable
 as String,port: freezed == port ? _self.port : port // ignore: cast_nullable_to_non_nullable
@@ -340,7 +340,7 @@ as bool?,
   ));
 }
 
-/// Create a copy of DnsServerObject
+/// Create a copy of DnsServerObject4Ray
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
@@ -352,7 +352,7 @@ $MultiValueStringCopyWith<$Res>? get domains {
   return $MultiValueStringCopyWith<$Res>(_self.domains!, (value) {
     return _then(_self.copyWith(domains: value));
   });
-}/// Create a copy of DnsServerObject
+}/// Create a copy of DnsServerObject4Ray
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
@@ -364,7 +364,7 @@ $MultiValueStringCopyWith<$Res>? get expectedIPs {
   return $MultiValueStringCopyWith<$Res>(_self.expectedIPs!, (value) {
     return _then(_self.copyWith(expectedIPs: value));
   });
-}/// Create a copy of DnsServerObject
+}/// Create a copy of DnsServerObject4Ray
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')

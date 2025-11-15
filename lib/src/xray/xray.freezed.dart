@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$XrayConfig {
 
- DnsConfig? get dns;
+ Version4Ray? get version; Log4Ray? get log; Api4Ray? get api; Dns4Ray? get dns; FakeDns4Ray? get fakeDns;
 /// Create a copy of XrayConfig
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $XrayConfigCopyWith<XrayConfig> get copyWith => _$XrayConfigCopyWithImpl<XrayCon
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is XrayConfig&&(identical(other.dns, dns) || other.dns == dns));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is XrayConfig&&(identical(other.version, version) || other.version == version)&&(identical(other.log, log) || other.log == log)&&(identical(other.api, api) || other.api == api)&&(identical(other.dns, dns) || other.dns == dns)&&(identical(other.fakeDns, fakeDns) || other.fakeDns == fakeDns));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,dns);
+int get hashCode => Object.hash(runtimeType,version,log,api,dns,fakeDns);
 
 @override
 String toString() {
-  return 'XrayConfig(dns: $dns)';
+  return 'XrayConfig(version: $version, log: $log, api: $api, dns: $dns, fakeDns: $fakeDns)';
 }
 
 
@@ -48,11 +48,11 @@ abstract mixin class $XrayConfigCopyWith<$Res>  {
   factory $XrayConfigCopyWith(XrayConfig value, $Res Function(XrayConfig) _then) = _$XrayConfigCopyWithImpl;
 @useResult
 $Res call({
- DnsConfig? dns
+ Version4Ray? version, Log4Ray? log, Api4Ray? api, Dns4Ray? dns, FakeDns4Ray? fakeDns
 });
 
 
-$DnsConfigCopyWith<$Res>? get dns;
+$Version4RayCopyWith<$Res>? get version;$Log4RayCopyWith<$Res>? get log;$Api4RayCopyWith<$Res>? get api;$Dns4RayCopyWith<$Res>? get dns;$FakeDns4RayCopyWith<$Res>? get fakeDns;
 
 }
 /// @nodoc
@@ -65,23 +65,75 @@ class _$XrayConfigCopyWithImpl<$Res>
 
 /// Create a copy of XrayConfig
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? dns = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? version = freezed,Object? log = freezed,Object? api = freezed,Object? dns = freezed,Object? fakeDns = freezed,}) {
   return _then(_self.copyWith(
-dns: freezed == dns ? _self.dns : dns // ignore: cast_nullable_to_non_nullable
-as DnsConfig?,
+version: freezed == version ? _self.version : version // ignore: cast_nullable_to_non_nullable
+as Version4Ray?,log: freezed == log ? _self.log : log // ignore: cast_nullable_to_non_nullable
+as Log4Ray?,api: freezed == api ? _self.api : api // ignore: cast_nullable_to_non_nullable
+as Api4Ray?,dns: freezed == dns ? _self.dns : dns // ignore: cast_nullable_to_non_nullable
+as Dns4Ray?,fakeDns: freezed == fakeDns ? _self.fakeDns : fakeDns // ignore: cast_nullable_to_non_nullable
+as FakeDns4Ray?,
   ));
 }
 /// Create a copy of XrayConfig
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$DnsConfigCopyWith<$Res>? get dns {
+$Version4RayCopyWith<$Res>? get version {
+    if (_self.version == null) {
+    return null;
+  }
+
+  return $Version4RayCopyWith<$Res>(_self.version!, (value) {
+    return _then(_self.copyWith(version: value));
+  });
+}/// Create a copy of XrayConfig
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$Log4RayCopyWith<$Res>? get log {
+    if (_self.log == null) {
+    return null;
+  }
+
+  return $Log4RayCopyWith<$Res>(_self.log!, (value) {
+    return _then(_self.copyWith(log: value));
+  });
+}/// Create a copy of XrayConfig
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$Api4RayCopyWith<$Res>? get api {
+    if (_self.api == null) {
+    return null;
+  }
+
+  return $Api4RayCopyWith<$Res>(_self.api!, (value) {
+    return _then(_self.copyWith(api: value));
+  });
+}/// Create a copy of XrayConfig
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$Dns4RayCopyWith<$Res>? get dns {
     if (_self.dns == null) {
     return null;
   }
 
-  return $DnsConfigCopyWith<$Res>(_self.dns!, (value) {
+  return $Dns4RayCopyWith<$Res>(_self.dns!, (value) {
     return _then(_self.copyWith(dns: value));
+  });
+}/// Create a copy of XrayConfig
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$FakeDns4RayCopyWith<$Res>? get fakeDns {
+    if (_self.fakeDns == null) {
+    return null;
+  }
+
+  return $FakeDns4RayCopyWith<$Res>(_self.fakeDns!, (value) {
+    return _then(_self.copyWith(fakeDns: value));
   });
 }
 }
@@ -165,10 +217,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( DnsConfig? dns)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Version4Ray? version,  Log4Ray? log,  Api4Ray? api,  Dns4Ray? dns,  FakeDns4Ray? fakeDns)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _XrayConfig() when $default != null:
-return $default(_that.dns);case _:
+return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns);case _:
   return orElse();
 
 }
@@ -186,10 +238,10 @@ return $default(_that.dns);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( DnsConfig? dns)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Version4Ray? version,  Log4Ray? log,  Api4Ray? api,  Dns4Ray? dns,  FakeDns4Ray? fakeDns)  $default,) {final _that = this;
 switch (_that) {
 case _XrayConfig():
-return $default(_that.dns);case _:
+return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -206,10 +258,10 @@ return $default(_that.dns);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( DnsConfig? dns)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Version4Ray? version,  Log4Ray? log,  Api4Ray? api,  Dns4Ray? dns,  FakeDns4Ray? fakeDns)?  $default,) {final _that = this;
 switch (_that) {
 case _XrayConfig() when $default != null:
-return $default(_that.dns);case _:
+return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns);case _:
   return null;
 
 }
@@ -221,10 +273,14 @@ return $default(_that.dns);case _:
 
 @JsonSerializable(explicitToJson: true)
 class _XrayConfig implements XrayConfig {
-  const _XrayConfig({this.dns});
+  const _XrayConfig({this.version, this.log, this.api, this.dns, this.fakeDns});
   factory _XrayConfig.fromJson(Map<String, dynamic> json) => _$XrayConfigFromJson(json);
 
-@override final  DnsConfig? dns;
+@override final  Version4Ray? version;
+@override final  Log4Ray? log;
+@override final  Api4Ray? api;
+@override final  Dns4Ray? dns;
+@override final  FakeDns4Ray? fakeDns;
 
 /// Create a copy of XrayConfig
 /// with the given fields replaced by the non-null parameter values.
@@ -239,16 +295,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _XrayConfig&&(identical(other.dns, dns) || other.dns == dns));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _XrayConfig&&(identical(other.version, version) || other.version == version)&&(identical(other.log, log) || other.log == log)&&(identical(other.api, api) || other.api == api)&&(identical(other.dns, dns) || other.dns == dns)&&(identical(other.fakeDns, fakeDns) || other.fakeDns == fakeDns));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,dns);
+int get hashCode => Object.hash(runtimeType,version,log,api,dns,fakeDns);
 
 @override
 String toString() {
-  return 'XrayConfig(dns: $dns)';
+  return 'XrayConfig(version: $version, log: $log, api: $api, dns: $dns, fakeDns: $fakeDns)';
 }
 
 
@@ -259,11 +315,11 @@ abstract mixin class _$XrayConfigCopyWith<$Res> implements $XrayConfigCopyWith<$
   factory _$XrayConfigCopyWith(_XrayConfig value, $Res Function(_XrayConfig) _then) = __$XrayConfigCopyWithImpl;
 @override @useResult
 $Res call({
- DnsConfig? dns
+ Version4Ray? version, Log4Ray? log, Api4Ray? api, Dns4Ray? dns, FakeDns4Ray? fakeDns
 });
 
 
-@override $DnsConfigCopyWith<$Res>? get dns;
+@override $Version4RayCopyWith<$Res>? get version;@override $Log4RayCopyWith<$Res>? get log;@override $Api4RayCopyWith<$Res>? get api;@override $Dns4RayCopyWith<$Res>? get dns;@override $FakeDns4RayCopyWith<$Res>? get fakeDns;
 
 }
 /// @nodoc
@@ -276,10 +332,14 @@ class __$XrayConfigCopyWithImpl<$Res>
 
 /// Create a copy of XrayConfig
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? dns = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? version = freezed,Object? log = freezed,Object? api = freezed,Object? dns = freezed,Object? fakeDns = freezed,}) {
   return _then(_XrayConfig(
-dns: freezed == dns ? _self.dns : dns // ignore: cast_nullable_to_non_nullable
-as DnsConfig?,
+version: freezed == version ? _self.version : version // ignore: cast_nullable_to_non_nullable
+as Version4Ray?,log: freezed == log ? _self.log : log // ignore: cast_nullable_to_non_nullable
+as Log4Ray?,api: freezed == api ? _self.api : api // ignore: cast_nullable_to_non_nullable
+as Api4Ray?,dns: freezed == dns ? _self.dns : dns // ignore: cast_nullable_to_non_nullable
+as Dns4Ray?,fakeDns: freezed == fakeDns ? _self.fakeDns : fakeDns // ignore: cast_nullable_to_non_nullable
+as FakeDns4Ray?,
   ));
 }
 
@@ -287,13 +347,61 @@ as DnsConfig?,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$DnsConfigCopyWith<$Res>? get dns {
+$Version4RayCopyWith<$Res>? get version {
+    if (_self.version == null) {
+    return null;
+  }
+
+  return $Version4RayCopyWith<$Res>(_self.version!, (value) {
+    return _then(_self.copyWith(version: value));
+  });
+}/// Create a copy of XrayConfig
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$Log4RayCopyWith<$Res>? get log {
+    if (_self.log == null) {
+    return null;
+  }
+
+  return $Log4RayCopyWith<$Res>(_self.log!, (value) {
+    return _then(_self.copyWith(log: value));
+  });
+}/// Create a copy of XrayConfig
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$Api4RayCopyWith<$Res>? get api {
+    if (_self.api == null) {
+    return null;
+  }
+
+  return $Api4RayCopyWith<$Res>(_self.api!, (value) {
+    return _then(_self.copyWith(api: value));
+  });
+}/// Create a copy of XrayConfig
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$Dns4RayCopyWith<$Res>? get dns {
     if (_self.dns == null) {
     return null;
   }
 
-  return $DnsConfigCopyWith<$Res>(_self.dns!, (value) {
+  return $Dns4RayCopyWith<$Res>(_self.dns!, (value) {
     return _then(_self.copyWith(dns: value));
+  });
+}/// Create a copy of XrayConfig
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$FakeDns4RayCopyWith<$Res>? get fakeDns {
+    if (_self.fakeDns == null) {
+    return null;
+  }
+
+  return $FakeDns4RayCopyWith<$Res>(_self.fakeDns!, (value) {
+    return _then(_self.copyWith(fakeDns: value));
   });
 }
 }

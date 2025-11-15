@@ -12,7 +12,7 @@ part of 'dns_server.dart';
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
-mixin _$DnsServer {
+mixin _$DnsServer4Ray {
 
  Object get value;
 
@@ -20,7 +20,7 @@ mixin _$DnsServer {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is DnsServer&&const DeepCollectionEquality().equals(other.value, value));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is DnsServer4Ray&&const DeepCollectionEquality().equals(other.value, value));
 }
 
 
@@ -29,20 +29,20 @@ int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(
 
 @override
 String toString() {
-  return 'DnsServer(value: $value)';
+  return 'DnsServer4Ray(value: $value)';
 }
 
 
 }
 
 /// @nodoc
-class $DnsServerCopyWith<$Res>  {
-$DnsServerCopyWith(DnsServer _, $Res Function(DnsServer) __);
+class $DnsServer4RayCopyWith<$Res>  {
+$DnsServer4RayCopyWith(DnsServer4Ray _, $Res Function(DnsServer4Ray) __);
 }
 
 
-/// Adds pattern-matching-related methods to [DnsServer].
-extension DnsServerPatterns on DnsServer {
+/// Adds pattern-matching-related methods to [DnsServer4Ray].
+extension DnsServer4RayPatterns on DnsServer4Ray {
 /// A variant of `map` that fallback to returning `orElse`.
 ///
 /// It is equivalent to doing:
@@ -55,11 +55,11 @@ extension DnsServerPatterns on DnsServer {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _DnsServerString value)?  string,TResult Function( _DnsServerObjectUnion value)?  object,required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _DnsServer4RayString value)?  string,TResult Function( _DnsServer4RayObjectUnion value)?  object,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _DnsServerString() when string != null:
-return string(_that);case _DnsServerObjectUnion() when object != null:
+case _DnsServer4RayString() when string != null:
+return string(_that);case _DnsServer4RayObjectUnion() when object != null:
 return object(_that);case _:
   return orElse();
 
@@ -78,11 +78,11 @@ return object(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _DnsServerString value)  string,required TResult Function( _DnsServerObjectUnion value)  object,}){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _DnsServer4RayString value)  string,required TResult Function( _DnsServer4RayObjectUnion value)  object,}){
 final _that = this;
 switch (_that) {
-case _DnsServerString():
-return string(_that);case _DnsServerObjectUnion():
+case _DnsServer4RayString():
+return string(_that);case _DnsServer4RayObjectUnion():
 return object(_that);case _:
   throw StateError('Unexpected subclass');
 
@@ -100,11 +100,11 @@ return object(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _DnsServerString value)?  string,TResult? Function( _DnsServerObjectUnion value)?  object,}){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _DnsServer4RayString value)?  string,TResult? Function( _DnsServer4RayObjectUnion value)?  object,}){
 final _that = this;
 switch (_that) {
-case _DnsServerString() when string != null:
-return string(_that);case _DnsServerObjectUnion() when object != null:
+case _DnsServer4RayString() when string != null:
+return string(_that);case _DnsServer4RayObjectUnion() when object != null:
 return object(_that);case _:
   return null;
 
@@ -122,10 +122,10 @@ return object(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String value)?  string,TResult Function( DnsServerObject value)?  object,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String value)?  string,TResult Function( DnsServerObject4Ray value)?  object,required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _DnsServerString() when string != null:
-return string(_that.value);case _DnsServerObjectUnion() when object != null:
+case _DnsServer4RayString() when string != null:
+return string(_that.value);case _DnsServer4RayObjectUnion() when object != null:
 return object(_that.value);case _:
   return orElse();
 
@@ -144,10 +144,10 @@ return object(_that.value);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String value)  string,required TResult Function( DnsServerObject value)  object,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String value)  string,required TResult Function( DnsServerObject4Ray value)  object,}) {final _that = this;
 switch (_that) {
-case _DnsServerString():
-return string(_that.value);case _DnsServerObjectUnion():
+case _DnsServer4RayString():
+return string(_that.value);case _DnsServer4RayObjectUnion():
 return object(_that.value);case _:
   throw StateError('Unexpected subclass');
 
@@ -165,10 +165,10 @@ return object(_that.value);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String value)?  string,TResult? Function( DnsServerObject value)?  object,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String value)?  string,TResult? Function( DnsServerObject4Ray value)?  object,}) {final _that = this;
 switch (_that) {
-case _DnsServerString() when string != null:
-return string(_that.value);case _DnsServerObjectUnion() when object != null:
+case _DnsServer4RayString() when string != null:
+return string(_that.value);case _DnsServer4RayObjectUnion() when object != null:
 return object(_that.value);case _:
   return null;
 
@@ -180,23 +180,23 @@ return object(_that.value);case _:
 /// @nodoc
 
 
-class _DnsServerString extends DnsServer {
-  const _DnsServerString(this.value): super._();
+class _DnsServer4RayString extends DnsServer4Ray {
+  const _DnsServer4RayString(this.value): super._();
   
 
 @override final  String value;
 
-/// Create a copy of DnsServer
+/// Create a copy of DnsServer4Ray
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-_$DnsServerStringCopyWith<_DnsServerString> get copyWith => __$DnsServerStringCopyWithImpl<_DnsServerString>(this, _$identity);
+_$DnsServer4RayStringCopyWith<_DnsServer4RayString> get copyWith => __$DnsServer4RayStringCopyWithImpl<_DnsServer4RayString>(this, _$identity);
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _DnsServerString&&(identical(other.value, value) || other.value == value));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _DnsServer4RayString&&(identical(other.value, value) || other.value == value));
 }
 
 
@@ -205,15 +205,15 @@ int get hashCode => Object.hash(runtimeType,value);
 
 @override
 String toString() {
-  return 'DnsServer.string(value: $value)';
+  return 'DnsServer4Ray.string(value: $value)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class _$DnsServerStringCopyWith<$Res> implements $DnsServerCopyWith<$Res> {
-  factory _$DnsServerStringCopyWith(_DnsServerString value, $Res Function(_DnsServerString) _then) = __$DnsServerStringCopyWithImpl;
+abstract mixin class _$DnsServer4RayStringCopyWith<$Res> implements $DnsServer4RayCopyWith<$Res> {
+  factory _$DnsServer4RayStringCopyWith(_DnsServer4RayString value, $Res Function(_DnsServer4RayString) _then) = __$DnsServer4RayStringCopyWithImpl;
 @useResult
 $Res call({
  String value
@@ -224,17 +224,17 @@ $Res call({
 
 }
 /// @nodoc
-class __$DnsServerStringCopyWithImpl<$Res>
-    implements _$DnsServerStringCopyWith<$Res> {
-  __$DnsServerStringCopyWithImpl(this._self, this._then);
+class __$DnsServer4RayStringCopyWithImpl<$Res>
+    implements _$DnsServer4RayStringCopyWith<$Res> {
+  __$DnsServer4RayStringCopyWithImpl(this._self, this._then);
 
-  final _DnsServerString _self;
-  final $Res Function(_DnsServerString) _then;
+  final _DnsServer4RayString _self;
+  final $Res Function(_DnsServer4RayString) _then;
 
-/// Create a copy of DnsServer
+/// Create a copy of DnsServer4Ray
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') $Res call({Object? value = null,}) {
-  return _then(_DnsServerString(
+  return _then(_DnsServer4RayString(
 null == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
 as String,
   ));
@@ -246,23 +246,23 @@ as String,
 /// @nodoc
 
 
-class _DnsServerObjectUnion extends DnsServer {
-  const _DnsServerObjectUnion(this.value): super._();
+class _DnsServer4RayObjectUnion extends DnsServer4Ray {
+  const _DnsServer4RayObjectUnion(this.value): super._();
   
 
-@override final  DnsServerObject value;
+@override final  DnsServerObject4Ray value;
 
-/// Create a copy of DnsServer
+/// Create a copy of DnsServer4Ray
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-_$DnsServerObjectUnionCopyWith<_DnsServerObjectUnion> get copyWith => __$DnsServerObjectUnionCopyWithImpl<_DnsServerObjectUnion>(this, _$identity);
+_$DnsServer4RayObjectUnionCopyWith<_DnsServer4RayObjectUnion> get copyWith => __$DnsServer4RayObjectUnionCopyWithImpl<_DnsServer4RayObjectUnion>(this, _$identity);
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _DnsServerObjectUnion&&(identical(other.value, value) || other.value == value));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _DnsServer4RayObjectUnion&&(identical(other.value, value) || other.value == value));
 }
 
 
@@ -271,48 +271,48 @@ int get hashCode => Object.hash(runtimeType,value);
 
 @override
 String toString() {
-  return 'DnsServer.object(value: $value)';
+  return 'DnsServer4Ray.object(value: $value)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class _$DnsServerObjectUnionCopyWith<$Res> implements $DnsServerCopyWith<$Res> {
-  factory _$DnsServerObjectUnionCopyWith(_DnsServerObjectUnion value, $Res Function(_DnsServerObjectUnion) _then) = __$DnsServerObjectUnionCopyWithImpl;
+abstract mixin class _$DnsServer4RayObjectUnionCopyWith<$Res> implements $DnsServer4RayCopyWith<$Res> {
+  factory _$DnsServer4RayObjectUnionCopyWith(_DnsServer4RayObjectUnion value, $Res Function(_DnsServer4RayObjectUnion) _then) = __$DnsServer4RayObjectUnionCopyWithImpl;
 @useResult
 $Res call({
- DnsServerObject value
+ DnsServerObject4Ray value
 });
 
 
-$DnsServerObjectCopyWith<$Res> get value;
+$DnsServerObject4RayCopyWith<$Res> get value;
 
 }
 /// @nodoc
-class __$DnsServerObjectUnionCopyWithImpl<$Res>
-    implements _$DnsServerObjectUnionCopyWith<$Res> {
-  __$DnsServerObjectUnionCopyWithImpl(this._self, this._then);
+class __$DnsServer4RayObjectUnionCopyWithImpl<$Res>
+    implements _$DnsServer4RayObjectUnionCopyWith<$Res> {
+  __$DnsServer4RayObjectUnionCopyWithImpl(this._self, this._then);
 
-  final _DnsServerObjectUnion _self;
-  final $Res Function(_DnsServerObjectUnion) _then;
+  final _DnsServer4RayObjectUnion _self;
+  final $Res Function(_DnsServer4RayObjectUnion) _then;
 
-/// Create a copy of DnsServer
+/// Create a copy of DnsServer4Ray
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') $Res call({Object? value = null,}) {
-  return _then(_DnsServerObjectUnion(
+  return _then(_DnsServer4RayObjectUnion(
 null == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
-as DnsServerObject,
+as DnsServerObject4Ray,
   ));
 }
 
-/// Create a copy of DnsServer
+/// Create a copy of DnsServer4Ray
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$DnsServerObjectCopyWith<$Res> get value {
+$DnsServerObject4RayCopyWith<$Res> get value {
   
-  return $DnsServerObjectCopyWith<$Res>(_self.value, (value) {
+  return $DnsServerObject4RayCopyWith<$Res>(_self.value, (value) {
     return _then(_self.copyWith(value: value));
   });
 }

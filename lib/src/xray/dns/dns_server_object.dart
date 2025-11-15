@@ -6,8 +6,8 @@ part 'dns_server_object.freezed.dart';
 part 'dns_server_object.g.dart';
 
 @freezed
-abstract class DnsServerObject with _$DnsServerObject {
-  const factory DnsServerObject({
+abstract class DnsServerObject4Ray with _$DnsServerObject4Ray {
+  const factory DnsServerObject4Ray({
     String? tag,
     required String address,
     int? port,
@@ -20,8 +20,8 @@ abstract class DnsServerObject with _$DnsServerObject {
     int? timeoutMs,
     bool? disableCache,
     bool? finalQuery,
-  }) = _DnsServerObject;
+  }) = _DnsServerObject4Ray;
 
-  factory DnsServerObject.fromJson(Map<String, dynamic> json) =>
-      _$DnsServerObjectFromJson(json);
+  factory DnsServerObject4Ray.fromJson(Map<String, dynamic> json) =>
+      _$DnsServerObject4RayFromJson(json);
 }

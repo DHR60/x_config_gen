@@ -10,11 +10,11 @@ part 'dns.freezed.dart';
 part 'dns.g.dart';
 
 @freezed
-abstract class DnsConfig with _$DnsConfig {
+abstract class Dns4Ray with _$Dns4Ray {
   @JsonSerializable(explicitToJson: true)
-  const factory DnsConfig({
+  const factory Dns4Ray({
     Map<String, MultiValueString>? hosts,
-    required List<DnsServer> servers,
+    required List<DnsServer4Ray> servers,
     String? clientIp,
     String? queryStrategy,
     bool? disableCache,
@@ -22,8 +22,8 @@ abstract class DnsConfig with _$DnsConfig {
     bool? disableFallbackIfMatch,
     bool? useSystemHosts,
     String? tag,
-  }) = _DnsConfig;
+  }) = _Dns4Ray;
 
-  factory DnsConfig.fromJson(Map<String, dynamic> json) =>
-      _$DnsConfigFromJson(json);
+  factory Dns4Ray.fromJson(Map<String, dynamic> json) =>
+      _$Dns4RayFromJson(json);
 }

@@ -7,10 +7,28 @@ part of 'xray.dart';
 // **************************************************************************
 
 _XrayConfig _$XrayConfigFromJson(Map<String, dynamic> json) => _XrayConfig(
+  version: json['version'] == null
+      ? null
+      : Version4Ray.fromJson(json['version'] as Map<String, dynamic>),
+  log: json['log'] == null
+      ? null
+      : Log4Ray.fromJson(json['log'] as Map<String, dynamic>),
+  api: json['api'] == null
+      ? null
+      : Api4Ray.fromJson(json['api'] as Map<String, dynamic>),
   dns: json['dns'] == null
       ? null
-      : DnsConfig.fromJson(json['dns'] as Map<String, dynamic>),
+      : Dns4Ray.fromJson(json['dns'] as Map<String, dynamic>),
+  fakeDns: json['fakeDns'] == null
+      ? null
+      : FakeDns4Ray.fromJson(json['fakeDns'] as Map<String, dynamic>),
 );
 
 Map<String, dynamic> _$XrayConfigToJson(_XrayConfig instance) =>
-    <String, dynamic>{'dns': ?instance.dns?.toJson()};
+    <String, dynamic>{
+      'version': ?instance.version?.toJson(),
+      'log': ?instance.log?.toJson(),
+      'api': ?instance.api?.toJson(),
+      'dns': ?instance.dns?.toJson(),
+      'fakeDns': ?instance.fakeDns?.toJson(),
+    };
