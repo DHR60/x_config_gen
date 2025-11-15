@@ -1,20 +1,20 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'package:x_config_gen/src/xray/transport/tls.dart';
-import 'package:x_config_gen/src/xray/transport/reality.dart';
-import 'package:x_config_gen/src/xray/transport/raw.dart';
-import 'package:x_config_gen/src/xray/transport/xhttp.dart';
-import 'package:x_config_gen/src/xray/transport/kcp.dart';
-import 'package:x_config_gen/src/xray/transport/grpc.dart';
-import 'package:x_config_gen/src/xray/transport/sockopt.dart';
+import 'package:x_config_gen/src/xray/transport/security/tls.dart';
+import 'package:x_config_gen/src/xray/transport/security/reality.dart';
+import 'package:x_config_gen/src/xray/transport/network/raw.dart';
+import 'package:x_config_gen/src/xray/transport/network/xhttp.dart';
+import 'package:x_config_gen/src/xray/transport/network/kcp.dart';
+import 'package:x_config_gen/src/xray/transport/network/grpc.dart';
+import 'package:x_config_gen/src/xray/transport/sockopt/sockopt.dart';
 
-export 'package:x_config_gen/src/xray/transport/tls.dart';
-export 'package:x_config_gen/src/xray/transport/reality.dart';
-export 'package:x_config_gen/src/xray/transport/raw.dart';
-export 'package:x_config_gen/src/xray/transport/xhttp.dart';
-export 'package:x_config_gen/src/xray/transport/kcp.dart';
-export 'package:x_config_gen/src/xray/transport/grpc.dart';
-export 'package:x_config_gen/src/xray/transport/sockopt.dart';
+export 'package:x_config_gen/src/xray/transport/security/tls.dart';
+export 'package:x_config_gen/src/xray/transport/security/reality.dart';
+export 'package:x_config_gen/src/xray/transport/network/raw.dart';
+export 'package:x_config_gen/src/xray/transport/network/xhttp.dart';
+export 'package:x_config_gen/src/xray/transport/network/kcp.dart';
+export 'package:x_config_gen/src/xray/transport/network/grpc.dart';
+export 'package:x_config_gen/src/xray/transport/sockopt/sockopt.dart';
 
 part 'stream_settings.freezed.dart';
 part 'stream_settings.g.dart';

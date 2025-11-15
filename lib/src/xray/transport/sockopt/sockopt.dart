@@ -1,10 +1,10 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'package:x_config_gen/src/xray/transport/happy_eyeballs.dart';
-import 'package:x_config_gen/src/xray/transport/custom_sockopt.dart';
+import 'package:x_config_gen/src/xray/transport/sockopt/happy_eyeballs.dart';
+import 'package:x_config_gen/src/xray/transport/sockopt/custom_sockopt.dart';
 
-export 'package:x_config_gen/src/xray/transport/happy_eyeballs.dart';
-export 'package:x_config_gen/src/xray/transport/custom_sockopt.dart';
+export 'package:x_config_gen/src/xray/transport/sockopt/happy_eyeballs.dart';
+export 'package:x_config_gen/src/xray/transport/sockopt/custom_sockopt.dart';
 
 part 'sockopt.freezed.dart';
 part 'sockopt.g.dart';

@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:x_config_gen/src/core/multi_value/multi_value_string.dart';
-import 'package:x_config_gen/src/xray/transport/tls.dart';
-import 'package:x_config_gen/src/xray/transport/sockopt.dart';
+import 'package:x_config_gen/src/xray/transport/security/tls.dart';
+import 'package:x_config_gen/src/xray/transport/sockopt/sockopt.dart';
 
 part 'xhttp.freezed.dart';
 part 'xhttp.g.dart';
