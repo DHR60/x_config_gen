@@ -22,6 +22,9 @@ _XrayConfig _$XrayConfigFromJson(Map<String, dynamic> json) => _XrayConfig(
   fakeDns: json['fakeDns'] == null
       ? null
       : FakeDns4Ray.fromJson(json['fakeDns'] as Map<String, dynamic>),
+  inbounds: (json['inbounds'] as List<dynamic>?)
+      ?.map((e) => Inbound4Ray.fromJson(e as Map<String, dynamic>))
+      .toList(),
 );
 
 Map<String, dynamic> _$XrayConfigToJson(_XrayConfig instance) =>
@@ -31,4 +34,5 @@ Map<String, dynamic> _$XrayConfigToJson(_XrayConfig instance) =>
       'api': ?instance.api?.toJson(),
       'dns': ?instance.dns?.toJson(),
       'fakeDns': ?instance.fakeDns?.toJson(),
+      'inbounds': ?instance.inbounds?.map((e) => e.toJson()).toList(),
     };

@@ -29,6 +29,43 @@ void main() {
         ),
       ],
     ),
+    inbounds: [
+      Inbound4Ray(
+        tag: 'http-inbound',
+        protocol: 'http',
+        settings: InboundSettings4Ray.http(
+          settings: HttpInboundSettings4Ray(
+            accounts: [
+              Account4Ray(
+                user: 'user1',
+                pass: 'pass1',
+              ),
+              Account4Ray(
+                user: 'user2',
+                pass: 'pass2',
+              ),
+            ],
+            allowTransparent: false,
+            userLevel: 0,
+          )
+        ),
+      ),
+      Inbound4Ray(
+        tag: 'socks-inbound',
+        protocol: 'socks',
+        settings: InboundSettings4Ray.socks(
+          settings: SocksInboundSettings4Ray(
+            auth: 'noauth',
+            accounts: [
+              Account4Ray(
+                user: 'sockuser',
+                pass: 'sockpass',
+              ),
+            ],
+          )
+        ),
+      ),
+    ],
   );
 
   // print config as json
@@ -38,4 +75,8 @@ void main() {
   // json str to config object
   final configBack = XrayConfig.fromJson(json.decode(prettyJson));
   print(configBack);
+
+  // print again to verify
+  final prettyJsonBack = const JsonEncoder.withIndent('  ').convert(configBack.toJson());
+  print(prettyJsonBack);
 }

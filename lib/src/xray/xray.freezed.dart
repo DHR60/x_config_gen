@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$XrayConfig {
 
- Version4Ray? get version; Log4Ray? get log; Api4Ray? get api; Dns4Ray? get dns; FakeDns4Ray? get fakeDns;
+ Version4Ray? get version; Log4Ray? get log; Api4Ray? get api; Dns4Ray? get dns; FakeDns4Ray? get fakeDns; List<Inbound4Ray>? get inbounds;
 /// Create a copy of XrayConfig
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $XrayConfigCopyWith<XrayConfig> get copyWith => _$XrayConfigCopyWithImpl<XrayCon
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is XrayConfig&&(identical(other.version, version) || other.version == version)&&(identical(other.log, log) || other.log == log)&&(identical(other.api, api) || other.api == api)&&(identical(other.dns, dns) || other.dns == dns)&&(identical(other.fakeDns, fakeDns) || other.fakeDns == fakeDns));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is XrayConfig&&(identical(other.version, version) || other.version == version)&&(identical(other.log, log) || other.log == log)&&(identical(other.api, api) || other.api == api)&&(identical(other.dns, dns) || other.dns == dns)&&(identical(other.fakeDns, fakeDns) || other.fakeDns == fakeDns)&&const DeepCollectionEquality().equals(other.inbounds, inbounds));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,version,log,api,dns,fakeDns);
+int get hashCode => Object.hash(runtimeType,version,log,api,dns,fakeDns,const DeepCollectionEquality().hash(inbounds));
 
 @override
 String toString() {
-  return 'XrayConfig(version: $version, log: $log, api: $api, dns: $dns, fakeDns: $fakeDns)';
+  return 'XrayConfig(version: $version, log: $log, api: $api, dns: $dns, fakeDns: $fakeDns, inbounds: $inbounds)';
 }
 
 
@@ -48,7 +48,7 @@ abstract mixin class $XrayConfigCopyWith<$Res>  {
   factory $XrayConfigCopyWith(XrayConfig value, $Res Function(XrayConfig) _then) = _$XrayConfigCopyWithImpl;
 @useResult
 $Res call({
- Version4Ray? version, Log4Ray? log, Api4Ray? api, Dns4Ray? dns, FakeDns4Ray? fakeDns
+ Version4Ray? version, Log4Ray? log, Api4Ray? api, Dns4Ray? dns, FakeDns4Ray? fakeDns, List<Inbound4Ray>? inbounds
 });
 
 
@@ -65,14 +65,15 @@ class _$XrayConfigCopyWithImpl<$Res>
 
 /// Create a copy of XrayConfig
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? version = freezed,Object? log = freezed,Object? api = freezed,Object? dns = freezed,Object? fakeDns = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? version = freezed,Object? log = freezed,Object? api = freezed,Object? dns = freezed,Object? fakeDns = freezed,Object? inbounds = freezed,}) {
   return _then(_self.copyWith(
 version: freezed == version ? _self.version : version // ignore: cast_nullable_to_non_nullable
 as Version4Ray?,log: freezed == log ? _self.log : log // ignore: cast_nullable_to_non_nullable
 as Log4Ray?,api: freezed == api ? _self.api : api // ignore: cast_nullable_to_non_nullable
 as Api4Ray?,dns: freezed == dns ? _self.dns : dns // ignore: cast_nullable_to_non_nullable
 as Dns4Ray?,fakeDns: freezed == fakeDns ? _self.fakeDns : fakeDns // ignore: cast_nullable_to_non_nullable
-as FakeDns4Ray?,
+as FakeDns4Ray?,inbounds: freezed == inbounds ? _self.inbounds : inbounds // ignore: cast_nullable_to_non_nullable
+as List<Inbound4Ray>?,
   ));
 }
 /// Create a copy of XrayConfig
@@ -217,10 +218,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Version4Ray? version,  Log4Ray? log,  Api4Ray? api,  Dns4Ray? dns,  FakeDns4Ray? fakeDns)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Version4Ray? version,  Log4Ray? log,  Api4Ray? api,  Dns4Ray? dns,  FakeDns4Ray? fakeDns,  List<Inbound4Ray>? inbounds)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _XrayConfig() when $default != null:
-return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns);case _:
+return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns,_that.inbounds);case _:
   return orElse();
 
 }
@@ -238,10 +239,10 @@ return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns);case 
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Version4Ray? version,  Log4Ray? log,  Api4Ray? api,  Dns4Ray? dns,  FakeDns4Ray? fakeDns)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Version4Ray? version,  Log4Ray? log,  Api4Ray? api,  Dns4Ray? dns,  FakeDns4Ray? fakeDns,  List<Inbound4Ray>? inbounds)  $default,) {final _that = this;
 switch (_that) {
 case _XrayConfig():
-return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns);case _:
+return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns,_that.inbounds);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -258,10 +259,10 @@ return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns);case 
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Version4Ray? version,  Log4Ray? log,  Api4Ray? api,  Dns4Ray? dns,  FakeDns4Ray? fakeDns)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Version4Ray? version,  Log4Ray? log,  Api4Ray? api,  Dns4Ray? dns,  FakeDns4Ray? fakeDns,  List<Inbound4Ray>? inbounds)?  $default,) {final _that = this;
 switch (_that) {
 case _XrayConfig() when $default != null:
-return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns);case _:
+return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns,_that.inbounds);case _:
   return null;
 
 }
@@ -273,7 +274,7 @@ return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns);case 
 
 @JsonSerializable(explicitToJson: true)
 class _XrayConfig implements XrayConfig {
-  const _XrayConfig({this.version, this.log, this.api, this.dns, this.fakeDns});
+  const _XrayConfig({this.version, this.log, this.api, this.dns, this.fakeDns, final  List<Inbound4Ray>? inbounds}): _inbounds = inbounds;
   factory _XrayConfig.fromJson(Map<String, dynamic> json) => _$XrayConfigFromJson(json);
 
 @override final  Version4Ray? version;
@@ -281,6 +282,15 @@ class _XrayConfig implements XrayConfig {
 @override final  Api4Ray? api;
 @override final  Dns4Ray? dns;
 @override final  FakeDns4Ray? fakeDns;
+ final  List<Inbound4Ray>? _inbounds;
+@override List<Inbound4Ray>? get inbounds {
+  final value = _inbounds;
+  if (value == null) return null;
+  if (_inbounds is EqualUnmodifiableListView) return _inbounds;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(value);
+}
+
 
 /// Create a copy of XrayConfig
 /// with the given fields replaced by the non-null parameter values.
@@ -295,16 +305,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _XrayConfig&&(identical(other.version, version) || other.version == version)&&(identical(other.log, log) || other.log == log)&&(identical(other.api, api) || other.api == api)&&(identical(other.dns, dns) || other.dns == dns)&&(identical(other.fakeDns, fakeDns) || other.fakeDns == fakeDns));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _XrayConfig&&(identical(other.version, version) || other.version == version)&&(identical(other.log, log) || other.log == log)&&(identical(other.api, api) || other.api == api)&&(identical(other.dns, dns) || other.dns == dns)&&(identical(other.fakeDns, fakeDns) || other.fakeDns == fakeDns)&&const DeepCollectionEquality().equals(other._inbounds, _inbounds));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,version,log,api,dns,fakeDns);
+int get hashCode => Object.hash(runtimeType,version,log,api,dns,fakeDns,const DeepCollectionEquality().hash(_inbounds));
 
 @override
 String toString() {
-  return 'XrayConfig(version: $version, log: $log, api: $api, dns: $dns, fakeDns: $fakeDns)';
+  return 'XrayConfig(version: $version, log: $log, api: $api, dns: $dns, fakeDns: $fakeDns, inbounds: $inbounds)';
 }
 
 
@@ -315,7 +325,7 @@ abstract mixin class _$XrayConfigCopyWith<$Res> implements $XrayConfigCopyWith<$
   factory _$XrayConfigCopyWith(_XrayConfig value, $Res Function(_XrayConfig) _then) = __$XrayConfigCopyWithImpl;
 @override @useResult
 $Res call({
- Version4Ray? version, Log4Ray? log, Api4Ray? api, Dns4Ray? dns, FakeDns4Ray? fakeDns
+ Version4Ray? version, Log4Ray? log, Api4Ray? api, Dns4Ray? dns, FakeDns4Ray? fakeDns, List<Inbound4Ray>? inbounds
 });
 
 
@@ -332,14 +342,15 @@ class __$XrayConfigCopyWithImpl<$Res>
 
 /// Create a copy of XrayConfig
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? version = freezed,Object? log = freezed,Object? api = freezed,Object? dns = freezed,Object? fakeDns = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? version = freezed,Object? log = freezed,Object? api = freezed,Object? dns = freezed,Object? fakeDns = freezed,Object? inbounds = freezed,}) {
   return _then(_XrayConfig(
 version: freezed == version ? _self.version : version // ignore: cast_nullable_to_non_nullable
 as Version4Ray?,log: freezed == log ? _self.log : log // ignore: cast_nullable_to_non_nullable
 as Log4Ray?,api: freezed == api ? _self.api : api // ignore: cast_nullable_to_non_nullable
 as Api4Ray?,dns: freezed == dns ? _self.dns : dns // ignore: cast_nullable_to_non_nullable
 as Dns4Ray?,fakeDns: freezed == fakeDns ? _self.fakeDns : fakeDns // ignore: cast_nullable_to_non_nullable
-as FakeDns4Ray?,
+as FakeDns4Ray?,inbounds: freezed == inbounds ? _self._inbounds : inbounds // ignore: cast_nullable_to_non_nullable
+as List<Inbound4Ray>?,
   ));
 }
 
