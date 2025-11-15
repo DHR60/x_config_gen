@@ -7,6 +7,11 @@ import 'package:x_config_gen/src/xray/dns/dns.dart';
 import 'package:x_config_gen/src/xray/fakedns/fakedns.dart';
 import 'package:x_config_gen/src/xray/inbounds/inbound.dart';
 import 'package:x_config_gen/src/xray/outbounds/outbound.dart';
+import 'package:x_config_gen/src/xray/routing/routing.dart';
+import 'package:x_config_gen/src/xray/stats/stats.dart';
+import 'package:x_config_gen/src/xray/metrics/metrics.dart';
+import 'package:x_config_gen/src/xray/observatory/observatory.dart';
+import 'package:x_config_gen/src/xray/observatory/burst_observatory.dart';
 
 export 'package:x_config_gen/src/xray/version/version.dart';
 export 'package:x_config_gen/src/xray/log/log.dart';
@@ -15,6 +20,11 @@ export 'package:x_config_gen/src/xray/dns/dns.dart';
 export 'package:x_config_gen/src/xray/fakedns/fakedns.dart';
 export 'package:x_config_gen/src/xray/inbounds/inbound.dart';
 export 'package:x_config_gen/src/xray/outbounds/outbound.dart';
+export 'package:x_config_gen/src/xray/routing/routing.dart';
+export 'package:x_config_gen/src/xray/stats/stats.dart';
+export 'package:x_config_gen/src/xray/metrics/metrics.dart';
+export 'package:x_config_gen/src/xray/observatory/observatory.dart';
+export 'package:x_config_gen/src/xray/observatory/burst_observatory.dart';
 
 part 'xray.freezed.dart';
 part 'xray.g.dart';
@@ -30,6 +40,11 @@ abstract class XrayConfig with _$XrayConfig {
     FakeDns4Ray? fakeDns,
     List<Inbound4Ray>? inbounds,
     List<Outbound4Ray>? outbounds,
+    Routing4Ray? routing,
+    Stats4Ray? stats,
+    Metrics4Ray? metrics,
+    Observatory4Ray? observatory,
+    BurstObservatory4Ray? burstObservatory,
   }) = _XrayConfig;
 
   factory XrayConfig.fromJson(Map<String, dynamic> json) =>

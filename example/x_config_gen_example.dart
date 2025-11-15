@@ -126,6 +126,23 @@ void main() {
         ),
       ),
     ],
+    routing: Routing4Ray(
+      domainStrategy: 'IPIfNonMatch',
+      rules: [
+        RoutingRule4Ray(
+          domain: ['geosite:cn'],
+          outboundTag: 'direct',
+        ),
+        RoutingRule4Ray(
+          ip: ['geoip:private'],
+          outboundTag: 'direct',
+        ),
+        RoutingRule4Ray(
+          protocol: ['bittorrent'],
+          outboundTag: 'blocked',
+        ),
+      ],
+    ),
   );
 
   // print config as json
