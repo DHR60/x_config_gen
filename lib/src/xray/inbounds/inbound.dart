@@ -15,7 +15,7 @@ part 'inbound.g.dart';
 abstract class Inbound4Ray with _$Inbound4Ray {
   const Inbound4Ray._();
 
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory Inbound4Ray({
     String? tag,
     String? protocol,

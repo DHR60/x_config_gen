@@ -222,7 +222,7 @@ return $default(_that.tag,_that.selector,_that.fallbackTag,_that.strategy);case 
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _RoutingBalancers4Ray implements RoutingBalancers4Ray {
   const _RoutingBalancers4Ray({this.tag, final  List<String>? selector, this.fallbackTag, this.strategy}): _selector = selector;
   factory _RoutingBalancers4Ray.fromJson(Map<String, dynamic> json) => _$RoutingBalancers4RayFromJson(json);
@@ -524,7 +524,7 @@ return $default(_that.type,_that.settings);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _RoutingBalancersStrategy4Ray implements RoutingBalancersStrategy4Ray {
   const _RoutingBalancersStrategy4Ray({this.type, this.settings});
   factory _RoutingBalancersStrategy4Ray.fromJson(Map<String, dynamic> json) => _$RoutingBalancersStrategy4RayFromJson(json);
@@ -805,7 +805,7 @@ return $default(_that.expected,_that.maxRTT,_that.tolerance,_that.baselines,_tha
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _RoutingBalancersStrategySetting4Ray implements RoutingBalancersStrategySetting4Ray {
   const _RoutingBalancersStrategySetting4Ray({this.expected, this.maxRTT, this.tolerance, final  List<String>? baselines, final  List<RoutingBalancersStrategySettingCost4Ray>? costs}): _baselines = baselines,_costs = costs;
   factory _RoutingBalancersStrategySetting4Ray.fromJson(Map<String, dynamic> json) => _$RoutingBalancersStrategySetting4RayFromJson(json);
@@ -1093,8 +1093,8 @@ return $default(_that.regexp,_that.match,_that.value);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _RoutingBalancersStrategySettingCost4Ray implements RoutingBalancersStrategySettingCost4Ray {
   const _RoutingBalancersStrategySettingCost4Ray({this.regexp, this.match, this.value});
   factory _RoutingBalancersStrategySettingCost4Ray.fromJson(Map<String, dynamic> json) => _$RoutingBalancersStrategySettingCost4RayFromJson(json);

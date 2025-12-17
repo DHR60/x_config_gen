@@ -11,7 +11,7 @@ part 'routing.g.dart';
 
 @freezed
 abstract class Routing4Ray with _$Routing4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory Routing4Ray({
     String? domainStrategy,
     List<RoutingRule4Ray>? rules,

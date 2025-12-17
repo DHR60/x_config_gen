@@ -211,7 +211,7 @@ return $default(_that.name,_that.alpn,_that.path,_that.dest,_that.xver);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _Fallback4Ray implements Fallback4Ray {
   const _Fallback4Ray({this.name, this.alpn, this.path, required this.dest, this.xver});
   factory _Fallback4Ray.fromJson(Map<String, dynamic> json) => _$Fallback4RayFromJson(json);

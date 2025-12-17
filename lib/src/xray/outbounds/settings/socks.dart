@@ -5,6 +5,7 @@ part 'socks.g.dart';
 
 @freezed
 abstract class SocksOutboundSettings4Ray with _$SocksOutboundSettings4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory SocksOutboundSettings4Ray({
     String? address,
     int? port,

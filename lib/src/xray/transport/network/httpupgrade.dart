@@ -5,6 +5,7 @@ part 'httpupgrade.g.dart';
 
 @freezed
 abstract class HttpUpgradeTransport4Ray with _$HttpUpgradeTransport4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory HttpUpgradeTransport4Ray({
     bool? acceptProxyProtocol,
     String? path,

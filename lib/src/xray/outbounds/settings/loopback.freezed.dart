@@ -206,8 +206,8 @@ return $default(_that.inboundTag);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _LoopbackOutboundSettings4Ray implements LoopbackOutboundSettings4Ray {
   const _LoopbackOutboundSettings4Ray({this.inboundTag});
   factory _LoopbackOutboundSettings4Ray.fromJson(Map<String, dynamic> json) => _$LoopbackOutboundSettings4RayFromJson(json);

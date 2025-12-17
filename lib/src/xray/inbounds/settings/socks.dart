@@ -8,7 +8,7 @@ part 'socks.g.dart';
 
 @freezed
 abstract class SocksInboundSettings4Ray with _$SocksInboundSettings4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory SocksInboundSettings4Ray({
     String? auth,
     List<Account4Ray>? accounts,

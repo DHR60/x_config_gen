@@ -208,8 +208,8 @@ return $default(_that.tag,_that.listen,_that.services);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _Api4Ray implements Api4Ray {
   const _Api4Ray({this.tag, this.listen, final  List<String>? services}): _services = services;
   factory _Api4Ray.fromJson(Map<String, dynamic> json) => _$Api4RayFromJson(json);

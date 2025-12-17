@@ -210,8 +210,8 @@ return $default(_that.network,_that.address,_that.port,_that.nonIPQuery,_that.bl
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _DnsOutboundSettings4Ray implements DnsOutboundSettings4Ray {
   const _DnsOutboundSettings4Ray({this.network, this.address, this.port, this.nonIPQuery, final  List<int>? blockTypes}): _blockTypes = blockTypes;
   factory _DnsOutboundSettings4Ray.fromJson(Map<String, dynamic> json) => _$DnsOutboundSettings4RayFromJson(json);

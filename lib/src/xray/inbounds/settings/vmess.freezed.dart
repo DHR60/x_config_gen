@@ -220,7 +220,7 @@ return $default(_that.clients,_that.defaultSettings);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _VmessInboundSettings4Ray implements VmessInboundSettings4Ray {
   const _VmessInboundSettings4Ray({required final  List<VmessInboundAccount4Ray> clients, @JsonKey(name: "default") this.defaultSettings}): _clients = clients;
   factory _VmessInboundSettings4Ray.fromJson(Map<String, dynamic> json) => _$VmessInboundSettings4RayFromJson(json);
@@ -505,7 +505,7 @@ return $default(_that.id,_that.email,_that.level);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _VmessInboundAccount4Ray implements VmessInboundAccount4Ray {
   const _VmessInboundAccount4Ray({required this.id, this.email, this.level});
   factory _VmessInboundAccount4Ray.fromJson(Map<String, dynamic> json) => _$VmessInboundAccount4RayFromJson(json);
@@ -772,7 +772,7 @@ return $default(_that.level);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _VmessInboundDefault4Ray implements VmessInboundDefault4Ray {
   const _VmessInboundDefault4Ray({required this.level});
   factory _VmessInboundDefault4Ray.fromJson(Map<String, dynamic> json) => _$VmessInboundDefault4RayFromJson(json);

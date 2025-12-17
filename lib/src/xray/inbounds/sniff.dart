@@ -5,7 +5,7 @@ part 'sniff.g.dart';
 
 @freezed
 abstract class Sniff4Ray with _$Sniff4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory Sniff4Ray({
     bool? enabled,
     List<String>? destOverride,

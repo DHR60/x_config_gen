@@ -15,7 +15,7 @@ part 'outbound.g.dart';
 abstract class Outbound4Ray with _$Outbound4Ray {
   const Outbound4Ray._();
 
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory Outbound4Ray({
     String? sendThrough,
     String? protocol,

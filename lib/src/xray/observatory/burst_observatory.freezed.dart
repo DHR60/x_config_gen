@@ -220,7 +220,7 @@ return $default(_that.subjectSelector,_that.pingConfig);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _BurstObservatory4Ray implements BurstObservatory4Ray {
   const _BurstObservatory4Ray({final  List<String>? subjectSelector, this.pingConfig}): _subjectSelector = subjectSelector;
   factory _BurstObservatory4Ray.fromJson(Map<String, dynamic> json) => _$BurstObservatory4RayFromJson(json);
@@ -508,8 +508,8 @@ return $default(_that.destination,_that.connectivity,_that.interval,_that.sampli
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _BurstObservatoryPing4Ray implements BurstObservatoryPing4Ray {
   const _BurstObservatoryPing4Ray({this.destination, this.connectivity, this.interval, this.sampling, this.timeout});
   factory _BurstObservatoryPing4Ray.fromJson(Map<String, dynamic> json) => _$BurstObservatoryPing4RayFromJson(json);

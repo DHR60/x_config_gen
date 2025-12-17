@@ -209,7 +209,7 @@ return $default(_that.secretKey,_that.peers,_that.mtu);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _WireguardInboundSettings4Ray implements WireguardInboundSettings4Ray {
   const _WireguardInboundSettings4Ray({required this.secretKey, required final  List<WireguardInboundPeer4Ray> peers, this.mtu}): _peers = peers;
   factory _WireguardInboundSettings4Ray.fromJson(Map<String, dynamic> json) => _$WireguardInboundSettings4RayFromJson(json);
@@ -483,7 +483,7 @@ return $default(_that.publicKey,_that.allowedIPs);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _WireguardInboundPeer4Ray implements WireguardInboundPeer4Ray {
   const _WireguardInboundPeer4Ray({required this.publicKey, final  List<String>? allowedIPs}): _allowedIPs = allowedIPs;
   factory _WireguardInboundPeer4Ray.fromJson(Map<String, dynamic> json) => _$WireguardInboundPeer4RayFromJson(json);

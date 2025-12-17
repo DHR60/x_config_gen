@@ -209,8 +209,8 @@ return $default(_that.tryDelayMs,_that.prioritizeIPv6,_that.interleave,_that.max
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _HappyEyeballs4Ray implements HappyEyeballs4Ray {
   const _HappyEyeballs4Ray({this.tryDelayMs, this.prioritizeIPv6, this.interleave, this.maxConcurrentTry});
   factory _HappyEyeballs4Ray.fromJson(Map<String, dynamic> json) => _$HappyEyeballs4RayFromJson(json);

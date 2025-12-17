@@ -5,6 +5,7 @@ part 'happy_eyeballs.g.dart';
 
 @freezed
 abstract class HappyEyeballs4Ray with _$HappyEyeballs4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory HappyEyeballs4Ray({
     int? tryDelayMs,
     bool? prioritizeIPv6,

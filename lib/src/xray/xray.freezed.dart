@@ -338,7 +338,7 @@ return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns,_that.
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _XrayConfig implements XrayConfig {
   const _XrayConfig({this.version, this.log, this.api, this.dns, this.fakeDns, final  List<Inbound4Ray>? inbounds, final  List<Outbound4Ray>? outbounds, this.routing, this.stats, this.metrics, this.observatory, this.burstObservatory}): _inbounds = inbounds,_outbounds = outbounds;
   factory _XrayConfig.fromJson(Map<String, dynamic> json) => _$XrayConfigFromJson(json);

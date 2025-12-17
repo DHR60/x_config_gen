@@ -8,7 +8,7 @@ part 'http.g.dart';
 
 @freezed
 abstract class HttpInboundSettings4Ray with _$HttpInboundSettings4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory HttpInboundSettings4Ray({
     List<Account4Ray>? accounts,
     bool? allowTransparent,

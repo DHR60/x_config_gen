@@ -210,8 +210,8 @@ return $default(_that.acceptProxyProtocol,_that.path,_that.host,_that.headers,_t
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _WebSocketTransport4Ray implements WebSocketTransport4Ray {
   const _WebSocketTransport4Ray({this.acceptProxyProtocol, this.path, this.host, final  Map<String, String>? headers, this.heartbeatPeriod}): _headers = headers;
   factory _WebSocketTransport4Ray.fromJson(Map<String, dynamic> json) => _$WebSocketTransport4RayFromJson(json);

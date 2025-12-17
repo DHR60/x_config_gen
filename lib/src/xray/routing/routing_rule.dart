@@ -5,6 +5,7 @@ part 'routing_rule.g.dart';
 
 @freezed
 abstract class RoutingRule4Ray with _$RoutingRule4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory RoutingRule4Ray({
     List<String>? domain,
     List<String>? ip,

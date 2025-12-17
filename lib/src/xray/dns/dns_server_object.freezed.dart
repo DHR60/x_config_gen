@@ -253,8 +253,8 @@ return $default(_that.tag,_that.address,_that.port,_that.domains,_that.expectedI
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _DnsServerObject4Ray implements DnsServerObject4Ray {
   const _DnsServerObject4Ray({this.tag, required this.address, this.port, this.domains, this.expectedIPs, this.unexpectedIPs, this.skipFallback, this.clientIP, this.queryStrategy, this.timeoutMs, this.disableCache, this.finalQuery});
   factory _DnsServerObject4Ray.fromJson(Map<String, dynamic> json) => _$DnsServerObject4RayFromJson(json);

@@ -5,7 +5,7 @@ part 'freedom.g.dart';
 
 @freezed
 abstract class FreedomOutboundSettings4Ray with _$FreedomOutboundSettings4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory FreedomOutboundSettings4Ray({
     String? domainStrategy,
     String? redirect,
@@ -21,6 +21,7 @@ abstract class FreedomOutboundSettings4Ray with _$FreedomOutboundSettings4Ray {
 
 @freezed
 abstract class FreedomOutboundFragment4Ray with _$FreedomOutboundFragment4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory FreedomOutboundFragment4Ray({
     String? packets,
     String? length,
@@ -33,6 +34,7 @@ abstract class FreedomOutboundFragment4Ray with _$FreedomOutboundFragment4Ray {
 
 @freezed
 abstract class FreedomOutboundNoises4Ray with _$FreedomOutboundNoises4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory FreedomOutboundNoises4Ray({
     String? type,
     String? packet,

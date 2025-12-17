@@ -5,6 +5,7 @@ part 'observatory.g.dart';
 
 @freezed
 abstract class Observatory4Ray with _$Observatory4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory Observatory4Ray({
     List<String>? subjectSelector,
     String? probeUrl,

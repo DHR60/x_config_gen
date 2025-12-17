@@ -207,8 +207,8 @@ return $default(_that.min,_that.max);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _Version4Ray implements Version4Ray {
   const _Version4Ray({this.min, this.max});
   factory _Version4Ray.fromJson(Map<String, dynamic> json) => _$Version4RayFromJson(json);

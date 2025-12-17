@@ -213,8 +213,8 @@ return $default(_that.secretKey,_that.address,_that.peers,_that.noKernelTun,_tha
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _WireguardOutboundSettings4Ray implements WireguardOutboundSettings4Ray {
   const _WireguardOutboundSettings4Ray({this.secretKey, final  List<String>? address, final  List<WireguardOutboundPeer4Ray>? peers, this.noKernelTun, this.mtu, final  List<int>? reserved, this.workers, this.domainStrategy}): _address = address,_peers = peers,_reserved = reserved;
   factory _WireguardOutboundSettings4Ray.fromJson(Map<String, dynamic> json) => _$WireguardOutboundSettings4RayFromJson(json);
@@ -518,8 +518,8 @@ return $default(_that.endpoint,_that.publicKey,_that.preSharedKey,_that.keepAliv
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _WireguardOutboundPeer4Ray implements WireguardOutboundPeer4Ray {
   const _WireguardOutboundPeer4Ray({this.endpoint, this.publicKey, this.preSharedKey, this.keepAlive, final  List<String>? allowedIPs}): _allowedIPs = allowedIPs;
   factory _WireguardOutboundPeer4Ray.fromJson(Map<String, dynamic> json) => _$WireguardOutboundPeer4RayFromJson(json);

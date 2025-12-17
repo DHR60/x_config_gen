@@ -209,8 +209,8 @@ return $default(_that.enabled,_that.concurrency,_that.xudpConcurrency,_that.xudp
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _Mux4Ray implements Mux4Ray {
   const _Mux4Ray({this.enabled, this.concurrency, this.xudpConcurrency, this.xudpProxyUDP443});
   factory _Mux4Ray.fromJson(Map<String, dynamic> json) => _$Mux4RayFromJson(json);

@@ -245,7 +245,7 @@ return $default(_that.sendThrough,_that.protocol,_that.tag,_that.settings,_that.
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _Outbound4Ray extends Outbound4Ray {
   const _Outbound4Ray({this.sendThrough, this.protocol, this.tag, @OutboundSettingsConverter() this.settings, this.streamSettings, this.mux}): super._();
   

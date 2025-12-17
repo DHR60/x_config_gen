@@ -244,7 +244,7 @@ return $default(_that.tag,_that.protocol,_that.settings,_that.streamSettings,_th
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _Inbound4Ray extends Inbound4Ray {
   const _Inbound4Ray({this.tag, this.protocol, @InboundSettingsConverter() this.settings, this.streamSettings, this.sniffing}): super._();
   

@@ -210,8 +210,8 @@ return $default(_that.address,_that.port,_that.password,_that.email,_that.level)
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _TrojanOutboundSettings4Ray implements TrojanOutboundSettings4Ray {
   const _TrojanOutboundSettings4Ray({this.address, this.port, this.password, this.email, this.level});
   factory _TrojanOutboundSettings4Ray.fromJson(Map<String, dynamic> json) => _$TrojanOutboundSettings4RayFromJson(json);

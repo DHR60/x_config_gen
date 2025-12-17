@@ -220,7 +220,7 @@ return $default(_that.acceptProxyProtocol,_that.header);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _RawTransport4Ray implements RawTransport4Ray {
   const _RawTransport4Ray({this.acceptProxyProtocol, this.header});
   factory _RawTransport4Ray.fromJson(Map<String, dynamic> json) => _$RawTransport4RayFromJson(json);
@@ -523,7 +523,7 @@ return $default(_that.type,_that.request,_that.response);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _RawHeader4Ray implements RawHeader4Ray {
   const _RawHeader4Ray({this.type, this.request, this.response});
   factory _RawHeader4Ray.fromJson(Map<String, dynamic> json) => _$RawHeader4RayFromJson(json);
@@ -817,7 +817,7 @@ return $default(_that.version,_that.method,_that.path,_that.headers);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _RawHttpRequest4Ray implements RawHttpRequest4Ray {
   const _RawHttpRequest4Ray({this.version, this.method, final  List<String>? path, final  Map<String, MultiValueString>? headers}): _path = path,_headers = headers;
   factory _RawHttpRequest4Ray.fromJson(Map<String, dynamic> json) => _$RawHttpRequest4RayFromJson(json);
@@ -1105,7 +1105,7 @@ return $default(_that.version,_that.status,_that.reason,_that.headers);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _RawHttpResponse4Ray implements RawHttpResponse4Ray {
   const _RawHttpResponse4Ray({this.version, this.status, this.reason, final  Map<String, MultiValueString>? headers}): _headers = headers;
   factory _RawHttpResponse4Ray.fromJson(Map<String, dynamic> json) => _$RawHttpResponse4RayFromJson(json);

@@ -7,6 +7,7 @@ part 'dns_server_object.g.dart';
 
 @freezed
 abstract class DnsServerObject4Ray with _$DnsServerObject4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory DnsServerObject4Ray({
     String? tag,
     required String address,

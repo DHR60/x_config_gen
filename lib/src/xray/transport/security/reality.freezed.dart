@@ -249,7 +249,7 @@ return $default(_that.show,_that.target,_that.xver,_that.serverNames,_that.priva
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _Reality4Ray implements Reality4Ray {
   const _Reality4Ray({this.show, this.target, this.xver, final  List<String>? serverNames, this.privateKey, this.minClientVer, this.maxClientVer, this.maxTimeDiff, final  List<String>? shortIds, this.mldsa65Seed, this.limitFallbackUpload, this.limitFallbackDownload, this.fingerprint, this.serverName, this.password, this.publicKey, this.shortId, this.mldsa65Verify, this.spiderX}): _serverNames = serverNames,_shortIds = shortIds;
   factory _Reality4Ray.fromJson(Map<String, dynamic> json) => _$Reality4RayFromJson(json);
@@ -589,8 +589,8 @@ return $default(_that.afterBytes,_that.bytesPerSec,_that.burstBytesPerSec);case 
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _LimitFallback4Ray implements LimitFallback4Ray {
   const _LimitFallback4Ray({this.afterBytes, this.bytesPerSec, this.burstBytesPerSec});
   factory _LimitFallback4Ray.fromJson(Map<String, dynamic> json) => _$LimitFallback4RayFromJson(json);

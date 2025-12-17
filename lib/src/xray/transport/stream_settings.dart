@@ -25,7 +25,7 @@ part 'stream_settings.g.dart';
 
 @freezed
 abstract class StreamSettings4Ray with _$StreamSettings4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory StreamSettings4Ray({
     String? network,
     String? security,

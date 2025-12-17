@@ -5,7 +5,7 @@ part 'shadowsocks.g.dart';
 
 @freezed
 abstract class ShadowsocksInboundSettings4Ray with _$ShadowsocksInboundSettings4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory ShadowsocksInboundSettings4Ray({
     String? network,
     String? method,
@@ -22,7 +22,7 @@ abstract class ShadowsocksInboundSettings4Ray with _$ShadowsocksInboundSettings4
 
 @freezed
 abstract class ShadowsocksInboundAccount4Ray with _$ShadowsocksInboundAccount4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory ShadowsocksInboundAccount4Ray({
     String? password,
     String? method,

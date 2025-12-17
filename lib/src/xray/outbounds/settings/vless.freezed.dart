@@ -225,7 +225,7 @@ return $default(_that.address,_that.port,_that.id,_that.encryption,_that.flow,_t
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _VlessOutboundSettings4Ray implements VlessOutboundSettings4Ray {
   const _VlessOutboundSettings4Ray({this.address, this.port, this.id, this.encryption, this.flow, this.level, this.reverse});
   factory _VlessOutboundSettings4Ray.fromJson(Map<String, dynamic> json) => _$VlessOutboundSettings4RayFromJson(json);
@@ -511,8 +511,8 @@ return $default(_that.tag);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _VlessOutboundReverse4Ray implements VlessOutboundReverse4Ray {
   const _VlessOutboundReverse4Ray({this.tag});
   factory _VlessOutboundReverse4Ray.fromJson(Map<String, dynamic> json) => _$VlessOutboundReverse4RayFromJson(json);

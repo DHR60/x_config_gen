@@ -221,8 +221,8 @@ return $default(_that.domain,_that.ip,_that.port,_that.sourcePort,_that.localPor
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _RoutingRule4Ray implements RoutingRule4Ray {
   const _RoutingRule4Ray({final  List<String>? domain, final  List<String>? ip, this.port, this.sourcePort, this.localPort, this.network, final  List<String>? sourceIP, final  List<String>? localIP, final  List<String>? user, this.vlessRoute, final  List<String>? inboundTag, final  List<String>? protocol, final  Map<String, String>? attrs, this.outboundTag, this.balancerTag, this.ruleTag}): _domain = domain,_ip = ip,_sourceIP = sourceIP,_localIP = localIP,_user = user,_inboundTag = inboundTag,_protocol = protocol,_attrs = attrs;
   factory _RoutingRule4Ray.fromJson(Map<String, dynamic> json) => _$RoutingRule4RayFromJson(json);

@@ -5,7 +5,7 @@ part 'blackhole.g.dart';
 
 @freezed
 abstract class BlackholeOutboundSettings4Ray with _$BlackholeOutboundSettings4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory BlackholeOutboundSettings4Ray({
     BlackholeOutboundResponse4Ray? response,
   }) = _BlackholeOutboundSettings4Ray;
@@ -16,6 +16,7 @@ abstract class BlackholeOutboundSettings4Ray with _$BlackholeOutboundSettings4Ra
 
 @freezed
 abstract class BlackholeOutboundResponse4Ray with _$BlackholeOutboundResponse4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory BlackholeOutboundResponse4Ray({
     String? type,
   }) = _BlackholeOutboundResponse4Ray;

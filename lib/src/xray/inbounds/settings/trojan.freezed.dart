@@ -208,7 +208,7 @@ return $default(_that.clients,_that.fallbacks);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _TrojanInboundSettings4Ray implements TrojanInboundSettings4Ray {
   const _TrojanInboundSettings4Ray({required final  List<TrojanInboundAccount4Ray> clients, final  List<Fallback4Ray>? fallbacks}): _clients = clients,_fallbacks = fallbacks;
   factory _TrojanInboundSettings4Ray.fromJson(Map<String, dynamic> json) => _$TrojanInboundSettings4RayFromJson(json);
@@ -489,7 +489,7 @@ return $default(_that.password,_that.email,_that.level);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _TrojanInboundAccount4Ray implements TrojanInboundAccount4Ray {
   const _TrojanInboundAccount4Ray({required this.password, this.email, this.level});
   factory _TrojanInboundAccount4Ray.fromJson(Map<String, dynamic> json) => _$TrojanInboundAccount4RayFromJson(json);

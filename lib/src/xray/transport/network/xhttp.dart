@@ -8,7 +8,7 @@ part 'xhttp.g.dart';
 
 @freezed
 abstract class XHttpTransport4Ray with _$XHttpTransport4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory XHttpTransport4Ray({
     String? host,
     String? path,
@@ -22,7 +22,7 @@ abstract class XHttpTransport4Ray with _$XHttpTransport4Ray {
 
 @freezed
 abstract class XHttpExtra4Ray with _$XHttpExtra4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory XHttpExtra4Ray({
     Map<String, MultiValueString>? headers,
     String? xPaddingBytes,
@@ -42,7 +42,7 @@ abstract class XHttpExtra4Ray with _$XHttpExtra4Ray {
 
 @freezed
 abstract class XHttpExtraXmux4Ray with _$XHttpExtraXmux4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory XHttpExtraXmux4Ray({
     String? maxConcurrency,
     int? maxConnections,
@@ -58,7 +58,7 @@ abstract class XHttpExtraXmux4Ray with _$XHttpExtraXmux4Ray {
 
 @freezed
 abstract class XHttpExtraDownload4Ray with _$XHttpExtraDownload4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory XHttpExtraDownload4Ray({
     String? address,
     int? port,

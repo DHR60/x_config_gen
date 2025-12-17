@@ -5,6 +5,7 @@ part 'api.g.dart';
 
 @freezed
 abstract class Api4Ray with _$Api4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory Api4Ray({
     String? tag,
     String? listen,

@@ -5,6 +5,7 @@ part 'stats.g.dart';
 
 @freezed
 abstract class Stats4Ray with _$Stats4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory Stats4Ray({
     @JsonKey(includeFromJson: false, includeToJson: false) Object? placeholder,
   }) = _Stats4Ray;

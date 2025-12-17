@@ -211,8 +211,8 @@ return $default(_that.address,_that.port,_that.id,_that.security,_that.level,_th
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _VmessOutboundSettings4Ray implements VmessOutboundSettings4Ray {
   const _VmessOutboundSettings4Ray({this.address, this.port, this.id, this.security, this.level, this.experiments});
   factory _VmessOutboundSettings4Ray.fromJson(Map<String, dynamic> json) => _$VmessOutboundSettings4RayFromJson(json);

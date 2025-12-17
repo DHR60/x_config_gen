@@ -5,6 +5,7 @@ part 'log.g.dart';
 
 @freezed
 abstract class Log4Ray with _$Log4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory Log4Ray({
     String? access,
     String? error,

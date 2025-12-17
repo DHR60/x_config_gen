@@ -211,7 +211,7 @@ return $default(_that.auth,_that.accounts,_that.udp,_that.ip,_that.userLevel);ca
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _SocksInboundSettings4Ray implements SocksInboundSettings4Ray {
   const _SocksInboundSettings4Ray({this.auth, final  List<Account4Ray>? accounts, this.udp, this.ip, this.userLevel}): _accounts = accounts;
   factory _SocksInboundSettings4Ray.fromJson(Map<String, dynamic> json) => _$SocksInboundSettings4RayFromJson(json);

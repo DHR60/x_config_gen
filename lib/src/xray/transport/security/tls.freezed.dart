@@ -237,7 +237,7 @@ return $default(_that.serverName,_that.verifyPeerCertInNames,_that.rejectUnknown
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _Tls4Ray implements Tls4Ray {
   const _Tls4Ray({this.serverName, final  List<String>? verifyPeerCertInNames, this.rejectUnknownSni, this.allowInsecure, final  List<String>? alpn, this.minVersion, this.maxVersion, this.cipherSuites, final  List<Certificate4Ray>? certificates, this.disableSystemRoot, this.enableSessionResumption, this.fingerprint, final  List<String>? pinnedPeerCertificateChainSha256, final  List<String>? curvePreferences, this.masterKeyLog, this.echServerKeys, this.echConfigList, this.echForceQuery, this.echSockopt}): _verifyPeerCertInNames = verifyPeerCertInNames,_alpn = alpn,_certificates = certificates,_pinnedPeerCertificateChainSha256 = pinnedPeerCertificateChainSha256,_curvePreferences = curvePreferences;
   factory _Tls4Ray.fromJson(Map<String, dynamic> json) => _$Tls4RayFromJson(json);
@@ -594,8 +594,8 @@ return $default(_that.ocspStapling,_that.oneTimeLoading,_that.usage,_that.buildC
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _Certificate4Ray implements Certificate4Ray {
   const _Certificate4Ray({this.ocspStapling, this.oneTimeLoading, this.usage, this.buildChain, this.certificateFile, this.keyFile, final  List<String>? certificate, final  List<String>? key}): _certificate = certificate,_key = key;
   factory _Certificate4Ray.fromJson(Map<String, dynamic> json) => _$Certificate4RayFromJson(json);

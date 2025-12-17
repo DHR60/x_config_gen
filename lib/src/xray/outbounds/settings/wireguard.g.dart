@@ -32,7 +32,7 @@ Map<String, dynamic> _$WireguardOutboundSettings4RayToJson(
 ) => <String, dynamic>{
   'secretKey': ?instance.secretKey,
   'address': ?instance.address,
-  'peers': ?instance.peers,
+  'peers': ?instance.peers?.map((e) => e.toJson()).toList(),
   'noKernelTun': ?instance.noKernelTun,
   'mtu': ?instance.mtu,
   'reserved': ?instance.reserved,

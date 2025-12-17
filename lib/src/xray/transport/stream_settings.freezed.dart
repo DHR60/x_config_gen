@@ -325,7 +325,7 @@ return $default(_that.network,_that.security,_that.tlsSettings,_that.realitySett
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _StreamSettings4Ray implements StreamSettings4Ray {
   const _StreamSettings4Ray({this.network, this.security, this.tlsSettings, this.realitySettings, this.rawSettings, this.xhttpSettings, this.kcpSettings, this.grpcSettings, this.wsSettings, this.httpSettings, this.sockopt});
   factory _StreamSettings4Ray.fromJson(Map<String, dynamic> json) => _$StreamSettings4RayFromJson(json);

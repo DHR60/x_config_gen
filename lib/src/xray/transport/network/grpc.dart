@@ -5,7 +5,7 @@ part 'grpc.g.dart';
 
 @freezed
 abstract class GrpcTransport4Ray with _$GrpcTransport4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory GrpcTransport4Ray({
     String? authority,
     String? serviceName,

@@ -5,6 +5,7 @@ part 'dns.g.dart';
 
 @freezed
 abstract class DnsOutboundSettings4Ray with _$DnsOutboundSettings4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory DnsOutboundSettings4Ray({
     String? network,
     String? address,

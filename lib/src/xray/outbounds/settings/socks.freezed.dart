@@ -211,8 +211,8 @@ return $default(_that.address,_that.port,_that.user,_that.pass,_that.level,_that
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _SocksOutboundSettings4Ray implements SocksOutboundSettings4Ray {
   const _SocksOutboundSettings4Ray({this.address, this.port, this.user, this.pass, this.level, this.email});
   factory _SocksOutboundSettings4Ray.fromJson(Map<String, dynamic> json) => _$SocksOutboundSettings4RayFromJson(json);

@@ -8,7 +8,7 @@ part 'trojan.g.dart';
 
 @freezed
 abstract class TrojanInboundSettings4Ray with _$TrojanInboundSettings4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory TrojanInboundSettings4Ray({
     required List<TrojanInboundAccount4Ray> clients,
     List<Fallback4Ray>? fallbacks,
@@ -20,7 +20,7 @@ abstract class TrojanInboundSettings4Ray with _$TrojanInboundSettings4Ray {
 
 @freezed
 abstract class TrojanInboundAccount4Ray with _$TrojanInboundAccount4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory TrojanInboundAccount4Ray({
     required String password,
     String? email,

@@ -5,6 +5,7 @@ part 'version.g.dart';
 
 @freezed
 abstract class Version4Ray with _$Version4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory Version4Ray({
     String? min,
     String? max,

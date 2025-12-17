@@ -209,7 +209,7 @@ return $default(_that.domainStrategy,_that.rules,_that.balancers);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _Routing4Ray implements Routing4Ray {
   const _Routing4Ray({this.domainStrategy, final  List<RoutingRule4Ray>? rules, final  List<RoutingBalancers4Ray>? balancers}): _rules = rules,_balancers = balancers;
   factory _Routing4Ray.fromJson(Map<String, dynamic> json) => _$Routing4RayFromJson(json);

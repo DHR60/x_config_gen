@@ -211,7 +211,7 @@ return $default(_that.enabled,_that.destOverride,_that.metadataOnly,_that.domain
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _Sniff4Ray implements Sniff4Ray {
   const _Sniff4Ray({this.enabled, final  List<String>? destOverride, this.metadataOnly, final  List<String>? domainsExcluded, this.routeOnly}): _destOverride = destOverride,_domainsExcluded = domainsExcluded;
   factory _Sniff4Ray.fromJson(Map<String, dynamic> json) => _$Sniff4RayFromJson(json);

@@ -5,6 +5,7 @@ part 'fakedns.g.dart';
 
 @freezed
 abstract class FakeDns4Ray with _$FakeDns4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory FakeDns4Ray({
     required String ipPool,
     required int poolSize,

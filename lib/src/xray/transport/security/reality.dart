@@ -5,7 +5,7 @@ part 'reality.g.dart';
 
 @freezed
 abstract class Reality4Ray with _$Reality4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory Reality4Ray({
     bool? show,
     String? target,
@@ -34,6 +34,7 @@ abstract class Reality4Ray with _$Reality4Ray {
 
 @freezed
 abstract class LimitFallback4Ray with _$LimitFallback4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory LimitFallback4Ray({
     int? afterBytes,
     int? bytesPerSec,

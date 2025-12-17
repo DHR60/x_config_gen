@@ -5,7 +5,7 @@ part 'routing_balancers.g.dart';
 
 @freezed
 abstract class RoutingBalancers4Ray with _$RoutingBalancers4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory RoutingBalancers4Ray({
     String? tag,
     List<String>? selector,
@@ -19,7 +19,7 @@ abstract class RoutingBalancers4Ray with _$RoutingBalancers4Ray {
 
 @freezed
 abstract class RoutingBalancersStrategy4Ray with _$RoutingBalancersStrategy4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory RoutingBalancersStrategy4Ray({
     String? type,
     RoutingBalancersStrategySetting4Ray? settings,
@@ -31,7 +31,7 @@ abstract class RoutingBalancersStrategy4Ray with _$RoutingBalancersStrategy4Ray 
 
 @freezed
 abstract class RoutingBalancersStrategySetting4Ray with _$RoutingBalancersStrategySetting4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory RoutingBalancersStrategySetting4Ray({
     int? expected,
     String? maxRTT,
@@ -47,6 +47,7 @@ abstract class RoutingBalancersStrategySetting4Ray with _$RoutingBalancersStrate
 
 @freezed
 abstract class RoutingBalancersStrategySettingCost4Ray with _$RoutingBalancersStrategySettingCost4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory RoutingBalancersStrategySettingCost4Ray({
     bool? regexp,
     String? match,

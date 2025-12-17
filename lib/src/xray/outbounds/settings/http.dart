@@ -5,6 +5,7 @@ part 'http.g.dart';
 
 @freezed
 abstract class HttpOutboundSettings4Ray with _$HttpOutboundSettings4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory HttpOutboundSettings4Ray({
     String? address,
     int? port,

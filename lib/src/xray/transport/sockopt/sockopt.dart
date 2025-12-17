@@ -11,7 +11,7 @@ part 'sockopt.g.dart';
 
 @freezed
 abstract class Sockopt4Ray with _$Sockopt4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory Sockopt4Ray({
     int? mark,
     int? tcpMaxSeg,

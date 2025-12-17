@@ -5,7 +5,7 @@ part 'wireguard.g.dart';
 
 @freezed
 abstract class WireguardInboundSettings4Ray with _$WireguardInboundSettings4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory WireguardInboundSettings4Ray({
     required String secretKey,
     required List<WireguardInboundPeer4Ray> peers,
@@ -18,7 +18,7 @@ abstract class WireguardInboundSettings4Ray with _$WireguardInboundSettings4Ray 
 
 @freezed
 abstract class WireguardInboundPeer4Ray with _$WireguardInboundPeer4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory WireguardInboundPeer4Ray({
     required String publicKey,
     List<String>? allowedIPs,

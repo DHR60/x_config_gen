@@ -210,8 +210,8 @@ return $default(_that.system,_that.type,_that.level,_that.opt,_that.value);case 
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _CustomSockopt4Ray implements CustomSockopt4Ray {
   const _CustomSockopt4Ray({this.system, required this.type, this.level, this.opt, this.value});
   factory _CustomSockopt4Ray.fromJson(Map<String, dynamic> json) => _$CustomSockopt4RayFromJson(json);

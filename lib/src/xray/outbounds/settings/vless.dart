@@ -5,7 +5,7 @@ part 'vless.g.dart';
 
 @freezed
 abstract class VlessOutboundSettings4Ray with _$VlessOutboundSettings4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory VlessOutboundSettings4Ray({
     String? address,
     int? port,
@@ -22,6 +22,7 @@ abstract class VlessOutboundSettings4Ray with _$VlessOutboundSettings4Ray {
 
 @freezed
 abstract class VlessOutboundReverse4Ray with _$VlessOutboundReverse4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory VlessOutboundReverse4Ray({
     String? tag,
   }) = _VlessOutboundReverse4Ray;

@@ -6,7 +6,7 @@ part 'vless.g.dart';
 
 @freezed
 abstract class VlessInboundSettings4Ray with _$VlessInboundSettings4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory VlessInboundSettings4Ray({
     List<VlessInboundAccount4Ray>? clients,
     String? decryption,
@@ -19,7 +19,7 @@ abstract class VlessInboundSettings4Ray with _$VlessInboundSettings4Ray {
 
 @freezed
 abstract class VlessInboundAccount4Ray with _$VlessInboundAccount4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory VlessInboundAccount4Ray({
     required String id,
     int? level,
@@ -34,7 +34,7 @@ abstract class VlessInboundAccount4Ray with _$VlessInboundAccount4Ray {
 
 @freezed
 abstract class VlessInboundReverse4Ray with _$VlessInboundReverse4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory VlessInboundReverse4Ray({
     required String tag,
   }) = _VlessInboundReverse4Ray;

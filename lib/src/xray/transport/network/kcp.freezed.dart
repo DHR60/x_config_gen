@@ -227,7 +227,7 @@ return $default(_that.mtu,_that.tti,_that.uplinkCapacity,_that.downlinkCapacity,
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _KcpTransport4Ray implements KcpTransport4Ray {
   const _KcpTransport4Ray({this.mtu, this.tti, this.uplinkCapacity, this.downlinkCapacity, this.congestion, this.readBufferSize, this.writeBufferSize, this.header, this.seed});
   factory _KcpTransport4Ray.fromJson(Map<String, dynamic> json) => _$KcpTransport4RayFromJson(json);
@@ -519,7 +519,7 @@ return $default(_that.type,_that.domain);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _KcpHeader4Ray implements KcpHeader4Ray {
   const _KcpHeader4Ray({this.type, this.domain});
   factory _KcpHeader4Ray.fromJson(Map<String, dynamic> json) => _$KcpHeader4RayFromJson(json);

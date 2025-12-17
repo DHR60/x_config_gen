@@ -5,7 +5,7 @@ part 'burst_observatory.g.dart';
 
 @freezed
 abstract class BurstObservatory4Ray with _$BurstObservatory4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory BurstObservatory4Ray({
     List<String>? subjectSelector,
     BurstObservatoryPing4Ray? pingConfig,
@@ -17,6 +17,7 @@ abstract class BurstObservatory4Ray with _$BurstObservatory4Ray {
 
 @freezed
 abstract class BurstObservatoryPing4Ray with _$BurstObservatoryPing4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory BurstObservatoryPing4Ray({
     String? destination,
     String? connectivity,

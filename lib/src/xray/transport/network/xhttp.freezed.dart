@@ -222,7 +222,7 @@ return $default(_that.host,_that.path,_that.mode,_that.extra);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _XHttpTransport4Ray implements XHttpTransport4Ray {
   const _XHttpTransport4Ray({this.host, this.path, this.mode, this.extra});
   factory _XHttpTransport4Ray.fromJson(Map<String, dynamic> json) => _$XHttpTransport4RayFromJson(json);
@@ -536,7 +536,7 @@ return $default(_that.headers,_that.xPaddingBytes,_that.noGRPCHeader,_that.noSSE
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _XHttpExtra4Ray implements XHttpExtra4Ray {
   const _XHttpExtra4Ray({final  Map<String, MultiValueString>? headers, this.xPaddingBytes, this.noGRPCHeader, this.noSSEHeader, this.scMaxEachPostBytes, this.scMinPostsIntervalMs, this.scMaxBufferedPosts, this.scStreamUpServerSecs, this.xmux, this.downloadSettings}): _headers = headers;
   factory _XHttpExtra4Ray.fromJson(Map<String, dynamic> json) => _$XHttpExtra4RayFromJson(json);
@@ -854,7 +854,7 @@ return $default(_that.maxConcurrency,_that.maxConnections,_that.cMaxReuseTimes,_
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _XHttpExtraXmux4Ray implements XHttpExtraXmux4Ray {
   const _XHttpExtraXmux4Ray({this.maxConcurrency, this.maxConnections, this.cMaxReuseTimes, this.hMaxRequestTimes, this.hMaxReusableSecs, this.hKeepAlivePeriod});
   factory _XHttpExtraXmux4Ray.fromJson(Map<String, dynamic> json) => _$XHttpExtraXmux4RayFromJson(json);
@@ -1169,7 +1169,7 @@ return $default(_that.address,_that.port,_that.network,_that.security,_that.tlsS
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _XHttpExtraDownload4Ray implements XHttpExtraDownload4Ray {
   const _XHttpExtraDownload4Ray({this.address, this.port, this.network, this.security, this.tlsSettings, this.xhttpSettings, this.sockopt});
   factory _XHttpExtraDownload4Ray.fromJson(Map<String, dynamic> json) => _$XHttpExtraDownload4RayFromJson(json);

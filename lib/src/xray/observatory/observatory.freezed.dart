@@ -209,8 +209,8 @@ return $default(_that.subjectSelector,_that.probeUrl,_that.probeInterval,_that.e
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _Observatory4Ray implements Observatory4Ray {
   const _Observatory4Ray({final  List<String>? subjectSelector, this.probeUrl, this.probeInterval, this.enableConcurrency}): _subjectSelector = subjectSelector;
   factory _Observatory4Ray.fromJson(Map<String, dynamic> json) => _$Observatory4RayFromJson(json);

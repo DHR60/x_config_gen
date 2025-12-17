@@ -31,7 +31,7 @@ part 'xray.g.dart';
 
 @freezed
 abstract class XrayConfig with _$XrayConfig {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory XrayConfig({
     Version4Ray? version,
     Log4Ray? log,

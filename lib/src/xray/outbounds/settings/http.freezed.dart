@@ -212,8 +212,8 @@ return $default(_that.address,_that.port,_that.user,_that.pass,_that.level,_that
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _HttpOutboundSettings4Ray implements HttpOutboundSettings4Ray {
   const _HttpOutboundSettings4Ray({this.address, this.port, this.user, this.pass, this.level, this.email, final  Map<String, String>? headers}): _headers = headers;
   factory _HttpOutboundSettings4Ray.fromJson(Map<String, dynamic> json) => _$HttpOutboundSettings4RayFromJson(json);

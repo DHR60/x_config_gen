@@ -236,7 +236,7 @@ return $default(_that.mark,_that.tcpMaxSeg,_that.tcpFastOpen,_that.tproxy,_that.
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _Sockopt4Ray implements Sockopt4Ray {
   const _Sockopt4Ray({this.mark, this.tcpMaxSeg, this.tcpFastOpen, this.tproxy, this.domainStrategy, this.happyEyeballs, this.dialerProxy, this.acceptProxyProtocol, this.tcpKeepAliveInterval, this.tcpKeepAliveIdle, this.tcpUserTimeout, this.tcpcongestion, this.interface, @JsonKey(name: 'V6Only') this.v6Only, this.tcpWindowClamp, this.tcpMptcp, this.addressPortStrategy, final  List<CustomSockopt4Ray>? customSockopt}): _customSockopt = customSockopt;
   factory _Sockopt4Ray.fromJson(Map<String, dynamic> json) => _$Sockopt4RayFromJson(json);

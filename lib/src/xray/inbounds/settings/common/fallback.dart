@@ -5,7 +5,7 @@ part 'fallback.g.dart';
 
 @freezed
 abstract class Fallback4Ray with _$Fallback4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory Fallback4Ray({
     String? name,
     String? alpn,

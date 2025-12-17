@@ -209,7 +209,7 @@ return $default(_that.clients,_that.decryption,_that.fallbacks);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _VlessInboundSettings4Ray implements VlessInboundSettings4Ray {
   const _VlessInboundSettings4Ray({final  List<VlessInboundAccount4Ray>? clients, this.decryption, final  List<Fallback4Ray>? fallbacks}): _clients = clients,_fallbacks = fallbacks;
   factory _VlessInboundSettings4Ray.fromJson(Map<String, dynamic> json) => _$VlessInboundSettings4RayFromJson(json);
@@ -508,7 +508,7 @@ return $default(_that.id,_that.level,_that.email,_that.flow,_that.reverse);case 
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _VlessInboundAccount4Ray implements VlessInboundAccount4Ray {
   const _VlessInboundAccount4Ray({required this.id, this.level, this.email, this.flow, this.reverse});
   factory _VlessInboundAccount4Ray.fromJson(Map<String, dynamic> json) => _$VlessInboundAccount4RayFromJson(json);
@@ -791,7 +791,7 @@ return $default(_that.tag);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _VlessInboundReverse4Ray implements VlessInboundReverse4Ray {
   const _VlessInboundReverse4Ray({required this.tag});
   factory _VlessInboundReverse4Ray.fromJson(Map<String, dynamic> json) => _$VlessInboundReverse4RayFromJson(json);

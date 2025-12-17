@@ -11,7 +11,7 @@ part 'dns.g.dart';
 
 @freezed
 abstract class Dns4Ray with _$Dns4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory Dns4Ray({
     Map<String, MultiValueString>? hosts,
     required List<DnsServer4Ray> servers,

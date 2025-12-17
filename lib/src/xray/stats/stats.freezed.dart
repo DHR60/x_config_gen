@@ -205,8 +205,8 @@ return $default(_that.placeholder);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _Stats4Ray implements Stats4Ray {
   const _Stats4Ray({@JsonKey(includeFromJson: false, includeToJson: false) this.placeholder});
   factory _Stats4Ray.fromJson(Map<String, dynamic> json) => _$Stats4RayFromJson(json);

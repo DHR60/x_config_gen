@@ -209,7 +209,7 @@ return $default(_that.accounts,_that.allowTransparent,_that.userLevel);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _HttpInboundSettings4Ray implements HttpInboundSettings4Ray {
   const _HttpInboundSettings4Ray({final  List<Account4Ray>? accounts, this.allowTransparent, this.userLevel}): _accounts = accounts;
   factory _HttpInboundSettings4Ray.fromJson(Map<String, dynamic> json) => _$HttpInboundSettings4RayFromJson(json);

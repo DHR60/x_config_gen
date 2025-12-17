@@ -5,7 +5,7 @@ part 'kcp.g.dart';
 
 @freezed
 abstract class KcpTransport4Ray with _$KcpTransport4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory KcpTransport4Ray({
     int? mtu,
     int? tti,
@@ -24,7 +24,7 @@ abstract class KcpTransport4Ray with _$KcpTransport4Ray {
 
 @freezed
 abstract class KcpHeader4Ray with _$KcpHeader4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory KcpHeader4Ray({
     String? type,
     String? domain,

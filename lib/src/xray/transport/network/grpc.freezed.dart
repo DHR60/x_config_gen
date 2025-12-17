@@ -214,7 +214,7 @@ return $default(_that.authority,_that.serviceName,_that.multiMode,_that.userAgen
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _GrpcTransport4Ray implements GrpcTransport4Ray {
   const _GrpcTransport4Ray({this.authority, this.serviceName, this.multiMode, @JsonKey(name: 'user_agent') this.userAgent, @JsonKey(name: 'idle_timeout') this.idleTimeout, @JsonKey(name: 'health_check_timeout') this.healthCheckTimeout, @JsonKey(name: 'permit_without_stream') this.permitWithoutStream, @JsonKey(name: 'initial_windows_size') this.initialWindowsSize});
   factory _GrpcTransport4Ray.fromJson(Map<String, dynamic> json) => _$GrpcTransport4RayFromJson(json);

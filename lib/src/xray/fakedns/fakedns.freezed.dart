@@ -207,8 +207,8 @@ return $default(_that.ipPool,_that.poolSize);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _FakeDns4Ray implements FakeDns4Ray {
   const _FakeDns4Ray({required this.ipPool, required this.poolSize});
   factory _FakeDns4Ray.fromJson(Map<String, dynamic> json) => _$FakeDns4RayFromJson(json);

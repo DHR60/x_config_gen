@@ -207,8 +207,8 @@ return $default(_that.user,_that.pass);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _Account4Ray implements Account4Ray {
   const _Account4Ray({this.user, this.pass});
   factory _Account4Ray.fromJson(Map<String, dynamic> json) => _$Account4RayFromJson(json);

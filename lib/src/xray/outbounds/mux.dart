@@ -5,6 +5,7 @@ part 'mux.g.dart';
 
 @freezed
 abstract class Mux4Ray with _$Mux4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory Mux4Ray({
     bool? enabled,
     int? concurrency,

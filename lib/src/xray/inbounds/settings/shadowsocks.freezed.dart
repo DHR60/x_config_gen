@@ -212,7 +212,7 @@ return $default(_that.network,_that.method,_that.password,_that.level,_that.emai
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _ShadowsocksInboundSettings4Ray implements ShadowsocksInboundSettings4Ray {
   const _ShadowsocksInboundSettings4Ray({this.network, this.method, required this.password, this.level, this.email, final  List<ShadowsocksInboundAccount4Ray>? accounts}): _accounts = accounts;
   factory _ShadowsocksInboundSettings4Ray.fromJson(Map<String, dynamic> json) => _$ShadowsocksInboundSettings4RayFromJson(json);
@@ -496,7 +496,7 @@ return $default(_that.password,_that.method,_that.level,_that.email);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _ShadowsocksInboundAccount4Ray implements ShadowsocksInboundAccount4Ray {
   const _ShadowsocksInboundAccount4Ray({this.password, this.method, this.level, this.email});
   factory _ShadowsocksInboundAccount4Ray.fromJson(Map<String, dynamic> json) => _$ShadowsocksInboundAccount4RayFromJson(json);

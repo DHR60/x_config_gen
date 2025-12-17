@@ -5,6 +5,7 @@ part 'wireguard.g.dart';
 
 @freezed
 abstract class WireguardOutboundSettings4Ray with _$WireguardOutboundSettings4Ray {
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory WireguardOutboundSettings4Ray({
     String? secretKey,
     List<String>? address,
@@ -22,6 +23,7 @@ abstract class WireguardOutboundSettings4Ray with _$WireguardOutboundSettings4Ra
 
 @freezed
 abstract class WireguardOutboundPeer4Ray with _$WireguardOutboundPeer4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory WireguardOutboundPeer4Ray({
     String? endpoint,
     String? publicKey,

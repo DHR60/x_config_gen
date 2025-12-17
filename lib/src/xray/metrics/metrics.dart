@@ -5,6 +5,7 @@ part 'metrics.g.dart';
 
 @freezed
 abstract class Metrics4Ray with _$Metrics4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory Metrics4Ray({
     String? tag,
     String? listen,

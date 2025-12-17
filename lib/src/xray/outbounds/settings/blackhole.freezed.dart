@@ -219,7 +219,7 @@ return $default(_that.response);case _:
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _BlackholeOutboundSettings4Ray implements BlackholeOutboundSettings4Ray {
   const _BlackholeOutboundSettings4Ray({this.response});
   factory _BlackholeOutboundSettings4Ray.fromJson(Map<String, dynamic> json) => _$BlackholeOutboundSettings4RayFromJson(json);
@@ -493,8 +493,8 @@ return $default(_that.type);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _BlackholeOutboundResponse4Ray implements BlackholeOutboundResponse4Ray {
   const _BlackholeOutboundResponse4Ray({this.type});
   factory _BlackholeOutboundResponse4Ray.fromJson(Map<String, dynamic> json) => _$BlackholeOutboundResponse4RayFromJson(json);

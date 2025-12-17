@@ -5,6 +5,7 @@ part 'shadowsocks.g.dart';
 
 @freezed
 abstract class ShadowsocksOutboundSettings4Ray with _$ShadowsocksOutboundSettings4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory ShadowsocksOutboundSettings4Ray({
     String? email,
     String? address,

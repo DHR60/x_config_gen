@@ -209,8 +209,8 @@ return $default(_that.acceptProxyProtocol,_that.path,_that.host,_that.headers);c
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _HttpUpgradeTransport4Ray implements HttpUpgradeTransport4Ray {
   const _HttpUpgradeTransport4Ray({this.acceptProxyProtocol, this.path, this.host, final  Map<String, String>? headers}): _headers = headers;
   factory _HttpUpgradeTransport4Ray.fromJson(Map<String, dynamic> json) => _$HttpUpgradeTransport4RayFromJson(json);

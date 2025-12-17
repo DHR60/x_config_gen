@@ -213,8 +213,8 @@ return $default(_that.email,_that.address,_that.port,_that.method,_that.password
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _ShadowsocksOutboundSettings4Ray implements ShadowsocksOutboundSettings4Ray {
   const _ShadowsocksOutboundSettings4Ray({this.email, this.address, this.port, this.method, this.password, this.uot, @JsonKey(name: 'UoTVersion') this.uotVersion, this.level});
   factory _ShadowsocksOutboundSettings4Ray.fromJson(Map<String, dynamic> json) => _$ShadowsocksOutboundSettings4RayFromJson(json);

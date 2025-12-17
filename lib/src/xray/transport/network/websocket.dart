@@ -5,6 +5,7 @@ part 'websocket.g.dart';
 
 @freezed
 abstract class WebSocketTransport4Ray with _$WebSocketTransport4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory WebSocketTransport4Ray({
     bool? acceptProxyProtocol,
     String? path,

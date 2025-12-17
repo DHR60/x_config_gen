@@ -5,6 +5,7 @@ part 'vmess.g.dart';
 
 @freezed
 abstract class VmessOutboundSettings4Ray with _$VmessOutboundSettings4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory VmessOutboundSettings4Ray({
     String? address,
     int? port,

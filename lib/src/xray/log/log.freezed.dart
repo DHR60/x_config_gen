@@ -210,8 +210,8 @@ return $default(_that.access,_that.error,_that.loglevel,_that.dnsLog,_that.maskA
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _Log4Ray implements Log4Ray {
   const _Log4Ray({this.access, this.error, this.loglevel, this.dnsLog, this.maskAddress});
   factory _Log4Ray.fromJson(Map<String, dynamic> json) => _$Log4RayFromJson(json);

@@ -6,7 +6,7 @@ part 'tls.g.dart';
 
 @freezed
 abstract class Tls4Ray with _$Tls4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory Tls4Ray({
     String? serverName,
     List<String>? verifyPeerCertInNames,
@@ -35,6 +35,7 @@ abstract class Tls4Ray with _$Tls4Ray {
 
 @freezed
 abstract class Certificate4Ray with _$Certificate4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory Certificate4Ray({
     int? ocspStapling,
     bool? oneTimeLoading,

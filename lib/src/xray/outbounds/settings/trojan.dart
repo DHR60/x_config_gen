@@ -5,6 +5,7 @@ part 'trojan.g.dart';
 
 @freezed
 abstract class TrojanOutboundSettings4Ray with _$TrojanOutboundSettings4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory TrojanOutboundSettings4Ray({
     String? address,
     int? port,

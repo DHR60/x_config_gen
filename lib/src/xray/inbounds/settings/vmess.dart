@@ -5,7 +5,7 @@ part 'vmess.g.dart';
 
 @freezed
 abstract class VmessInboundSettings4Ray with _$VmessInboundSettings4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory VmessInboundSettings4Ray({
     required List<VmessInboundAccount4Ray> clients,
     @JsonKey(name: "default") VmessInboundDefault4Ray? defaultSettings,
@@ -17,7 +17,7 @@ abstract class VmessInboundSettings4Ray with _$VmessInboundSettings4Ray {
 
 @freezed
 abstract class VmessInboundAccount4Ray with _$VmessInboundAccount4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory VmessInboundAccount4Ray({
     required String id,
     String? email,
@@ -30,7 +30,7 @@ abstract class VmessInboundAccount4Ray with _$VmessInboundAccount4Ray {
 
 @freezed
 abstract class VmessInboundDefault4Ray with _$VmessInboundDefault4Ray {
-  @JsonSerializable(explicitToJson: true)
+  @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory VmessInboundDefault4Ray({
     required int level,
   }) = _VmessInboundDefault4Ray;

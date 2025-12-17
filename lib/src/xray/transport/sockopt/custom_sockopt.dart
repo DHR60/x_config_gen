@@ -5,6 +5,7 @@ part 'custom_sockopt.g.dart';
 
 @freezed
 abstract class CustomSockopt4Ray with _$CustomSockopt4Ray {
+  @JsonSerializable(includeIfNull: false)
   const factory CustomSockopt4Ray({
     String? system,
     required String type,

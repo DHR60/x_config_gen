@@ -207,8 +207,8 @@ return $default(_that.tag,_that.listen);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _Metrics4Ray implements Metrics4Ray {
   const _Metrics4Ray({this.tag, this.listen});
   factory _Metrics4Ray.fromJson(Map<String, dynamic> json) => _$Metrics4RayFromJson(json);

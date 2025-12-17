@@ -224,7 +224,7 @@ return $default(_that.domainStrategy,_that.redirect,_that.userLevel,_that.fragme
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _FreedomOutboundSettings4Ray implements FreedomOutboundSettings4Ray {
   const _FreedomOutboundSettings4Ray({this.domainStrategy, this.redirect, this.userLevel, this.fragment, final  List<FreedomOutboundNoises4Ray>? noises, this.proxyProtocol}): _noises = noises;
   factory _FreedomOutboundSettings4Ray.fromJson(Map<String, dynamic> json) => _$FreedomOutboundSettings4RayFromJson(json);
@@ -518,8 +518,8 @@ return $default(_that.packets,_that.length,_that.interval);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _FreedomOutboundFragment4Ray implements FreedomOutboundFragment4Ray {
   const _FreedomOutboundFragment4Ray({this.packets, this.length, this.interval});
   factory _FreedomOutboundFragment4Ray.fromJson(Map<String, dynamic> json) => _$FreedomOutboundFragment4RayFromJson(json);
@@ -787,8 +787,8 @@ return $default(_that.type,_that.packet,_that.delay);case _:
 }
 
 /// @nodoc
-@JsonSerializable()
 
+@JsonSerializable(includeIfNull: false)
 class _FreedomOutboundNoises4Ray implements FreedomOutboundNoises4Ray {
   const _FreedomOutboundNoises4Ray({this.type, this.packet, this.delay});
   factory _FreedomOutboundNoises4Ray.fromJson(Map<String, dynamic> json) => _$FreedomOutboundNoises4RayFromJson(json);

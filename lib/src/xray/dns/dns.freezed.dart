@@ -215,7 +215,7 @@ return $default(_that.hosts,_that.servers,_that.clientIp,_that.queryStrategy,_th
 
 /// @nodoc
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _Dns4Ray implements Dns4Ray {
   const _Dns4Ray({final  Map<String, MultiValueString>? hosts, required final  List<DnsServer4Ray> servers, this.clientIp, this.queryStrategy, this.disableCache, this.disableFallback, this.disableFallbackIfMatch, this.useSystemHosts, this.tag}): _hosts = hosts,_servers = servers;
   factory _Dns4Ray.fromJson(Map<String, dynamic> json) => _$Dns4RayFromJson(json);
