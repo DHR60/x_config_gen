@@ -1,3 +1,7 @@
+## 0.0.3
+
+= fix: missing field
+
 ## 0.0.2
 
 - feat: Xray-core config serialization.
