@@ -10,6 +10,7 @@ import 'package:x_config_gen/src/xray/outbounds/outbound.dart';
 import 'package:x_config_gen/src/xray/routing/routing.dart';
 import 'package:x_config_gen/src/xray/stats/stats.dart';
 import 'package:x_config_gen/src/xray/metrics/metrics.dart';
+import 'package:x_config_gen/src/xray/policy/policy.dart';
 import 'package:x_config_gen/src/xray/observatory/observatory.dart';
 import 'package:x_config_gen/src/xray/observatory/burst_observatory.dart';
 
@@ -23,6 +24,7 @@ export 'package:x_config_gen/src/xray/outbounds/outbound.dart';
 export 'package:x_config_gen/src/xray/routing/routing.dart';
 export 'package:x_config_gen/src/xray/stats/stats.dart';
 export 'package:x_config_gen/src/xray/metrics/metrics.dart';
+export 'package:x_config_gen/src/xray/policy/policy.dart';
 export 'package:x_config_gen/src/xray/observatory/observatory.dart';
 export 'package:x_config_gen/src/xray/observatory/burst_observatory.dart';
 
@@ -43,6 +45,7 @@ abstract class XrayConfig with _$XrayConfig {
     Routing4Ray? routing,
     Stats4Ray? stats,
     Metrics4Ray? metrics,
+    Policy4Ray? policy,
     Observatory4Ray? observatory,
     BurstObservatory4Ray? burstObservatory,
   }) = _XrayConfig;

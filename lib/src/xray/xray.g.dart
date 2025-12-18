@@ -37,6 +37,9 @@ _XrayConfig _$XrayConfigFromJson(Map<String, dynamic> json) => _XrayConfig(
   metrics: json['metrics'] == null
       ? null
       : Metrics4Ray.fromJson(json['metrics'] as Map<String, dynamic>),
+  policy: json['policy'] == null
+      ? null
+      : Policy4Ray.fromJson(json['policy'] as Map<String, dynamic>),
   observatory: json['observatory'] == null
       ? null
       : Observatory4Ray.fromJson(json['observatory'] as Map<String, dynamic>),
@@ -59,6 +62,7 @@ Map<String, dynamic> _$XrayConfigToJson(_XrayConfig instance) =>
       'routing': ?instance.routing?.toJson(),
       'stats': ?instance.stats?.toJson(),
       'metrics': ?instance.metrics?.toJson(),
+      'policy': ?instance.policy?.toJson(),
       'observatory': ?instance.observatory?.toJson(),
       'burstObservatory': ?instance.burstObservatory?.toJson(),
     };

@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$XrayConfig {
 
- Version4Ray? get version; Log4Ray? get log; Api4Ray? get api; Dns4Ray? get dns; FakeDns4Ray? get fakeDns; List<Inbound4Ray>? get inbounds; List<Outbound4Ray>? get outbounds; Routing4Ray? get routing; Stats4Ray? get stats; Metrics4Ray? get metrics; Observatory4Ray? get observatory; BurstObservatory4Ray? get burstObservatory;
+ Version4Ray? get version; Log4Ray? get log; Api4Ray? get api; Dns4Ray? get dns; FakeDns4Ray? get fakeDns; List<Inbound4Ray>? get inbounds; List<Outbound4Ray>? get outbounds; Routing4Ray? get routing; Stats4Ray? get stats; Metrics4Ray? get metrics; Policy4Ray? get policy; Observatory4Ray? get observatory; BurstObservatory4Ray? get burstObservatory;
 /// Create a copy of XrayConfig
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $XrayConfigCopyWith<XrayConfig> get copyWith => _$XrayConfigCopyWithImpl<XrayCon
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is XrayConfig&&(identical(other.version, version) || other.version == version)&&(identical(other.log, log) || other.log == log)&&(identical(other.api, api) || other.api == api)&&(identical(other.dns, dns) || other.dns == dns)&&(identical(other.fakeDns, fakeDns) || other.fakeDns == fakeDns)&&const DeepCollectionEquality().equals(other.inbounds, inbounds)&&const DeepCollectionEquality().equals(other.outbounds, outbounds)&&(identical(other.routing, routing) || other.routing == routing)&&(identical(other.stats, stats) || other.stats == stats)&&(identical(other.metrics, metrics) || other.metrics == metrics)&&(identical(other.observatory, observatory) || other.observatory == observatory)&&(identical(other.burstObservatory, burstObservatory) || other.burstObservatory == burstObservatory));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is XrayConfig&&(identical(other.version, version) || other.version == version)&&(identical(other.log, log) || other.log == log)&&(identical(other.api, api) || other.api == api)&&(identical(other.dns, dns) || other.dns == dns)&&(identical(other.fakeDns, fakeDns) || other.fakeDns == fakeDns)&&const DeepCollectionEquality().equals(other.inbounds, inbounds)&&const DeepCollectionEquality().equals(other.outbounds, outbounds)&&(identical(other.routing, routing) || other.routing == routing)&&(identical(other.stats, stats) || other.stats == stats)&&(identical(other.metrics, metrics) || other.metrics == metrics)&&(identical(other.policy, policy) || other.policy == policy)&&(identical(other.observatory, observatory) || other.observatory == observatory)&&(identical(other.burstObservatory, burstObservatory) || other.burstObservatory == burstObservatory));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,version,log,api,dns,fakeDns,const DeepCollectionEquality().hash(inbounds),const DeepCollectionEquality().hash(outbounds),routing,stats,metrics,observatory,burstObservatory);
+int get hashCode => Object.hash(runtimeType,version,log,api,dns,fakeDns,const DeepCollectionEquality().hash(inbounds),const DeepCollectionEquality().hash(outbounds),routing,stats,metrics,policy,observatory,burstObservatory);
 
 @override
 String toString() {
-  return 'XrayConfig(version: $version, log: $log, api: $api, dns: $dns, fakeDns: $fakeDns, inbounds: $inbounds, outbounds: $outbounds, routing: $routing, stats: $stats, metrics: $metrics, observatory: $observatory, burstObservatory: $burstObservatory)';
+  return 'XrayConfig(version: $version, log: $log, api: $api, dns: $dns, fakeDns: $fakeDns, inbounds: $inbounds, outbounds: $outbounds, routing: $routing, stats: $stats, metrics: $metrics, policy: $policy, observatory: $observatory, burstObservatory: $burstObservatory)';
 }
 
 
@@ -48,11 +48,11 @@ abstract mixin class $XrayConfigCopyWith<$Res>  {
   factory $XrayConfigCopyWith(XrayConfig value, $Res Function(XrayConfig) _then) = _$XrayConfigCopyWithImpl;
 @useResult
 $Res call({
- Version4Ray? version, Log4Ray? log, Api4Ray? api, Dns4Ray? dns, FakeDns4Ray? fakeDns, List<Inbound4Ray>? inbounds, List<Outbound4Ray>? outbounds, Routing4Ray? routing, Stats4Ray? stats, Metrics4Ray? metrics, Observatory4Ray? observatory, BurstObservatory4Ray? burstObservatory
+ Version4Ray? version, Log4Ray? log, Api4Ray? api, Dns4Ray? dns, FakeDns4Ray? fakeDns, List<Inbound4Ray>? inbounds, List<Outbound4Ray>? outbounds, Routing4Ray? routing, Stats4Ray? stats, Metrics4Ray? metrics, Policy4Ray? policy, Observatory4Ray? observatory, BurstObservatory4Ray? burstObservatory
 });
 
 
-$Version4RayCopyWith<$Res>? get version;$Log4RayCopyWith<$Res>? get log;$Api4RayCopyWith<$Res>? get api;$Dns4RayCopyWith<$Res>? get dns;$FakeDns4RayCopyWith<$Res>? get fakeDns;$Routing4RayCopyWith<$Res>? get routing;$Stats4RayCopyWith<$Res>? get stats;$Metrics4RayCopyWith<$Res>? get metrics;$Observatory4RayCopyWith<$Res>? get observatory;$BurstObservatory4RayCopyWith<$Res>? get burstObservatory;
+$Version4RayCopyWith<$Res>? get version;$Log4RayCopyWith<$Res>? get log;$Api4RayCopyWith<$Res>? get api;$Dns4RayCopyWith<$Res>? get dns;$FakeDns4RayCopyWith<$Res>? get fakeDns;$Routing4RayCopyWith<$Res>? get routing;$Stats4RayCopyWith<$Res>? get stats;$Metrics4RayCopyWith<$Res>? get metrics;$Policy4RayCopyWith<$Res>? get policy;$Observatory4RayCopyWith<$Res>? get observatory;$BurstObservatory4RayCopyWith<$Res>? get burstObservatory;
 
 }
 /// @nodoc
@@ -65,7 +65,7 @@ class _$XrayConfigCopyWithImpl<$Res>
 
 /// Create a copy of XrayConfig
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? version = freezed,Object? log = freezed,Object? api = freezed,Object? dns = freezed,Object? fakeDns = freezed,Object? inbounds = freezed,Object? outbounds = freezed,Object? routing = freezed,Object? stats = freezed,Object? metrics = freezed,Object? observatory = freezed,Object? burstObservatory = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? version = freezed,Object? log = freezed,Object? api = freezed,Object? dns = freezed,Object? fakeDns = freezed,Object? inbounds = freezed,Object? outbounds = freezed,Object? routing = freezed,Object? stats = freezed,Object? metrics = freezed,Object? policy = freezed,Object? observatory = freezed,Object? burstObservatory = freezed,}) {
   return _then(_self.copyWith(
 version: freezed == version ? _self.version : version // ignore: cast_nullable_to_non_nullable
 as Version4Ray?,log: freezed == log ? _self.log : log // ignore: cast_nullable_to_non_nullable
@@ -77,7 +77,8 @@ as List<Inbound4Ray>?,outbounds: freezed == outbounds ? _self.outbounds : outbou
 as List<Outbound4Ray>?,routing: freezed == routing ? _self.routing : routing // ignore: cast_nullable_to_non_nullable
 as Routing4Ray?,stats: freezed == stats ? _self.stats : stats // ignore: cast_nullable_to_non_nullable
 as Stats4Ray?,metrics: freezed == metrics ? _self.metrics : metrics // ignore: cast_nullable_to_non_nullable
-as Metrics4Ray?,observatory: freezed == observatory ? _self.observatory : observatory // ignore: cast_nullable_to_non_nullable
+as Metrics4Ray?,policy: freezed == policy ? _self.policy : policy // ignore: cast_nullable_to_non_nullable
+as Policy4Ray?,observatory: freezed == observatory ? _self.observatory : observatory // ignore: cast_nullable_to_non_nullable
 as Observatory4Ray?,burstObservatory: freezed == burstObservatory ? _self.burstObservatory : burstObservatory // ignore: cast_nullable_to_non_nullable
 as BurstObservatory4Ray?,
   ));
@@ -177,6 +178,18 @@ $Metrics4RayCopyWith<$Res>? get metrics {
 
   return $Metrics4RayCopyWith<$Res>(_self.metrics!, (value) {
     return _then(_self.copyWith(metrics: value));
+  });
+}/// Create a copy of XrayConfig
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$Policy4RayCopyWith<$Res>? get policy {
+    if (_self.policy == null) {
+    return null;
+  }
+
+  return $Policy4RayCopyWith<$Res>(_self.policy!, (value) {
+    return _then(_self.copyWith(policy: value));
   });
 }/// Create a copy of XrayConfig
 /// with the given fields replaced by the non-null parameter values.
@@ -284,10 +297,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Version4Ray? version,  Log4Ray? log,  Api4Ray? api,  Dns4Ray? dns,  FakeDns4Ray? fakeDns,  List<Inbound4Ray>? inbounds,  List<Outbound4Ray>? outbounds,  Routing4Ray? routing,  Stats4Ray? stats,  Metrics4Ray? metrics,  Observatory4Ray? observatory,  BurstObservatory4Ray? burstObservatory)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Version4Ray? version,  Log4Ray? log,  Api4Ray? api,  Dns4Ray? dns,  FakeDns4Ray? fakeDns,  List<Inbound4Ray>? inbounds,  List<Outbound4Ray>? outbounds,  Routing4Ray? routing,  Stats4Ray? stats,  Metrics4Ray? metrics,  Policy4Ray? policy,  Observatory4Ray? observatory,  BurstObservatory4Ray? burstObservatory)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _XrayConfig() when $default != null:
-return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns,_that.inbounds,_that.outbounds,_that.routing,_that.stats,_that.metrics,_that.observatory,_that.burstObservatory);case _:
+return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns,_that.inbounds,_that.outbounds,_that.routing,_that.stats,_that.metrics,_that.policy,_that.observatory,_that.burstObservatory);case _:
   return orElse();
 
 }
@@ -305,10 +318,10 @@ return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns,_that.
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Version4Ray? version,  Log4Ray? log,  Api4Ray? api,  Dns4Ray? dns,  FakeDns4Ray? fakeDns,  List<Inbound4Ray>? inbounds,  List<Outbound4Ray>? outbounds,  Routing4Ray? routing,  Stats4Ray? stats,  Metrics4Ray? metrics,  Observatory4Ray? observatory,  BurstObservatory4Ray? burstObservatory)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Version4Ray? version,  Log4Ray? log,  Api4Ray? api,  Dns4Ray? dns,  FakeDns4Ray? fakeDns,  List<Inbound4Ray>? inbounds,  List<Outbound4Ray>? outbounds,  Routing4Ray? routing,  Stats4Ray? stats,  Metrics4Ray? metrics,  Policy4Ray? policy,  Observatory4Ray? observatory,  BurstObservatory4Ray? burstObservatory)  $default,) {final _that = this;
 switch (_that) {
 case _XrayConfig():
-return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns,_that.inbounds,_that.outbounds,_that.routing,_that.stats,_that.metrics,_that.observatory,_that.burstObservatory);case _:
+return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns,_that.inbounds,_that.outbounds,_that.routing,_that.stats,_that.metrics,_that.policy,_that.observatory,_that.burstObservatory);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -325,10 +338,10 @@ return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns,_that.
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Version4Ray? version,  Log4Ray? log,  Api4Ray? api,  Dns4Ray? dns,  FakeDns4Ray? fakeDns,  List<Inbound4Ray>? inbounds,  List<Outbound4Ray>? outbounds,  Routing4Ray? routing,  Stats4Ray? stats,  Metrics4Ray? metrics,  Observatory4Ray? observatory,  BurstObservatory4Ray? burstObservatory)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Version4Ray? version,  Log4Ray? log,  Api4Ray? api,  Dns4Ray? dns,  FakeDns4Ray? fakeDns,  List<Inbound4Ray>? inbounds,  List<Outbound4Ray>? outbounds,  Routing4Ray? routing,  Stats4Ray? stats,  Metrics4Ray? metrics,  Policy4Ray? policy,  Observatory4Ray? observatory,  BurstObservatory4Ray? burstObservatory)?  $default,) {final _that = this;
 switch (_that) {
 case _XrayConfig() when $default != null:
-return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns,_that.inbounds,_that.outbounds,_that.routing,_that.stats,_that.metrics,_that.observatory,_that.burstObservatory);case _:
+return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns,_that.inbounds,_that.outbounds,_that.routing,_that.stats,_that.metrics,_that.policy,_that.observatory,_that.burstObservatory);case _:
   return null;
 
 }
@@ -340,7 +353,7 @@ return $default(_that.version,_that.log,_that.api,_that.dns,_that.fakeDns,_that.
 
 @JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _XrayConfig implements XrayConfig {
-  const _XrayConfig({this.version, this.log, this.api, this.dns, this.fakeDns, final  List<Inbound4Ray>? inbounds, final  List<Outbound4Ray>? outbounds, this.routing, this.stats, this.metrics, this.observatory, this.burstObservatory}): _inbounds = inbounds,_outbounds = outbounds;
+  const _XrayConfig({this.version, this.log, this.api, this.dns, this.fakeDns, final  List<Inbound4Ray>? inbounds, final  List<Outbound4Ray>? outbounds, this.routing, this.stats, this.metrics, this.policy, this.observatory, this.burstObservatory}): _inbounds = inbounds,_outbounds = outbounds;
   factory _XrayConfig.fromJson(Map<String, dynamic> json) => _$XrayConfigFromJson(json);
 
 @override final  Version4Ray? version;
@@ -369,6 +382,7 @@ class _XrayConfig implements XrayConfig {
 @override final  Routing4Ray? routing;
 @override final  Stats4Ray? stats;
 @override final  Metrics4Ray? metrics;
+@override final  Policy4Ray? policy;
 @override final  Observatory4Ray? observatory;
 @override final  BurstObservatory4Ray? burstObservatory;
 
@@ -385,16 +399,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _XrayConfig&&(identical(other.version, version) || other.version == version)&&(identical(other.log, log) || other.log == log)&&(identical(other.api, api) || other.api == api)&&(identical(other.dns, dns) || other.dns == dns)&&(identical(other.fakeDns, fakeDns) || other.fakeDns == fakeDns)&&const DeepCollectionEquality().equals(other._inbounds, _inbounds)&&const DeepCollectionEquality().equals(other._outbounds, _outbounds)&&(identical(other.routing, routing) || other.routing == routing)&&(identical(other.stats, stats) || other.stats == stats)&&(identical(other.metrics, metrics) || other.metrics == metrics)&&(identical(other.observatory, observatory) || other.observatory == observatory)&&(identical(other.burstObservatory, burstObservatory) || other.burstObservatory == burstObservatory));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _XrayConfig&&(identical(other.version, version) || other.version == version)&&(identical(other.log, log) || other.log == log)&&(identical(other.api, api) || other.api == api)&&(identical(other.dns, dns) || other.dns == dns)&&(identical(other.fakeDns, fakeDns) || other.fakeDns == fakeDns)&&const DeepCollectionEquality().equals(other._inbounds, _inbounds)&&const DeepCollectionEquality().equals(other._outbounds, _outbounds)&&(identical(other.routing, routing) || other.routing == routing)&&(identical(other.stats, stats) || other.stats == stats)&&(identical(other.metrics, metrics) || other.metrics == metrics)&&(identical(other.policy, policy) || other.policy == policy)&&(identical(other.observatory, observatory) || other.observatory == observatory)&&(identical(other.burstObservatory, burstObservatory) || other.burstObservatory == burstObservatory));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,version,log,api,dns,fakeDns,const DeepCollectionEquality().hash(_inbounds),const DeepCollectionEquality().hash(_outbounds),routing,stats,metrics,observatory,burstObservatory);
+int get hashCode => Object.hash(runtimeType,version,log,api,dns,fakeDns,const DeepCollectionEquality().hash(_inbounds),const DeepCollectionEquality().hash(_outbounds),routing,stats,metrics,policy,observatory,burstObservatory);
 
 @override
 String toString() {
-  return 'XrayConfig(version: $version, log: $log, api: $api, dns: $dns, fakeDns: $fakeDns, inbounds: $inbounds, outbounds: $outbounds, routing: $routing, stats: $stats, metrics: $metrics, observatory: $observatory, burstObservatory: $burstObservatory)';
+  return 'XrayConfig(version: $version, log: $log, api: $api, dns: $dns, fakeDns: $fakeDns, inbounds: $inbounds, outbounds: $outbounds, routing: $routing, stats: $stats, metrics: $metrics, policy: $policy, observatory: $observatory, burstObservatory: $burstObservatory)';
 }
 
 
@@ -405,11 +419,11 @@ abstract mixin class _$XrayConfigCopyWith<$Res> implements $XrayConfigCopyWith<$
   factory _$XrayConfigCopyWith(_XrayConfig value, $Res Function(_XrayConfig) _then) = __$XrayConfigCopyWithImpl;
 @override @useResult
 $Res call({
- Version4Ray? version, Log4Ray? log, Api4Ray? api, Dns4Ray? dns, FakeDns4Ray? fakeDns, List<Inbound4Ray>? inbounds, List<Outbound4Ray>? outbounds, Routing4Ray? routing, Stats4Ray? stats, Metrics4Ray? metrics, Observatory4Ray? observatory, BurstObservatory4Ray? burstObservatory
+ Version4Ray? version, Log4Ray? log, Api4Ray? api, Dns4Ray? dns, FakeDns4Ray? fakeDns, List<Inbound4Ray>? inbounds, List<Outbound4Ray>? outbounds, Routing4Ray? routing, Stats4Ray? stats, Metrics4Ray? metrics, Policy4Ray? policy, Observatory4Ray? observatory, BurstObservatory4Ray? burstObservatory
 });
 
 
-@override $Version4RayCopyWith<$Res>? get version;@override $Log4RayCopyWith<$Res>? get log;@override $Api4RayCopyWith<$Res>? get api;@override $Dns4RayCopyWith<$Res>? get dns;@override $FakeDns4RayCopyWith<$Res>? get fakeDns;@override $Routing4RayCopyWith<$Res>? get routing;@override $Stats4RayCopyWith<$Res>? get stats;@override $Metrics4RayCopyWith<$Res>? get metrics;@override $Observatory4RayCopyWith<$Res>? get observatory;@override $BurstObservatory4RayCopyWith<$Res>? get burstObservatory;
+@override $Version4RayCopyWith<$Res>? get version;@override $Log4RayCopyWith<$Res>? get log;@override $Api4RayCopyWith<$Res>? get api;@override $Dns4RayCopyWith<$Res>? get dns;@override $FakeDns4RayCopyWith<$Res>? get fakeDns;@override $Routing4RayCopyWith<$Res>? get routing;@override $Stats4RayCopyWith<$Res>? get stats;@override $Metrics4RayCopyWith<$Res>? get metrics;@override $Policy4RayCopyWith<$Res>? get policy;@override $Observatory4RayCopyWith<$Res>? get observatory;@override $BurstObservatory4RayCopyWith<$Res>? get burstObservatory;
 
 }
 /// @nodoc
@@ -422,7 +436,7 @@ class __$XrayConfigCopyWithImpl<$Res>
 
 /// Create a copy of XrayConfig
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? version = freezed,Object? log = freezed,Object? api = freezed,Object? dns = freezed,Object? fakeDns = freezed,Object? inbounds = freezed,Object? outbounds = freezed,Object? routing = freezed,Object? stats = freezed,Object? metrics = freezed,Object? observatory = freezed,Object? burstObservatory = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? version = freezed,Object? log = freezed,Object? api = freezed,Object? dns = freezed,Object? fakeDns = freezed,Object? inbounds = freezed,Object? outbounds = freezed,Object? routing = freezed,Object? stats = freezed,Object? metrics = freezed,Object? policy = freezed,Object? observatory = freezed,Object? burstObservatory = freezed,}) {
   return _then(_XrayConfig(
 version: freezed == version ? _self.version : version // ignore: cast_nullable_to_non_nullable
 as Version4Ray?,log: freezed == log ? _self.log : log // ignore: cast_nullable_to_non_nullable
@@ -434,7 +448,8 @@ as List<Inbound4Ray>?,outbounds: freezed == outbounds ? _self._outbounds : outbo
 as List<Outbound4Ray>?,routing: freezed == routing ? _self.routing : routing // ignore: cast_nullable_to_non_nullable
 as Routing4Ray?,stats: freezed == stats ? _self.stats : stats // ignore: cast_nullable_to_non_nullable
 as Stats4Ray?,metrics: freezed == metrics ? _self.metrics : metrics // ignore: cast_nullable_to_non_nullable
-as Metrics4Ray?,observatory: freezed == observatory ? _self.observatory : observatory // ignore: cast_nullable_to_non_nullable
+as Metrics4Ray?,policy: freezed == policy ? _self.policy : policy // ignore: cast_nullable_to_non_nullable
+as Policy4Ray?,observatory: freezed == observatory ? _self.observatory : observatory // ignore: cast_nullable_to_non_nullable
 as Observatory4Ray?,burstObservatory: freezed == burstObservatory ? _self.burstObservatory : burstObservatory // ignore: cast_nullable_to_non_nullable
 as BurstObservatory4Ray?,
   ));
@@ -535,6 +550,18 @@ $Metrics4RayCopyWith<$Res>? get metrics {
 
   return $Metrics4RayCopyWith<$Res>(_self.metrics!, (value) {
     return _then(_self.copyWith(metrics: value));
+  });
+}/// Create a copy of XrayConfig
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$Policy4RayCopyWith<$Res>? get policy {
+    if (_self.policy == null) {
+    return null;
+  }
+
+  return $Policy4RayCopyWith<$Res>(_self.policy!, (value) {
+    return _then(_self.copyWith(policy: value));
   });
 }/// Create a copy of XrayConfig
 /// with the given fields replaced by the non-null parameter values.
