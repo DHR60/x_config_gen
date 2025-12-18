@@ -14,7 +14,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Inbound4Ray {
 
- String? get tag; String? get protocol;@InboundSettingsConverter() InboundSettings4Ray? get settings; StreamSettings4Ray? get streamSettings; Sniff4Ray? get sniffing;
+ String? get listen; MultiValueMixed? get port; String? get tag; String? get protocol;@InboundSettingsConverter() InboundSettings4Ray? get settings; StreamSettings4Ray? get streamSettings; Sniff4Ray? get sniffing;
 /// Create a copy of Inbound4Ray
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -25,16 +25,16 @@ $Inbound4RayCopyWith<Inbound4Ray> get copyWith => _$Inbound4RayCopyWithImpl<Inbo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Inbound4Ray&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.protocol, protocol) || other.protocol == protocol)&&(identical(other.settings, settings) || other.settings == settings)&&(identical(other.streamSettings, streamSettings) || other.streamSettings == streamSettings)&&(identical(other.sniffing, sniffing) || other.sniffing == sniffing));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Inbound4Ray&&(identical(other.listen, listen) || other.listen == listen)&&(identical(other.port, port) || other.port == port)&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.protocol, protocol) || other.protocol == protocol)&&(identical(other.settings, settings) || other.settings == settings)&&(identical(other.streamSettings, streamSettings) || other.streamSettings == streamSettings)&&(identical(other.sniffing, sniffing) || other.sniffing == sniffing));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,tag,protocol,settings,streamSettings,sniffing);
+int get hashCode => Object.hash(runtimeType,listen,port,tag,protocol,settings,streamSettings,sniffing);
 
 @override
 String toString() {
-  return 'Inbound4Ray(tag: $tag, protocol: $protocol, settings: $settings, streamSettings: $streamSettings, sniffing: $sniffing)';
+  return 'Inbound4Ray(listen: $listen, port: $port, tag: $tag, protocol: $protocol, settings: $settings, streamSettings: $streamSettings, sniffing: $sniffing)';
 }
 
 
@@ -45,11 +45,11 @@ abstract mixin class $Inbound4RayCopyWith<$Res>  {
   factory $Inbound4RayCopyWith(Inbound4Ray value, $Res Function(Inbound4Ray) _then) = _$Inbound4RayCopyWithImpl;
 @useResult
 $Res call({
- String? tag, String? protocol,@InboundSettingsConverter() InboundSettings4Ray? settings, StreamSettings4Ray? streamSettings, Sniff4Ray? sniffing
+ String? listen, MultiValueMixed? port, String? tag, String? protocol,@InboundSettingsConverter() InboundSettings4Ray? settings, StreamSettings4Ray? streamSettings, Sniff4Ray? sniffing
 });
 
 
-$InboundSettings4RayCopyWith<$Res>? get settings;$StreamSettings4RayCopyWith<$Res>? get streamSettings;$Sniff4RayCopyWith<$Res>? get sniffing;
+$MultiValueMixedCopyWith<$Res>? get port;$InboundSettings4RayCopyWith<$Res>? get settings;$StreamSettings4RayCopyWith<$Res>? get streamSettings;$Sniff4RayCopyWith<$Res>? get sniffing;
 
 }
 /// @nodoc
@@ -62,9 +62,11 @@ class _$Inbound4RayCopyWithImpl<$Res>
 
 /// Create a copy of Inbound4Ray
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? tag = freezed,Object? protocol = freezed,Object? settings = freezed,Object? streamSettings = freezed,Object? sniffing = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? listen = freezed,Object? port = freezed,Object? tag = freezed,Object? protocol = freezed,Object? settings = freezed,Object? streamSettings = freezed,Object? sniffing = freezed,}) {
   return _then(_self.copyWith(
-tag: freezed == tag ? _self.tag : tag // ignore: cast_nullable_to_non_nullable
+listen: freezed == listen ? _self.listen : listen // ignore: cast_nullable_to_non_nullable
+as String?,port: freezed == port ? _self.port : port // ignore: cast_nullable_to_non_nullable
+as MultiValueMixed?,tag: freezed == tag ? _self.tag : tag // ignore: cast_nullable_to_non_nullable
 as String?,protocol: freezed == protocol ? _self.protocol : protocol // ignore: cast_nullable_to_non_nullable
 as String?,settings: freezed == settings ? _self.settings : settings // ignore: cast_nullable_to_non_nullable
 as InboundSettings4Ray?,streamSettings: freezed == streamSettings ? _self.streamSettings : streamSettings // ignore: cast_nullable_to_non_nullable
@@ -73,6 +75,18 @@ as Sniff4Ray?,
   ));
 }
 /// Create a copy of Inbound4Ray
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MultiValueMixedCopyWith<$Res>? get port {
+    if (_self.port == null) {
+    return null;
+  }
+
+  return $MultiValueMixedCopyWith<$Res>(_self.port!, (value) {
+    return _then(_self.copyWith(port: value));
+  });
+}/// Create a copy of Inbound4Ray
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
@@ -190,10 +204,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? tag,  String? protocol, @InboundSettingsConverter()  InboundSettings4Ray? settings,  StreamSettings4Ray? streamSettings,  Sniff4Ray? sniffing)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? listen,  MultiValueMixed? port,  String? tag,  String? protocol, @InboundSettingsConverter()  InboundSettings4Ray? settings,  StreamSettings4Ray? streamSettings,  Sniff4Ray? sniffing)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Inbound4Ray() when $default != null:
-return $default(_that.tag,_that.protocol,_that.settings,_that.streamSettings,_that.sniffing);case _:
+return $default(_that.listen,_that.port,_that.tag,_that.protocol,_that.settings,_that.streamSettings,_that.sniffing);case _:
   return orElse();
 
 }
@@ -211,10 +225,10 @@ return $default(_that.tag,_that.protocol,_that.settings,_that.streamSettings,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? tag,  String? protocol, @InboundSettingsConverter()  InboundSettings4Ray? settings,  StreamSettings4Ray? streamSettings,  Sniff4Ray? sniffing)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? listen,  MultiValueMixed? port,  String? tag,  String? protocol, @InboundSettingsConverter()  InboundSettings4Ray? settings,  StreamSettings4Ray? streamSettings,  Sniff4Ray? sniffing)  $default,) {final _that = this;
 switch (_that) {
 case _Inbound4Ray():
-return $default(_that.tag,_that.protocol,_that.settings,_that.streamSettings,_that.sniffing);case _:
+return $default(_that.listen,_that.port,_that.tag,_that.protocol,_that.settings,_that.streamSettings,_that.sniffing);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -231,10 +245,10 @@ return $default(_that.tag,_that.protocol,_that.settings,_that.streamSettings,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? tag,  String? protocol, @InboundSettingsConverter()  InboundSettings4Ray? settings,  StreamSettings4Ray? streamSettings,  Sniff4Ray? sniffing)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? listen,  MultiValueMixed? port,  String? tag,  String? protocol, @InboundSettingsConverter()  InboundSettings4Ray? settings,  StreamSettings4Ray? streamSettings,  Sniff4Ray? sniffing)?  $default,) {final _that = this;
 switch (_that) {
 case _Inbound4Ray() when $default != null:
-return $default(_that.tag,_that.protocol,_that.settings,_that.streamSettings,_that.sniffing);case _:
+return $default(_that.listen,_that.port,_that.tag,_that.protocol,_that.settings,_that.streamSettings,_that.sniffing);case _:
   return null;
 
 }
@@ -246,9 +260,11 @@ return $default(_that.tag,_that.protocol,_that.settings,_that.streamSettings,_th
 
 @JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _Inbound4Ray extends Inbound4Ray {
-  const _Inbound4Ray({this.tag, this.protocol, @InboundSettingsConverter() this.settings, this.streamSettings, this.sniffing}): super._();
+  const _Inbound4Ray({this.listen, this.port, this.tag, this.protocol, @InboundSettingsConverter() this.settings, this.streamSettings, this.sniffing}): super._();
   
 
+@override final  String? listen;
+@override final  MultiValueMixed? port;
 @override final  String? tag;
 @override final  String? protocol;
 @override@InboundSettingsConverter() final  InboundSettings4Ray? settings;
@@ -265,16 +281,16 @@ _$Inbound4RayCopyWith<_Inbound4Ray> get copyWith => __$Inbound4RayCopyWithImpl<_
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Inbound4Ray&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.protocol, protocol) || other.protocol == protocol)&&(identical(other.settings, settings) || other.settings == settings)&&(identical(other.streamSettings, streamSettings) || other.streamSettings == streamSettings)&&(identical(other.sniffing, sniffing) || other.sniffing == sniffing));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Inbound4Ray&&(identical(other.listen, listen) || other.listen == listen)&&(identical(other.port, port) || other.port == port)&&(identical(other.tag, tag) || other.tag == tag)&&(identical(other.protocol, protocol) || other.protocol == protocol)&&(identical(other.settings, settings) || other.settings == settings)&&(identical(other.streamSettings, streamSettings) || other.streamSettings == streamSettings)&&(identical(other.sniffing, sniffing) || other.sniffing == sniffing));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,tag,protocol,settings,streamSettings,sniffing);
+int get hashCode => Object.hash(runtimeType,listen,port,tag,protocol,settings,streamSettings,sniffing);
 
 @override
 String toString() {
-  return 'Inbound4Ray(tag: $tag, protocol: $protocol, settings: $settings, streamSettings: $streamSettings, sniffing: $sniffing)';
+  return 'Inbound4Ray(listen: $listen, port: $port, tag: $tag, protocol: $protocol, settings: $settings, streamSettings: $streamSettings, sniffing: $sniffing)';
 }
 
 
@@ -285,11 +301,11 @@ abstract mixin class _$Inbound4RayCopyWith<$Res> implements $Inbound4RayCopyWith
   factory _$Inbound4RayCopyWith(_Inbound4Ray value, $Res Function(_Inbound4Ray) _then) = __$Inbound4RayCopyWithImpl;
 @override @useResult
 $Res call({
- String? tag, String? protocol,@InboundSettingsConverter() InboundSettings4Ray? settings, StreamSettings4Ray? streamSettings, Sniff4Ray? sniffing
+ String? listen, MultiValueMixed? port, String? tag, String? protocol,@InboundSettingsConverter() InboundSettings4Ray? settings, StreamSettings4Ray? streamSettings, Sniff4Ray? sniffing
 });
 
 
-@override $InboundSettings4RayCopyWith<$Res>? get settings;@override $StreamSettings4RayCopyWith<$Res>? get streamSettings;@override $Sniff4RayCopyWith<$Res>? get sniffing;
+@override $MultiValueMixedCopyWith<$Res>? get port;@override $InboundSettings4RayCopyWith<$Res>? get settings;@override $StreamSettings4RayCopyWith<$Res>? get streamSettings;@override $Sniff4RayCopyWith<$Res>? get sniffing;
 
 }
 /// @nodoc
@@ -302,9 +318,11 @@ class __$Inbound4RayCopyWithImpl<$Res>
 
 /// Create a copy of Inbound4Ray
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? tag = freezed,Object? protocol = freezed,Object? settings = freezed,Object? streamSettings = freezed,Object? sniffing = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? listen = freezed,Object? port = freezed,Object? tag = freezed,Object? protocol = freezed,Object? settings = freezed,Object? streamSettings = freezed,Object? sniffing = freezed,}) {
   return _then(_Inbound4Ray(
-tag: freezed == tag ? _self.tag : tag // ignore: cast_nullable_to_non_nullable
+listen: freezed == listen ? _self.listen : listen // ignore: cast_nullable_to_non_nullable
+as String?,port: freezed == port ? _self.port : port // ignore: cast_nullable_to_non_nullable
+as MultiValueMixed?,tag: freezed == tag ? _self.tag : tag // ignore: cast_nullable_to_non_nullable
 as String?,protocol: freezed == protocol ? _self.protocol : protocol // ignore: cast_nullable_to_non_nullable
 as String?,settings: freezed == settings ? _self.settings : settings // ignore: cast_nullable_to_non_nullable
 as InboundSettings4Ray?,streamSettings: freezed == streamSettings ? _self.streamSettings : streamSettings // ignore: cast_nullable_to_non_nullable
@@ -314,6 +332,18 @@ as Sniff4Ray?,
 }
 
 /// Create a copy of Inbound4Ray
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$MultiValueMixedCopyWith<$Res>? get port {
+    if (_self.port == null) {
+    return null;
+  }
+
+  return $MultiValueMixedCopyWith<$Res>(_self.port!, (value) {
+    return _then(_self.copyWith(port: value));
+  });
+}/// Create a copy of Inbound4Ray
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')

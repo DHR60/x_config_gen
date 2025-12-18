@@ -31,6 +31,8 @@ void main() {
     ),
     inbounds: [
       Inbound4Ray(
+        listen: '127.0.0.1',
+        port: MultiValueMixed.single(1080),
         tag: 'http-inbound',
         protocol: 'http',
         settings: InboundSettings4Ray.http(
@@ -51,6 +53,8 @@ void main() {
         ),
       ),
       Inbound4Ray(
+        listen: '127.0.0.1',
+        port: MultiValueMixed.single(1081),
         tag: 'socks-inbound',
         protocol: 'socks',
         settings: InboundSettings4Ray.socks(

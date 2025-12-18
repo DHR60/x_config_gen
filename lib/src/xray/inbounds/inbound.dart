@@ -3,6 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:x_config_gen/src/xray/inbounds/settings/inbound_settings.dart';
 import 'package:x_config_gen/src/xray/inbounds/sniff.dart';
 import 'package:x_config_gen/src/xray/transport/stream_settings.dart';
+import 'package:x_config_gen/src/core/multi_value/multi_value_mixed.dart';
 
 export 'package:x_config_gen/src/xray/inbounds/settings/inbound_settings.dart';
 export 'package:x_config_gen/src/xray/inbounds/sniff.dart';
@@ -17,6 +18,8 @@ abstract class Inbound4Ray with _$Inbound4Ray {
 
   @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory Inbound4Ray({
+    String? listen,
+    MultiValueMixed? port,
     String? tag,
     String? protocol,
     @InboundSettingsConverter() InboundSettings4Ray? settings,

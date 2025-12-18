@@ -7,6 +7,8 @@ part of 'inbound.dart';
 // **************************************************************************
 
 _Inbound4Ray _$Inbound4RayFromJson(Map<String, dynamic> json) => _Inbound4Ray(
+  listen: json['listen'] as String?,
+  port: json['port'] == null ? null : MultiValueMixed.fromJson(json['port']),
   tag: json['tag'] as String?,
   protocol: json['protocol'] as String?,
   settings: const InboundSettingsConverter().fromJson(
@@ -24,6 +26,8 @@ _Inbound4Ray _$Inbound4RayFromJson(Map<String, dynamic> json) => _Inbound4Ray(
 
 Map<String, dynamic> _$Inbound4RayToJson(_Inbound4Ray instance) =>
     <String, dynamic>{
+      'listen': ?instance.listen,
+      'port': ?instance.port?.toJson(),
       'tag': ?instance.tag,
       'protocol': ?instance.protocol,
       'settings': ?const InboundSettingsConverter().toJson(instance.settings),
