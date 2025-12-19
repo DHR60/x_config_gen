@@ -12,7 +12,7 @@ part 'policy.g.dart';
 abstract class Policy4Ray with _$Policy4Ray {
   @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory Policy4Ray({
-    PolicyLevels4Ray? levels,
+    Map<String, PolicyLevelObject4Ray>? levels,
     PolicySystem4Ray? system,
   }) = _Policy4Ray;
 

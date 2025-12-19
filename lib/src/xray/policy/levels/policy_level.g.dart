@@ -6,21 +6,6 @@ part of 'policy_level.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_PolicyLevels4Ray _$PolicyLevels4RayFromJson(Map<String, dynamic> json) =>
-    _PolicyLevels4Ray(
-      levels: (json['levels'] as Map<String, dynamic>?)?.map(
-        (k, e) => MapEntry(
-          k,
-          PolicyLevelObject4Ray.fromJson(e as Map<String, dynamic>),
-        ),
-      ),
-    );
-
-Map<String, dynamic> _$PolicyLevels4RayToJson(_PolicyLevels4Ray instance) =>
-    <String, dynamic>{
-      'levels': ?instance.levels?.map((k, e) => MapEntry(k, e.toJson())),
-    };
-
 _PolicyLevelObject4Ray _$PolicyLevelObject4RayFromJson(
   Map<String, dynamic> json,
 ) => _PolicyLevelObject4Ray(

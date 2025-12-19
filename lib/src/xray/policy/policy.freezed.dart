@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Policy4Ray {
 
- PolicyLevels4Ray? get levels; PolicySystem4Ray? get system;
+ Map<String, PolicyLevelObject4Ray>? get levels; PolicySystem4Ray? get system;
 /// Create a copy of Policy4Ray
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,12 +28,12 @@ $Policy4RayCopyWith<Policy4Ray> get copyWith => _$Policy4RayCopyWithImpl<Policy4
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Policy4Ray&&(identical(other.levels, levels) || other.levels == levels)&&(identical(other.system, system) || other.system == system));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Policy4Ray&&const DeepCollectionEquality().equals(other.levels, levels)&&(identical(other.system, system) || other.system == system));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,levels,system);
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(levels),system);
 
 @override
 String toString() {
@@ -48,11 +48,11 @@ abstract mixin class $Policy4RayCopyWith<$Res>  {
   factory $Policy4RayCopyWith(Policy4Ray value, $Res Function(Policy4Ray) _then) = _$Policy4RayCopyWithImpl;
 @useResult
 $Res call({
- PolicyLevels4Ray? levels, PolicySystem4Ray? system
+ Map<String, PolicyLevelObject4Ray>? levels, PolicySystem4Ray? system
 });
 
 
-$PolicyLevels4RayCopyWith<$Res>? get levels;$PolicySystem4RayCopyWith<$Res>? get system;
+$PolicySystem4RayCopyWith<$Res>? get system;
 
 }
 /// @nodoc
@@ -68,23 +68,11 @@ class _$Policy4RayCopyWithImpl<$Res>
 @pragma('vm:prefer-inline') @override $Res call({Object? levels = freezed,Object? system = freezed,}) {
   return _then(_self.copyWith(
 levels: freezed == levels ? _self.levels : levels // ignore: cast_nullable_to_non_nullable
-as PolicyLevels4Ray?,system: freezed == system ? _self.system : system // ignore: cast_nullable_to_non_nullable
+as Map<String, PolicyLevelObject4Ray>?,system: freezed == system ? _self.system : system // ignore: cast_nullable_to_non_nullable
 as PolicySystem4Ray?,
   ));
 }
 /// Create a copy of Policy4Ray
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$PolicyLevels4RayCopyWith<$Res>? get levels {
-    if (_self.levels == null) {
-    return null;
-  }
-
-  return $PolicyLevels4RayCopyWith<$Res>(_self.levels!, (value) {
-    return _then(_self.copyWith(levels: value));
-  });
-}/// Create a copy of Policy4Ray
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
@@ -178,7 +166,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( PolicyLevels4Ray? levels,  PolicySystem4Ray? system)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Map<String, PolicyLevelObject4Ray>? levels,  PolicySystem4Ray? system)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Policy4Ray() when $default != null:
 return $default(_that.levels,_that.system);case _:
@@ -199,7 +187,7 @@ return $default(_that.levels,_that.system);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( PolicyLevels4Ray? levels,  PolicySystem4Ray? system)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Map<String, PolicyLevelObject4Ray>? levels,  PolicySystem4Ray? system)  $default,) {final _that = this;
 switch (_that) {
 case _Policy4Ray():
 return $default(_that.levels,_that.system);case _:
@@ -219,7 +207,7 @@ return $default(_that.levels,_that.system);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( PolicyLevels4Ray? levels,  PolicySystem4Ray? system)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Map<String, PolicyLevelObject4Ray>? levels,  PolicySystem4Ray? system)?  $default,) {final _that = this;
 switch (_that) {
 case _Policy4Ray() when $default != null:
 return $default(_that.levels,_that.system);case _:
@@ -234,10 +222,18 @@ return $default(_that.levels,_that.system);case _:
 
 @JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _Policy4Ray implements Policy4Ray {
-  const _Policy4Ray({this.levels, this.system});
+  const _Policy4Ray({final  Map<String, PolicyLevelObject4Ray>? levels, this.system}): _levels = levels;
   factory _Policy4Ray.fromJson(Map<String, dynamic> json) => _$Policy4RayFromJson(json);
 
-@override final  PolicyLevels4Ray? levels;
+ final  Map<String, PolicyLevelObject4Ray>? _levels;
+@override Map<String, PolicyLevelObject4Ray>? get levels {
+  final value = _levels;
+  if (value == null) return null;
+  if (_levels is EqualUnmodifiableMapView) return _levels;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableMapView(value);
+}
+
 @override final  PolicySystem4Ray? system;
 
 /// Create a copy of Policy4Ray
@@ -253,12 +249,12 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Policy4Ray&&(identical(other.levels, levels) || other.levels == levels)&&(identical(other.system, system) || other.system == system));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Policy4Ray&&const DeepCollectionEquality().equals(other._levels, _levels)&&(identical(other.system, system) || other.system == system));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,levels,system);
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_levels),system);
 
 @override
 String toString() {
@@ -273,11 +269,11 @@ abstract mixin class _$Policy4RayCopyWith<$Res> implements $Policy4RayCopyWith<$
   factory _$Policy4RayCopyWith(_Policy4Ray value, $Res Function(_Policy4Ray) _then) = __$Policy4RayCopyWithImpl;
 @override @useResult
 $Res call({
- PolicyLevels4Ray? levels, PolicySystem4Ray? system
+ Map<String, PolicyLevelObject4Ray>? levels, PolicySystem4Ray? system
 });
 
 
-@override $PolicyLevels4RayCopyWith<$Res>? get levels;@override $PolicySystem4RayCopyWith<$Res>? get system;
+@override $PolicySystem4RayCopyWith<$Res>? get system;
 
 }
 /// @nodoc
@@ -292,25 +288,13 @@ class __$Policy4RayCopyWithImpl<$Res>
 /// with the given fields replaced by the non-null parameter values.
 @override @pragma('vm:prefer-inline') $Res call({Object? levels = freezed,Object? system = freezed,}) {
   return _then(_Policy4Ray(
-levels: freezed == levels ? _self.levels : levels // ignore: cast_nullable_to_non_nullable
-as PolicyLevels4Ray?,system: freezed == system ? _self.system : system // ignore: cast_nullable_to_non_nullable
+levels: freezed == levels ? _self._levels : levels // ignore: cast_nullable_to_non_nullable
+as Map<String, PolicyLevelObject4Ray>?,system: freezed == system ? _self.system : system // ignore: cast_nullable_to_non_nullable
 as PolicySystem4Ray?,
   ));
 }
 
 /// Create a copy of Policy4Ray
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$PolicyLevels4RayCopyWith<$Res>? get levels {
-    if (_self.levels == null) {
-    return null;
-  }
-
-  return $PolicyLevels4RayCopyWith<$Res>(_self.levels!, (value) {
-    return _then(_self.copyWith(levels: value));
-  });
-}/// Create a copy of Policy4Ray
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
