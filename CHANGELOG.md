@@ -1,3 +1,7 @@
+## 0.0.5
+
+= fix: wrong field
+
 ## 0.0.4
 
 = fix: missing field
