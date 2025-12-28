@@ -36,7 +36,7 @@ abstract class StreamSettings4Ray with _$StreamSettings4Ray {
     KcpTransport4Ray? kcpSettings,
     GrpcTransport4Ray? grpcSettings,
     WebSocketTransport4Ray? wsSettings,
-    HttpUpgradeTransport4Ray? httpSettings,
+    HttpUpgradeTransport4Ray? httpupgradeSettings,
     Sockopt4Ray? sockopt,
   }) = _StreamSettings4Ray;
 
