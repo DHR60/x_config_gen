@@ -4,6 +4,7 @@ import 'package:x_config_gen/src/xray/outbounds/settings/dns.dart';
 import 'package:x_config_gen/src/xray/outbounds/settings/freedom.dart';
 import 'package:x_config_gen/src/xray/outbounds/settings/http.dart';
 import 'package:x_config_gen/src/xray/outbounds/settings/loopback.dart';
+import 'package:x_config_gen/src/xray/outbounds/settings/shadowsocks.dart';
 import 'package:x_config_gen/src/xray/outbounds/settings/socks.dart';
 import 'package:x_config_gen/src/xray/outbounds/settings/vless.dart';
 import 'package:x_config_gen/src/xray/outbounds/settings/trojan.dart';
@@ -15,6 +16,7 @@ export 'package:x_config_gen/src/xray/outbounds/settings/dns.dart';
 export 'package:x_config_gen/src/xray/outbounds/settings/freedom.dart';
 export 'package:x_config_gen/src/xray/outbounds/settings/http.dart';
 export 'package:x_config_gen/src/xray/outbounds/settings/loopback.dart';
+export 'package:x_config_gen/src/xray/outbounds/settings/shadowsocks.dart';
 export 'package:x_config_gen/src/xray/outbounds/settings/socks.dart';
 export 'package:x_config_gen/src/xray/outbounds/settings/vless.dart';
 export 'package:x_config_gen/src/xray/outbounds/settings/trojan.dart';
@@ -61,6 +63,10 @@ sealed class OutboundSettings4Ray with _$OutboundSettings4Ray {
     required VmessOutboundSettings4Ray settings,
   }) = _OutboundSettingsVmess;
 
+  const factory OutboundSettings4Ray.shadowsocks({
+    required ShadowsocksOutboundSettings4Ray settings,
+  }) = _OutboundSettingsShadowsocks;
+
   const factory OutboundSettings4Ray.wireguard({
     required WireguardOutboundSettings4Ray settings,
   }) = _OutboundSettingsWireguard;
@@ -78,8 +84,7 @@ class OutboundSettingsConverter
       throw ArgumentError('Outbound settings JSON missing protocol field.');
     }
 
-    final settingsJson = Map<String, dynamic>.from(json)
-      ..remove('protocol');
+    final settingsJson = Map<String, dynamic>.from(json)..remove('protocol');
 
     switch (protocol) {
       case 'blackhole':
@@ -118,6 +123,10 @@ class OutboundSettingsConverter
         return OutboundSettings4Ray.vmess(
           settings: VmessOutboundSettings4Ray.fromJson(settingsJson),
         );
+      case 'shadowsocks':
+        return OutboundSettings4Ray.shadowsocks(
+          settings: ShadowsocksOutboundSettings4Ray.fromJson(settingsJson),
+        );
       case 'wireguard':
         return OutboundSettings4Ray.wireguard(
           settings: WireguardOutboundSettings4Ray.fromJson(settingsJson),
@@ -142,6 +151,7 @@ class OutboundSettingsConverter
       vless: (value) => value.settings.toJson(),
       trojan: (value) => value.settings.toJson(),
       vmess: (value) => value.settings.toJson(),
+      shadowsocks: (value) => value.settings.toJson(),
       wireguard: (value) => value.settings.toJson(),
     );
   }
