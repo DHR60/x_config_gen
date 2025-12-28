@@ -1,6 +1,6 @@
 name: x_config_gen
 description: A tool for generating Xray and sing-box configs.
-version: 0.0.5
+version: 0.0.6
 repository: https://github.com/DHR60/x_config_gen
 
 environment:
