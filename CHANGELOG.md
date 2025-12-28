@@ -1,3 +1,7 @@
+## 0.0.7
+
+= fix: wrong field
+
 ## 0.0.6
 
 = fix: missing ss outbound setting
