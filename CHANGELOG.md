@@ -1,3 +1,7 @@
+## 0.0.8
+
+- fix. missing xhttp extra reality settings
+
 ## 0.0.7
 
 = fix: wrong field
