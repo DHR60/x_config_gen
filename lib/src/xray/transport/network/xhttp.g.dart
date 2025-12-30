@@ -90,6 +90,9 @@ _XHttpExtraDownload4Ray _$XHttpExtraDownload4RayFromJson(
   tlsSettings: json['tlsSettings'] == null
       ? null
       : Tls4Ray.fromJson(json['tlsSettings'] as Map<String, dynamic>),
+  realitySettings: json['realitySettings'] == null
+      ? null
+      : Reality4Ray.fromJson(json['realitySettings'] as Map<String, dynamic>),
   xhttpSettings: json['xhttpSettings'] == null
       ? null
       : XHttpTransport4Ray.fromJson(
@@ -108,6 +111,7 @@ Map<String, dynamic> _$XHttpExtraDownload4RayToJson(
   'network': ?instance.network,
   'security': ?instance.security,
   'tlsSettings': ?instance.tlsSettings?.toJson(),
+  'realitySettings': ?instance.realitySettings?.toJson(),
   'xhttpSettings': ?instance.xhttpSettings?.toJson(),
   'sockopt': ?instance.sockopt?.toJson(),
 };

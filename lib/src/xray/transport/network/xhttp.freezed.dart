@@ -935,7 +935,7 @@ as int?,
 /// @nodoc
 mixin _$XHttpExtraDownload4Ray {
 
- String? get address; int? get port; String? get network; String? get security; Tls4Ray? get tlsSettings; XHttpTransport4Ray? get xhttpSettings; Sockopt4Ray? get sockopt;
+ String? get address; int? get port; String? get network; String? get security; Tls4Ray? get tlsSettings; Reality4Ray? get realitySettings; XHttpTransport4Ray? get xhttpSettings; Sockopt4Ray? get sockopt;
 /// Create a copy of XHttpExtraDownload4Ray
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -948,16 +948,16 @@ $XHttpExtraDownload4RayCopyWith<XHttpExtraDownload4Ray> get copyWith => _$XHttpE
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is XHttpExtraDownload4Ray&&(identical(other.address, address) || other.address == address)&&(identical(other.port, port) || other.port == port)&&(identical(other.network, network) || other.network == network)&&(identical(other.security, security) || other.security == security)&&(identical(other.tlsSettings, tlsSettings) || other.tlsSettings == tlsSettings)&&(identical(other.xhttpSettings, xhttpSettings) || other.xhttpSettings == xhttpSettings)&&(identical(other.sockopt, sockopt) || other.sockopt == sockopt));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is XHttpExtraDownload4Ray&&(identical(other.address, address) || other.address == address)&&(identical(other.port, port) || other.port == port)&&(identical(other.network, network) || other.network == network)&&(identical(other.security, security) || other.security == security)&&(identical(other.tlsSettings, tlsSettings) || other.tlsSettings == tlsSettings)&&(identical(other.realitySettings, realitySettings) || other.realitySettings == realitySettings)&&(identical(other.xhttpSettings, xhttpSettings) || other.xhttpSettings == xhttpSettings)&&(identical(other.sockopt, sockopt) || other.sockopt == sockopt));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,address,port,network,security,tlsSettings,xhttpSettings,sockopt);
+int get hashCode => Object.hash(runtimeType,address,port,network,security,tlsSettings,realitySettings,xhttpSettings,sockopt);
 
 @override
 String toString() {
-  return 'XHttpExtraDownload4Ray(address: $address, port: $port, network: $network, security: $security, tlsSettings: $tlsSettings, xhttpSettings: $xhttpSettings, sockopt: $sockopt)';
+  return 'XHttpExtraDownload4Ray(address: $address, port: $port, network: $network, security: $security, tlsSettings: $tlsSettings, realitySettings: $realitySettings, xhttpSettings: $xhttpSettings, sockopt: $sockopt)';
 }
 
 
@@ -968,11 +968,11 @@ abstract mixin class $XHttpExtraDownload4RayCopyWith<$Res>  {
   factory $XHttpExtraDownload4RayCopyWith(XHttpExtraDownload4Ray value, $Res Function(XHttpExtraDownload4Ray) _then) = _$XHttpExtraDownload4RayCopyWithImpl;
 @useResult
 $Res call({
- String? address, int? port, String? network, String? security, Tls4Ray? tlsSettings, XHttpTransport4Ray? xhttpSettings, Sockopt4Ray? sockopt
+ String? address, int? port, String? network, String? security, Tls4Ray? tlsSettings, Reality4Ray? realitySettings, XHttpTransport4Ray? xhttpSettings, Sockopt4Ray? sockopt
 });
 
 
-$Tls4RayCopyWith<$Res>? get tlsSettings;$XHttpTransport4RayCopyWith<$Res>? get xhttpSettings;$Sockopt4RayCopyWith<$Res>? get sockopt;
+$Tls4RayCopyWith<$Res>? get tlsSettings;$Reality4RayCopyWith<$Res>? get realitySettings;$XHttpTransport4RayCopyWith<$Res>? get xhttpSettings;$Sockopt4RayCopyWith<$Res>? get sockopt;
 
 }
 /// @nodoc
@@ -985,14 +985,15 @@ class _$XHttpExtraDownload4RayCopyWithImpl<$Res>
 
 /// Create a copy of XHttpExtraDownload4Ray
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? address = freezed,Object? port = freezed,Object? network = freezed,Object? security = freezed,Object? tlsSettings = freezed,Object? xhttpSettings = freezed,Object? sockopt = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? address = freezed,Object? port = freezed,Object? network = freezed,Object? security = freezed,Object? tlsSettings = freezed,Object? realitySettings = freezed,Object? xhttpSettings = freezed,Object? sockopt = freezed,}) {
   return _then(_self.copyWith(
 address: freezed == address ? _self.address : address // ignore: cast_nullable_to_non_nullable
 as String?,port: freezed == port ? _self.port : port // ignore: cast_nullable_to_non_nullable
 as int?,network: freezed == network ? _self.network : network // ignore: cast_nullable_to_non_nullable
 as String?,security: freezed == security ? _self.security : security // ignore: cast_nullable_to_non_nullable
 as String?,tlsSettings: freezed == tlsSettings ? _self.tlsSettings : tlsSettings // ignore: cast_nullable_to_non_nullable
-as Tls4Ray?,xhttpSettings: freezed == xhttpSettings ? _self.xhttpSettings : xhttpSettings // ignore: cast_nullable_to_non_nullable
+as Tls4Ray?,realitySettings: freezed == realitySettings ? _self.realitySettings : realitySettings // ignore: cast_nullable_to_non_nullable
+as Reality4Ray?,xhttpSettings: freezed == xhttpSettings ? _self.xhttpSettings : xhttpSettings // ignore: cast_nullable_to_non_nullable
 as XHttpTransport4Ray?,sockopt: freezed == sockopt ? _self.sockopt : sockopt // ignore: cast_nullable_to_non_nullable
 as Sockopt4Ray?,
   ));
@@ -1008,6 +1009,18 @@ $Tls4RayCopyWith<$Res>? get tlsSettings {
 
   return $Tls4RayCopyWith<$Res>(_self.tlsSettings!, (value) {
     return _then(_self.copyWith(tlsSettings: value));
+  });
+}/// Create a copy of XHttpExtraDownload4Ray
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$Reality4RayCopyWith<$Res>? get realitySettings {
+    if (_self.realitySettings == null) {
+    return null;
+  }
+
+  return $Reality4RayCopyWith<$Res>(_self.realitySettings!, (value) {
+    return _then(_self.copyWith(realitySettings: value));
   });
 }/// Create a copy of XHttpExtraDownload4Ray
 /// with the given fields replaced by the non-null parameter values.
@@ -1115,10 +1128,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? address,  int? port,  String? network,  String? security,  Tls4Ray? tlsSettings,  XHttpTransport4Ray? xhttpSettings,  Sockopt4Ray? sockopt)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? address,  int? port,  String? network,  String? security,  Tls4Ray? tlsSettings,  Reality4Ray? realitySettings,  XHttpTransport4Ray? xhttpSettings,  Sockopt4Ray? sockopt)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _XHttpExtraDownload4Ray() when $default != null:
-return $default(_that.address,_that.port,_that.network,_that.security,_that.tlsSettings,_that.xhttpSettings,_that.sockopt);case _:
+return $default(_that.address,_that.port,_that.network,_that.security,_that.tlsSettings,_that.realitySettings,_that.xhttpSettings,_that.sockopt);case _:
   return orElse();
 
 }
@@ -1136,10 +1149,10 @@ return $default(_that.address,_that.port,_that.network,_that.security,_that.tlsS
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? address,  int? port,  String? network,  String? security,  Tls4Ray? tlsSettings,  XHttpTransport4Ray? xhttpSettings,  Sockopt4Ray? sockopt)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? address,  int? port,  String? network,  String? security,  Tls4Ray? tlsSettings,  Reality4Ray? realitySettings,  XHttpTransport4Ray? xhttpSettings,  Sockopt4Ray? sockopt)  $default,) {final _that = this;
 switch (_that) {
 case _XHttpExtraDownload4Ray():
-return $default(_that.address,_that.port,_that.network,_that.security,_that.tlsSettings,_that.xhttpSettings,_that.sockopt);case _:
+return $default(_that.address,_that.port,_that.network,_that.security,_that.tlsSettings,_that.realitySettings,_that.xhttpSettings,_that.sockopt);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -1156,10 +1169,10 @@ return $default(_that.address,_that.port,_that.network,_that.security,_that.tlsS
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? address,  int? port,  String? network,  String? security,  Tls4Ray? tlsSettings,  XHttpTransport4Ray? xhttpSettings,  Sockopt4Ray? sockopt)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? address,  int? port,  String? network,  String? security,  Tls4Ray? tlsSettings,  Reality4Ray? realitySettings,  XHttpTransport4Ray? xhttpSettings,  Sockopt4Ray? sockopt)?  $default,) {final _that = this;
 switch (_that) {
 case _XHttpExtraDownload4Ray() when $default != null:
-return $default(_that.address,_that.port,_that.network,_that.security,_that.tlsSettings,_that.xhttpSettings,_that.sockopt);case _:
+return $default(_that.address,_that.port,_that.network,_that.security,_that.tlsSettings,_that.realitySettings,_that.xhttpSettings,_that.sockopt);case _:
   return null;
 
 }
@@ -1171,7 +1184,7 @@ return $default(_that.address,_that.port,_that.network,_that.security,_that.tlsS
 
 @JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _XHttpExtraDownload4Ray implements XHttpExtraDownload4Ray {
-  const _XHttpExtraDownload4Ray({this.address, this.port, this.network, this.security, this.tlsSettings, this.xhttpSettings, this.sockopt});
+  const _XHttpExtraDownload4Ray({this.address, this.port, this.network, this.security, this.tlsSettings, this.realitySettings, this.xhttpSettings, this.sockopt});
   factory _XHttpExtraDownload4Ray.fromJson(Map<String, dynamic> json) => _$XHttpExtraDownload4RayFromJson(json);
 
 @override final  String? address;
@@ -1179,6 +1192,7 @@ class _XHttpExtraDownload4Ray implements XHttpExtraDownload4Ray {
 @override final  String? network;
 @override final  String? security;
 @override final  Tls4Ray? tlsSettings;
+@override final  Reality4Ray? realitySettings;
 @override final  XHttpTransport4Ray? xhttpSettings;
 @override final  Sockopt4Ray? sockopt;
 
@@ -1195,16 +1209,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _XHttpExtraDownload4Ray&&(identical(other.address, address) || other.address == address)&&(identical(other.port, port) || other.port == port)&&(identical(other.network, network) || other.network == network)&&(identical(other.security, security) || other.security == security)&&(identical(other.tlsSettings, tlsSettings) || other.tlsSettings == tlsSettings)&&(identical(other.xhttpSettings, xhttpSettings) || other.xhttpSettings == xhttpSettings)&&(identical(other.sockopt, sockopt) || other.sockopt == sockopt));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _XHttpExtraDownload4Ray&&(identical(other.address, address) || other.address == address)&&(identical(other.port, port) || other.port == port)&&(identical(other.network, network) || other.network == network)&&(identical(other.security, security) || other.security == security)&&(identical(other.tlsSettings, tlsSettings) || other.tlsSettings == tlsSettings)&&(identical(other.realitySettings, realitySettings) || other.realitySettings == realitySettings)&&(identical(other.xhttpSettings, xhttpSettings) || other.xhttpSettings == xhttpSettings)&&(identical(other.sockopt, sockopt) || other.sockopt == sockopt));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,address,port,network,security,tlsSettings,xhttpSettings,sockopt);
+int get hashCode => Object.hash(runtimeType,address,port,network,security,tlsSettings,realitySettings,xhttpSettings,sockopt);
 
 @override
 String toString() {
-  return 'XHttpExtraDownload4Ray(address: $address, port: $port, network: $network, security: $security, tlsSettings: $tlsSettings, xhttpSettings: $xhttpSettings, sockopt: $sockopt)';
+  return 'XHttpExtraDownload4Ray(address: $address, port: $port, network: $network, security: $security, tlsSettings: $tlsSettings, realitySettings: $realitySettings, xhttpSettings: $xhttpSettings, sockopt: $sockopt)';
 }
 
 
@@ -1215,11 +1229,11 @@ abstract mixin class _$XHttpExtraDownload4RayCopyWith<$Res> implements $XHttpExt
   factory _$XHttpExtraDownload4RayCopyWith(_XHttpExtraDownload4Ray value, $Res Function(_XHttpExtraDownload4Ray) _then) = __$XHttpExtraDownload4RayCopyWithImpl;
 @override @useResult
 $Res call({
- String? address, int? port, String? network, String? security, Tls4Ray? tlsSettings, XHttpTransport4Ray? xhttpSettings, Sockopt4Ray? sockopt
+ String? address, int? port, String? network, String? security, Tls4Ray? tlsSettings, Reality4Ray? realitySettings, XHttpTransport4Ray? xhttpSettings, Sockopt4Ray? sockopt
 });
 
 
-@override $Tls4RayCopyWith<$Res>? get tlsSettings;@override $XHttpTransport4RayCopyWith<$Res>? get xhttpSettings;@override $Sockopt4RayCopyWith<$Res>? get sockopt;
+@override $Tls4RayCopyWith<$Res>? get tlsSettings;@override $Reality4RayCopyWith<$Res>? get realitySettings;@override $XHttpTransport4RayCopyWith<$Res>? get xhttpSettings;@override $Sockopt4RayCopyWith<$Res>? get sockopt;
 
 }
 /// @nodoc
@@ -1232,14 +1246,15 @@ class __$XHttpExtraDownload4RayCopyWithImpl<$Res>
 
 /// Create a copy of XHttpExtraDownload4Ray
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? address = freezed,Object? port = freezed,Object? network = freezed,Object? security = freezed,Object? tlsSettings = freezed,Object? xhttpSettings = freezed,Object? sockopt = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? address = freezed,Object? port = freezed,Object? network = freezed,Object? security = freezed,Object? tlsSettings = freezed,Object? realitySettings = freezed,Object? xhttpSettings = freezed,Object? sockopt = freezed,}) {
   return _then(_XHttpExtraDownload4Ray(
 address: freezed == address ? _self.address : address // ignore: cast_nullable_to_non_nullable
 as String?,port: freezed == port ? _self.port : port // ignore: cast_nullable_to_non_nullable
 as int?,network: freezed == network ? _self.network : network // ignore: cast_nullable_to_non_nullable
 as String?,security: freezed == security ? _self.security : security // ignore: cast_nullable_to_non_nullable
 as String?,tlsSettings: freezed == tlsSettings ? _self.tlsSettings : tlsSettings // ignore: cast_nullable_to_non_nullable
-as Tls4Ray?,xhttpSettings: freezed == xhttpSettings ? _self.xhttpSettings : xhttpSettings // ignore: cast_nullable_to_non_nullable
+as Tls4Ray?,realitySettings: freezed == realitySettings ? _self.realitySettings : realitySettings // ignore: cast_nullable_to_non_nullable
+as Reality4Ray?,xhttpSettings: freezed == xhttpSettings ? _self.xhttpSettings : xhttpSettings // ignore: cast_nullable_to_non_nullable
 as XHttpTransport4Ray?,sockopt: freezed == sockopt ? _self.sockopt : sockopt // ignore: cast_nullable_to_non_nullable
 as Sockopt4Ray?,
   ));
@@ -1256,6 +1271,18 @@ $Tls4RayCopyWith<$Res>? get tlsSettings {
 
   return $Tls4RayCopyWith<$Res>(_self.tlsSettings!, (value) {
     return _then(_self.copyWith(tlsSettings: value));
+  });
+}/// Create a copy of XHttpExtraDownload4Ray
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$Reality4RayCopyWith<$Res>? get realitySettings {
+    if (_self.realitySettings == null) {
+    return null;
+  }
+
+  return $Reality4RayCopyWith<$Res>(_self.realitySettings!, (value) {
+    return _then(_self.copyWith(realitySettings: value));
   });
 }/// Create a copy of XHttpExtraDownload4Ray
 /// with the given fields replaced by the non-null parameter values.

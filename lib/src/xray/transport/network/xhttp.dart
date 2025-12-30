@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:x_config_gen/src/core/multi_value/multi_value_string.dart';
+import 'package:x_config_gen/src/xray/inbounds/inbound.dart';
 import 'package:x_config_gen/src/xray/transport/security/tls.dart';
 import 'package:x_config_gen/src/xray/transport/sockopt/sockopt.dart';
 
@@ -65,6 +66,7 @@ abstract class XHttpExtraDownload4Ray with _$XHttpExtraDownload4Ray {
     String? network,
     String? security,
     Tls4Ray? tlsSettings,
+    Reality4Ray? realitySettings,
     XHttpTransport4Ray? xhttpSettings,
     Sockopt4Ray? sockopt,
   }) = _XHttpExtraDownload4Ray;
