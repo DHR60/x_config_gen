@@ -6,10 +6,7 @@ part 'account.g.dart';
 @freezed
 abstract class Account4Ray with _$Account4Ray {
   @JsonSerializable(includeIfNull: false)
-  const factory Account4Ray({
-    String? user,
-    String? pass,
-  }) = _Account4Ray;
+  const factory Account4Ray({String? user, String? pass}) = _Account4Ray;
 
   factory Account4Ray.fromJson(Map<String, dynamic> json) =>
       _$Account4RayFromJson(json);

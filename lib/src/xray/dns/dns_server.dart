@@ -11,16 +11,17 @@ abstract class DnsServer4Ray with _$DnsServer4Ray {
   const DnsServer4Ray._();
 
   const factory DnsServer4Ray.string(String value) = _DnsServer4RayString;
-  const factory DnsServer4Ray.object(DnsServerObject4Ray value) = _DnsServer4RayObjectUnion;
+  const factory DnsServer4Ray.object(DnsServerObject4Ray value) =
+      _DnsServer4RayObjectUnion;
 
   factory DnsServer4Ray.fromJson(dynamic json) => switch (json) {
-        final String v => DnsServer4Ray.string(v),
-        final Map<String, dynamic> v => DnsServer4Ray.object(DnsServerObject4Ray.fromJson(v)),
-        _ => throw FormatException('Invalid DnsServer type: $json'),
-      };
+    final String v => DnsServer4Ray.string(v),
+    final Map<String, dynamic> v => DnsServer4Ray.object(
+      DnsServerObject4Ray.fromJson(v),
+    ),
+    _ => throw FormatException('Invalid DnsServer type: $json'),
+  };
 
-  dynamic toJson() => map(
-        string: (v) => v.value,
-        object: (v) => v.value.toJson(),
-      );
+  dynamic toJson() =>
+      map(string: (v) => v.value, object: (v) => v.value.toJson());
 }

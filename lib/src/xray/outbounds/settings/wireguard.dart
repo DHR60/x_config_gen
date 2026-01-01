@@ -4,7 +4,8 @@ part 'wireguard.freezed.dart';
 part 'wireguard.g.dart';
 
 @freezed
-abstract class WireguardOutboundSettings4Ray with _$WireguardOutboundSettings4Ray {
+abstract class WireguardOutboundSettings4Ray
+    with _$WireguardOutboundSettings4Ray {
   @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory WireguardOutboundSettings4Ray({
     String? secretKey,

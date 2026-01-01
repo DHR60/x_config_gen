@@ -18,7 +18,8 @@ abstract class RoutingBalancers4Ray with _$RoutingBalancers4Ray {
 }
 
 @freezed
-abstract class RoutingBalancersStrategy4Ray with _$RoutingBalancersStrategy4Ray {
+abstract class RoutingBalancersStrategy4Ray
+    with _$RoutingBalancersStrategy4Ray {
   @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory RoutingBalancersStrategy4Ray({
     String? type,
@@ -30,7 +31,8 @@ abstract class RoutingBalancersStrategy4Ray with _$RoutingBalancersStrategy4Ray 
 }
 
 @freezed
-abstract class RoutingBalancersStrategySetting4Ray with _$RoutingBalancersStrategySetting4Ray {
+abstract class RoutingBalancersStrategySetting4Ray
+    with _$RoutingBalancersStrategySetting4Ray {
   @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory RoutingBalancersStrategySetting4Ray({
     int? expected,
@@ -41,12 +43,13 @@ abstract class RoutingBalancersStrategySetting4Ray with _$RoutingBalancersStrate
   }) = _RoutingBalancersStrategySetting4Ray;
 
   factory RoutingBalancersStrategySetting4Ray.fromJson(
-          Map<String, dynamic> json) =>
-      _$RoutingBalancersStrategySetting4RayFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$RoutingBalancersStrategySetting4RayFromJson(json);
 }
 
 @freezed
-abstract class RoutingBalancersStrategySettingCost4Ray with _$RoutingBalancersStrategySettingCost4Ray {
+abstract class RoutingBalancersStrategySettingCost4Ray
+    with _$RoutingBalancersStrategySettingCost4Ray {
   @JsonSerializable(includeIfNull: false)
   const factory RoutingBalancersStrategySettingCost4Ray({
     bool? regexp,
@@ -55,6 +58,6 @@ abstract class RoutingBalancersStrategySettingCost4Ray with _$RoutingBalancersSt
   }) = _RoutingBalancersStrategySettingCost4Ray;
 
   factory RoutingBalancersStrategySettingCost4Ray.fromJson(
-          Map<String, dynamic> json) =>
-      _$RoutingBalancersStrategySettingCost4RayFromJson(json);
+    Map<String, dynamic> json,
+  ) => _$RoutingBalancersStrategySettingCost4RayFromJson(json);
 }

@@ -25,10 +25,7 @@ abstract class KcpTransport4Ray with _$KcpTransport4Ray {
 @freezed
 abstract class KcpHeader4Ray with _$KcpHeader4Ray {
   @JsonSerializable(includeIfNull: false, explicitToJson: true)
-  const factory KcpHeader4Ray({
-    String? type,
-    String? domain,
-  }) = _KcpHeader4Ray;
+  const factory KcpHeader4Ray({String? type, String? domain}) = _KcpHeader4Ray;
 
   factory KcpHeader4Ray.fromJson(Map<String, dynamic> json) =>
       _$KcpHeader4RayFromJson(json);

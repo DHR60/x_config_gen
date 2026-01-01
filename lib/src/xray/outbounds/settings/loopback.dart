@@ -4,11 +4,11 @@ part 'loopback.freezed.dart';
 part 'loopback.g.dart';
 
 @freezed
-abstract class LoopbackOutboundSettings4Ray with _$LoopbackOutboundSettings4Ray {
+abstract class LoopbackOutboundSettings4Ray
+    with _$LoopbackOutboundSettings4Ray {
   @JsonSerializable(includeIfNull: false)
-  const factory LoopbackOutboundSettings4Ray({
-    String? inboundTag,
-  }) = _LoopbackOutboundSettings4Ray;
+  const factory LoopbackOutboundSettings4Ray({String? inboundTag}) =
+      _LoopbackOutboundSettings4Ray;
 
   factory LoopbackOutboundSettings4Ray.fromJson(Map<String, dynamic> json) =>
       _$LoopbackOutboundSettings4RayFromJson(json);

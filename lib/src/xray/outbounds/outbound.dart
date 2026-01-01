@@ -39,6 +39,6 @@ abstract class Outbound4Ray with _$Outbound4Ray {
 
     return _$Outbound4RayFromJson(normalizedJson);
   }
-  
+
   Map<String, dynamic> toJson() => _$Outbound4RayToJson(this as _Outbound4Ray);
 }

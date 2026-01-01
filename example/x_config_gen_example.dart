@@ -38,18 +38,12 @@ void main() {
         settings: InboundSettings4Ray.http(
           settings: HttpInboundSettings4Ray(
             accounts: [
-              Account4Ray(
-                user: 'user1',
-                pass: 'pass1',
-              ),
-              Account4Ray(
-                user: 'user2',
-                pass: 'pass2',
-              ),
+              Account4Ray(user: 'user1', pass: 'pass1'),
+              Account4Ray(user: 'user2', pass: 'pass2'),
             ],
             allowTransparent: false,
             userLevel: 0,
-          )
+          ),
         ),
       ),
       Inbound4Ray(
@@ -60,13 +54,8 @@ void main() {
         settings: InboundSettings4Ray.socks(
           settings: SocksInboundSettings4Ray(
             auth: 'noauth',
-            accounts: [
-              Account4Ray(
-                user: 'sockuser',
-                pass: 'sockpass',
-              ),
-            ],
-          )
+            accounts: [Account4Ray(user: 'sockuser', pass: 'sockpass')],
+          ),
         ),
       ),
     ],
@@ -75,9 +64,7 @@ void main() {
         tag: 'direct',
         protocol: 'freedom',
         settings: OutboundSettings4Ray.freedom(
-          settings: FreedomOutboundSettings4Ray(
-            domainStrategy: 'UseIP',
-          ),
+          settings: FreedomOutboundSettings4Ray(domainStrategy: 'UseIP'),
         ),
       ),
       Outbound4Ray(
@@ -85,9 +72,7 @@ void main() {
         protocol: 'blackhole',
         settings: OutboundSettings4Ray.blackhole(
           settings: BlackholeOutboundSettings4Ray(
-            response: BlackholeOutboundResponse4Ray(
-              type: 'http',
-            ),
+            response: BlackholeOutboundResponse4Ray(type: 'http'),
           ),
         ),
       ),
@@ -112,9 +97,7 @@ void main() {
             encryption: 'none',
             flow: 'xtls-rprx-vision',
             level: 0,
-            reverse: VlessOutboundReverse4Ray(
-              tag: 'vless-reverse-inbound',
-            ),
+            reverse: VlessOutboundReverse4Ray(tag: 'vless-reverse-inbound'),
           ),
         ),
         streamSettings: StreamSettings4Ray(
@@ -124,33 +107,24 @@ void main() {
             allowInsecure: false,
             serverName: 'vless.example.com',
           ),
-          sockopt: Sockopt4Ray(
-            dialerProxy: 'socks-outbound',
-          ),
+          sockopt: Sockopt4Ray(dialerProxy: 'socks-outbound'),
         ),
       ),
     ],
     routing: Routing4Ray(
       domainStrategy: 'IPIfNonMatch',
       rules: [
-        RoutingRule4Ray(
-          domain: ['geosite:cn'],
-          outboundTag: 'direct',
-        ),
-        RoutingRule4Ray(
-          ip: ['geoip:private'],
-          outboundTag: 'direct',
-        ),
-        RoutingRule4Ray(
-          protocol: ['bittorrent'],
-          outboundTag: 'blocked',
-        ),
+        RoutingRule4Ray(domain: ['geosite:cn'], outboundTag: 'direct'),
+        RoutingRule4Ray(ip: ['geoip:private'], outboundTag: 'direct'),
+        RoutingRule4Ray(protocol: ['bittorrent'], outboundTag: 'blocked'),
       ],
     ),
   );
 
   // print config as json
-  final prettyJson = const JsonEncoder.withIndent('  ').convert(config.toJson());
+  final prettyJson = const JsonEncoder.withIndent(
+    '  ',
+  ).convert(config.toJson());
   print(prettyJson);
 
   // json str to config object
@@ -158,6 +132,8 @@ void main() {
   print(configBack);
 
   // print again to verify
-  final prettyJsonBack = const JsonEncoder.withIndent('  ').convert(configBack.toJson());
+  final prettyJsonBack = const JsonEncoder.withIndent(
+    '  ',
+  ).convert(configBack.toJson());
   print(prettyJsonBack);
 }

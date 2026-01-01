@@ -11,22 +11,20 @@ void main() {
           hosts: {
             'example.com': MultiValueString.multi(['1.1.1.1', '1.0.0.1']),
           },
-          servers: [
-            DnsServer4Ray.string('1.1.1.1'),
-          ],
+          servers: [DnsServer4Ray.string('1.1.1.1')],
         ),
         inbounds: const [],
         outbounds: const [],
-        routing: Routing4Ray(
-          domainStrategy: 'IPIfNonMatch',
-          rules: const [],
-        ),
+        routing: Routing4Ray(domainStrategy: 'IPIfNonMatch', rules: const []),
       );
 
       final jsonStr = jsonEncode(config.toJson());
       final back = XrayConfig.fromJson(jsonDecode(jsonStr));
 
-      expect(back.dns!.hosts!['example.com'], MultiValueString.multi(['1.1.1.1', '1.0.0.1']));
+      expect(
+        back.dns!.hosts!['example.com'],
+        MultiValueString.multi(['1.1.1.1', '1.0.0.1']),
+      );
       expect(back.routing!.domainStrategy, 'IPIfNonMatch');
     });
   });

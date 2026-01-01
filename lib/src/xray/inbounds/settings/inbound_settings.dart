@@ -60,8 +60,7 @@ class InboundSettingsConverter
       throw ArgumentError('Inbound settings JSON missing protocol field.');
     }
 
-    final settingsJson = Map<String, dynamic>.from(json)
-      ..remove('protocol');
+    final settingsJson = Map<String, dynamic>.from(json)..remove('protocol');
 
     switch (protocol) {
       case 'socks':

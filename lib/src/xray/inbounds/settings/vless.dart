@@ -35,9 +35,8 @@ abstract class VlessInboundAccount4Ray with _$VlessInboundAccount4Ray {
 @freezed
 abstract class VlessInboundReverse4Ray with _$VlessInboundReverse4Ray {
   @JsonSerializable(includeIfNull: false, explicitToJson: true)
-  const factory VlessInboundReverse4Ray({
-    required String tag,
-  }) = _VlessInboundReverse4Ray;
+  const factory VlessInboundReverse4Ray({required String tag}) =
+      _VlessInboundReverse4Ray;
 
   factory VlessInboundReverse4Ray.fromJson(Map<String, dynamic> json) =>
       _$VlessInboundReverse4RayFromJson(json);

@@ -4,7 +4,8 @@ part 'shadowsocks.freezed.dart';
 part 'shadowsocks.g.dart';
 
 @freezed
-abstract class ShadowsocksOutboundSettings4Ray with _$ShadowsocksOutboundSettings4Ray {
+abstract class ShadowsocksOutboundSettings4Ray
+    with _$ShadowsocksOutboundSettings4Ray {
   @JsonSerializable(includeIfNull: false)
   const factory ShadowsocksOutboundSettings4Ray({
     String? email,
@@ -17,7 +18,6 @@ abstract class ShadowsocksOutboundSettings4Ray with _$ShadowsocksOutboundSetting
     int? level,
   }) = _ShadowsocksOutboundSettings4Ray;
 
-  factory ShadowsocksOutboundSettings4Ray.fromJson(
-          Map<String, dynamic> json) =>
+  factory ShadowsocksOutboundSettings4Ray.fromJson(Map<String, dynamic> json) =>
       _$ShadowsocksOutboundSettings4RayFromJson(json);
 }

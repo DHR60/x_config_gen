@@ -31,9 +31,8 @@ abstract class VmessInboundAccount4Ray with _$VmessInboundAccount4Ray {
 @freezed
 abstract class VmessInboundDefault4Ray with _$VmessInboundDefault4Ray {
   @JsonSerializable(includeIfNull: false, explicitToJson: true)
-  const factory VmessInboundDefault4Ray({
-    required int level,
-  }) = _VmessInboundDefault4Ray;
+  const factory VmessInboundDefault4Ray({required int level}) =
+      _VmessInboundDefault4Ray;
 
   factory VmessInboundDefault4Ray.fromJson(Map<String, dynamic> json) =>
       _$VmessInboundDefault4RayFromJson(json);
