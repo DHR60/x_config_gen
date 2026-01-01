@@ -1,3 +1,7 @@
+## 0.1.0
+
+- feat: update dns settings fields
+
 ## 0.0.8
 
 - fix. missing xhttp extra reality settings
