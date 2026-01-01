@@ -19,6 +19,9 @@ _Dns4Ray _$Dns4RayFromJson(Map<String, dynamic> json) => _Dns4Ray(
   disableFallback: json['disableFallback'] as bool?,
   disableFallbackIfMatch: json['disableFallbackIfMatch'] as bool?,
   useSystemHosts: json['useSystemHosts'] as bool?,
+  serveStale: json['serveStale'] as bool?,
+  serveExpiredTTL: (json['serveExpiredTTL'] as num?)?.toInt(),
+  enableParallelQuery: json['enableParallelQuery'] as bool?,
   tag: json['tag'] as String?,
 );
 
@@ -31,5 +34,8 @@ Map<String, dynamic> _$Dns4RayToJson(_Dns4Ray instance) => <String, dynamic>{
   'disableFallback': ?instance.disableFallback,
   'disableFallbackIfMatch': ?instance.disableFallbackIfMatch,
   'useSystemHosts': ?instance.useSystemHosts,
+  'serveStale': ?instance.serveStale,
+  'serveExpiredTTL': ?instance.serveExpiredTTL,
+  'enableParallelQuery': ?instance.enableParallelQuery,
   'tag': ?instance.tag,
 };

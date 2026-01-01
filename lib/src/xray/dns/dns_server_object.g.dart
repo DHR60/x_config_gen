@@ -11,21 +11,23 @@ _DnsServerObject4Ray _$DnsServerObject4RayFromJson(Map<String, dynamic> json) =>
       tag: json['tag'] as String?,
       address: json['address'] as String,
       port: (json['port'] as num?)?.toInt(),
-      domains: json['domains'] == null
-          ? null
-          : MultiValueString.fromJson(json['domains']),
-      expectedIPs: json['expectedIPs'] == null
-          ? null
-          : MultiValueString.fromJson(json['expectedIPs']),
-      unexpectedIPs: json['unexpectedIPs'] == null
-          ? null
-          : MultiValueString.fromJson(json['unexpectedIPs']),
+      domains: (json['domains'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      expectedIPs: (json['expectedIPs'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      unexpectedIPs: (json['unexpectedIPs'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
       skipFallback: json['skipFallback'] as bool?,
       clientIP: json['clientIP'] as String?,
       queryStrategy: json['queryStrategy'] as String?,
       timeoutMs: (json['timeoutMs'] as num?)?.toInt(),
       disableCache: json['disableCache'] as bool?,
       finalQuery: json['finalQuery'] as bool?,
+      serveStale: json['serveStale'] as bool?,
+      serveExpiredTTL: (json['serveExpiredTTL'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$DnsServerObject4RayToJson(
@@ -43,4 +45,6 @@ Map<String, dynamic> _$DnsServerObject4RayToJson(
   'timeoutMs': ?instance.timeoutMs,
   'disableCache': ?instance.disableCache,
   'finalQuery': ?instance.finalQuery,
+  'serveStale': ?instance.serveStale,
+  'serveExpiredTTL': ?instance.serveExpiredTTL,
 };

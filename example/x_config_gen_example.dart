@@ -15,7 +15,7 @@ void main() {
           DnsServerObject4Ray(
             address: '8.8.8.8',
             port: 53,
-            domains: MultiValueString.single('geosite:google'),
+            domains: ['geosite:google'],
             skipFallback: true,
           ),
         ),
@@ -23,7 +23,7 @@ void main() {
           DnsServerObject4Ray(
             address: '223.5.5.5',
             port: 53,
-            domains: MultiValueString.multi(['geosite:cn', 'geosite:private']),
+            domains: ['geosite:cn', 'geosite:private'],
             skipFallback: true,
           ),
         ),

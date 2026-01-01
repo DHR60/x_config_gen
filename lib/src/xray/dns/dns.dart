@@ -21,6 +21,9 @@ abstract class Dns4Ray with _$Dns4Ray {
     bool? disableFallback,
     bool? disableFallbackIfMatch,
     bool? useSystemHosts,
+    bool? serveStale,
+    int? serveExpiredTTL,
+    bool? enableParallelQuery,
     String? tag,
   }) = _Dns4Ray;
 
