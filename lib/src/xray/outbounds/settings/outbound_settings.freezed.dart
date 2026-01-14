@@ -55,7 +55,7 @@ extension OutboundSettings4RayPatterns on OutboundSettings4Ray {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _OutboundSettingsBlackhole value)?  blackhole,TResult Function( _OutboundSettingsDns value)?  dns,TResult Function( _OutboundSettingsFreedom value)?  freedom,TResult Function( _OutboundSettingsLoopback value)?  loopback,TResult Function( _OutboundSettingsHttp value)?  http,TResult Function( _OutboundSettingsSocks value)?  socks,TResult Function( _OutboundSettingsVless value)?  vless,TResult Function( _OutboundSettingsTrojan value)?  trojan,TResult Function( _OutboundSettingsVmess value)?  vmess,TResult Function( _OutboundSettingsShadowsocks value)?  shadowsocks,TResult Function( _OutboundSettingsWireguard value)?  wireguard,required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _OutboundSettingsBlackhole value)?  blackhole,TResult Function( _OutboundSettingsDns value)?  dns,TResult Function( _OutboundSettingsFreedom value)?  freedom,TResult Function( _OutboundSettingsLoopback value)?  loopback,TResult Function( _OutboundSettingsHttp value)?  http,TResult Function( _OutboundSettingsSocks value)?  socks,TResult Function( _OutboundSettingsVless value)?  vless,TResult Function( _OutboundSettingsTrojan value)?  trojan,TResult Function( _OutboundSettingsVmess value)?  vmess,TResult Function( _OutboundSettingsShadowsocks value)?  shadowsocks,TResult Function( _OutboundSettingsWireguard value)?  wireguard,TResult Function( _OutboundSettingsHysteria value)?  hysteria,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
 case _OutboundSettingsBlackhole() when blackhole != null:
@@ -69,7 +69,8 @@ return vless(_that);case _OutboundSettingsTrojan() when trojan != null:
 return trojan(_that);case _OutboundSettingsVmess() when vmess != null:
 return vmess(_that);case _OutboundSettingsShadowsocks() when shadowsocks != null:
 return shadowsocks(_that);case _OutboundSettingsWireguard() when wireguard != null:
-return wireguard(_that);case _:
+return wireguard(_that);case _OutboundSettingsHysteria() when hysteria != null:
+return hysteria(_that);case _:
   return orElse();
 
 }
@@ -87,7 +88,7 @@ return wireguard(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _OutboundSettingsBlackhole value)  blackhole,required TResult Function( _OutboundSettingsDns value)  dns,required TResult Function( _OutboundSettingsFreedom value)  freedom,required TResult Function( _OutboundSettingsLoopback value)  loopback,required TResult Function( _OutboundSettingsHttp value)  http,required TResult Function( _OutboundSettingsSocks value)  socks,required TResult Function( _OutboundSettingsVless value)  vless,required TResult Function( _OutboundSettingsTrojan value)  trojan,required TResult Function( _OutboundSettingsVmess value)  vmess,required TResult Function( _OutboundSettingsShadowsocks value)  shadowsocks,required TResult Function( _OutboundSettingsWireguard value)  wireguard,}){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _OutboundSettingsBlackhole value)  blackhole,required TResult Function( _OutboundSettingsDns value)  dns,required TResult Function( _OutboundSettingsFreedom value)  freedom,required TResult Function( _OutboundSettingsLoopback value)  loopback,required TResult Function( _OutboundSettingsHttp value)  http,required TResult Function( _OutboundSettingsSocks value)  socks,required TResult Function( _OutboundSettingsVless value)  vless,required TResult Function( _OutboundSettingsTrojan value)  trojan,required TResult Function( _OutboundSettingsVmess value)  vmess,required TResult Function( _OutboundSettingsShadowsocks value)  shadowsocks,required TResult Function( _OutboundSettingsWireguard value)  wireguard,required TResult Function( _OutboundSettingsHysteria value)  hysteria,}){
 final _that = this;
 switch (_that) {
 case _OutboundSettingsBlackhole():
@@ -101,7 +102,8 @@ return vless(_that);case _OutboundSettingsTrojan():
 return trojan(_that);case _OutboundSettingsVmess():
 return vmess(_that);case _OutboundSettingsShadowsocks():
 return shadowsocks(_that);case _OutboundSettingsWireguard():
-return wireguard(_that);}
+return wireguard(_that);case _OutboundSettingsHysteria():
+return hysteria(_that);}
 }
 /// A variant of `map` that fallback to returning `null`.
 ///
@@ -115,7 +117,7 @@ return wireguard(_that);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _OutboundSettingsBlackhole value)?  blackhole,TResult? Function( _OutboundSettingsDns value)?  dns,TResult? Function( _OutboundSettingsFreedom value)?  freedom,TResult? Function( _OutboundSettingsLoopback value)?  loopback,TResult? Function( _OutboundSettingsHttp value)?  http,TResult? Function( _OutboundSettingsSocks value)?  socks,TResult? Function( _OutboundSettingsVless value)?  vless,TResult? Function( _OutboundSettingsTrojan value)?  trojan,TResult? Function( _OutboundSettingsVmess value)?  vmess,TResult? Function( _OutboundSettingsShadowsocks value)?  shadowsocks,TResult? Function( _OutboundSettingsWireguard value)?  wireguard,}){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _OutboundSettingsBlackhole value)?  blackhole,TResult? Function( _OutboundSettingsDns value)?  dns,TResult? Function( _OutboundSettingsFreedom value)?  freedom,TResult? Function( _OutboundSettingsLoopback value)?  loopback,TResult? Function( _OutboundSettingsHttp value)?  http,TResult? Function( _OutboundSettingsSocks value)?  socks,TResult? Function( _OutboundSettingsVless value)?  vless,TResult? Function( _OutboundSettingsTrojan value)?  trojan,TResult? Function( _OutboundSettingsVmess value)?  vmess,TResult? Function( _OutboundSettingsShadowsocks value)?  shadowsocks,TResult? Function( _OutboundSettingsWireguard value)?  wireguard,TResult? Function( _OutboundSettingsHysteria value)?  hysteria,}){
 final _that = this;
 switch (_that) {
 case _OutboundSettingsBlackhole() when blackhole != null:
@@ -129,7 +131,8 @@ return vless(_that);case _OutboundSettingsTrojan() when trojan != null:
 return trojan(_that);case _OutboundSettingsVmess() when vmess != null:
 return vmess(_that);case _OutboundSettingsShadowsocks() when shadowsocks != null:
 return shadowsocks(_that);case _OutboundSettingsWireguard() when wireguard != null:
-return wireguard(_that);case _:
+return wireguard(_that);case _OutboundSettingsHysteria() when hysteria != null:
+return hysteria(_that);case _:
   return null;
 
 }
@@ -146,7 +149,7 @@ return wireguard(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( BlackholeOutboundSettings4Ray settings)?  blackhole,TResult Function( DnsOutboundSettings4Ray settings)?  dns,TResult Function( FreedomOutboundSettings4Ray settings)?  freedom,TResult Function( LoopbackOutboundSettings4Ray settings)?  loopback,TResult Function( HttpOutboundSettings4Ray settings)?  http,TResult Function( SocksOutboundSettings4Ray settings)?  socks,TResult Function( VlessOutboundSettings4Ray settings)?  vless,TResult Function( TrojanOutboundSettings4Ray settings)?  trojan,TResult Function( VmessOutboundSettings4Ray settings)?  vmess,TResult Function( ShadowsocksOutboundSettings4Ray settings)?  shadowsocks,TResult Function( WireguardOutboundSettings4Ray settings)?  wireguard,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( BlackholeOutboundSettings4Ray settings)?  blackhole,TResult Function( DnsOutboundSettings4Ray settings)?  dns,TResult Function( FreedomOutboundSettings4Ray settings)?  freedom,TResult Function( LoopbackOutboundSettings4Ray settings)?  loopback,TResult Function( HttpOutboundSettings4Ray settings)?  http,TResult Function( SocksOutboundSettings4Ray settings)?  socks,TResult Function( VlessOutboundSettings4Ray settings)?  vless,TResult Function( TrojanOutboundSettings4Ray settings)?  trojan,TResult Function( VmessOutboundSettings4Ray settings)?  vmess,TResult Function( ShadowsocksOutboundSettings4Ray settings)?  shadowsocks,TResult Function( WireguardOutboundSettings4Ray settings)?  wireguard,TResult Function( HysteriaOutboundSettings4Ray settings)?  hysteria,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _OutboundSettingsBlackhole() when blackhole != null:
 return blackhole(_that.settings);case _OutboundSettingsDns() when dns != null:
@@ -159,7 +162,8 @@ return vless(_that.settings);case _OutboundSettingsTrojan() when trojan != null:
 return trojan(_that.settings);case _OutboundSettingsVmess() when vmess != null:
 return vmess(_that.settings);case _OutboundSettingsShadowsocks() when shadowsocks != null:
 return shadowsocks(_that.settings);case _OutboundSettingsWireguard() when wireguard != null:
-return wireguard(_that.settings);case _:
+return wireguard(_that.settings);case _OutboundSettingsHysteria() when hysteria != null:
+return hysteria(_that.settings);case _:
   return orElse();
 
 }
@@ -177,7 +181,7 @@ return wireguard(_that.settings);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( BlackholeOutboundSettings4Ray settings)  blackhole,required TResult Function( DnsOutboundSettings4Ray settings)  dns,required TResult Function( FreedomOutboundSettings4Ray settings)  freedom,required TResult Function( LoopbackOutboundSettings4Ray settings)  loopback,required TResult Function( HttpOutboundSettings4Ray settings)  http,required TResult Function( SocksOutboundSettings4Ray settings)  socks,required TResult Function( VlessOutboundSettings4Ray settings)  vless,required TResult Function( TrojanOutboundSettings4Ray settings)  trojan,required TResult Function( VmessOutboundSettings4Ray settings)  vmess,required TResult Function( ShadowsocksOutboundSettings4Ray settings)  shadowsocks,required TResult Function( WireguardOutboundSettings4Ray settings)  wireguard,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( BlackholeOutboundSettings4Ray settings)  blackhole,required TResult Function( DnsOutboundSettings4Ray settings)  dns,required TResult Function( FreedomOutboundSettings4Ray settings)  freedom,required TResult Function( LoopbackOutboundSettings4Ray settings)  loopback,required TResult Function( HttpOutboundSettings4Ray settings)  http,required TResult Function( SocksOutboundSettings4Ray settings)  socks,required TResult Function( VlessOutboundSettings4Ray settings)  vless,required TResult Function( TrojanOutboundSettings4Ray settings)  trojan,required TResult Function( VmessOutboundSettings4Ray settings)  vmess,required TResult Function( ShadowsocksOutboundSettings4Ray settings)  shadowsocks,required TResult Function( WireguardOutboundSettings4Ray settings)  wireguard,required TResult Function( HysteriaOutboundSettings4Ray settings)  hysteria,}) {final _that = this;
 switch (_that) {
 case _OutboundSettingsBlackhole():
 return blackhole(_that.settings);case _OutboundSettingsDns():
@@ -190,7 +194,8 @@ return vless(_that.settings);case _OutboundSettingsTrojan():
 return trojan(_that.settings);case _OutboundSettingsVmess():
 return vmess(_that.settings);case _OutboundSettingsShadowsocks():
 return shadowsocks(_that.settings);case _OutboundSettingsWireguard():
-return wireguard(_that.settings);}
+return wireguard(_that.settings);case _OutboundSettingsHysteria():
+return hysteria(_that.settings);}
 }
 /// A variant of `when` that fallback to returning `null`
 ///
@@ -204,7 +209,7 @@ return wireguard(_that.settings);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( BlackholeOutboundSettings4Ray settings)?  blackhole,TResult? Function( DnsOutboundSettings4Ray settings)?  dns,TResult? Function( FreedomOutboundSettings4Ray settings)?  freedom,TResult? Function( LoopbackOutboundSettings4Ray settings)?  loopback,TResult? Function( HttpOutboundSettings4Ray settings)?  http,TResult? Function( SocksOutboundSettings4Ray settings)?  socks,TResult? Function( VlessOutboundSettings4Ray settings)?  vless,TResult? Function( TrojanOutboundSettings4Ray settings)?  trojan,TResult? Function( VmessOutboundSettings4Ray settings)?  vmess,TResult? Function( ShadowsocksOutboundSettings4Ray settings)?  shadowsocks,TResult? Function( WireguardOutboundSettings4Ray settings)?  wireguard,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( BlackholeOutboundSettings4Ray settings)?  blackhole,TResult? Function( DnsOutboundSettings4Ray settings)?  dns,TResult? Function( FreedomOutboundSettings4Ray settings)?  freedom,TResult? Function( LoopbackOutboundSettings4Ray settings)?  loopback,TResult? Function( HttpOutboundSettings4Ray settings)?  http,TResult? Function( SocksOutboundSettings4Ray settings)?  socks,TResult? Function( VlessOutboundSettings4Ray settings)?  vless,TResult? Function( TrojanOutboundSettings4Ray settings)?  trojan,TResult? Function( VmessOutboundSettings4Ray settings)?  vmess,TResult? Function( ShadowsocksOutboundSettings4Ray settings)?  shadowsocks,TResult? Function( WireguardOutboundSettings4Ray settings)?  wireguard,TResult? Function( HysteriaOutboundSettings4Ray settings)?  hysteria,}) {final _that = this;
 switch (_that) {
 case _OutboundSettingsBlackhole() when blackhole != null:
 return blackhole(_that.settings);case _OutboundSettingsDns() when dns != null:
@@ -217,7 +222,8 @@ return vless(_that.settings);case _OutboundSettingsTrojan() when trojan != null:
 return trojan(_that.settings);case _OutboundSettingsVmess() when vmess != null:
 return vmess(_that.settings);case _OutboundSettingsShadowsocks() when shadowsocks != null:
 return shadowsocks(_that.settings);case _OutboundSettingsWireguard() when wireguard != null:
-return wireguard(_that.settings);case _:
+return wireguard(_that.settings);case _OutboundSettingsHysteria() when hysteria != null:
+return hysteria(_that.settings);case _:
   return null;
 
 }
@@ -1045,6 +1051,81 @@ as WireguardOutboundSettings4Ray,
 $WireguardOutboundSettings4RayCopyWith<$Res> get settings {
   
   return $WireguardOutboundSettings4RayCopyWith<$Res>(_self.settings, (value) {
+    return _then(_self.copyWith(settings: value));
+  });
+}
+}
+
+/// @nodoc
+
+
+class _OutboundSettingsHysteria implements OutboundSettings4Ray {
+  const _OutboundSettingsHysteria({required this.settings});
+  
+
+@override final  HysteriaOutboundSettings4Ray settings;
+
+/// Create a copy of OutboundSettings4Ray
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$OutboundSettingsHysteriaCopyWith<_OutboundSettingsHysteria> get copyWith => __$OutboundSettingsHysteriaCopyWithImpl<_OutboundSettingsHysteria>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _OutboundSettingsHysteria&&(identical(other.settings, settings) || other.settings == settings));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,settings);
+
+@override
+String toString() {
+  return 'OutboundSettings4Ray.hysteria(settings: $settings)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$OutboundSettingsHysteriaCopyWith<$Res> implements $OutboundSettings4RayCopyWith<$Res> {
+  factory _$OutboundSettingsHysteriaCopyWith(_OutboundSettingsHysteria value, $Res Function(_OutboundSettingsHysteria) _then) = __$OutboundSettingsHysteriaCopyWithImpl;
+@useResult
+$Res call({
+ HysteriaOutboundSettings4Ray settings
+});
+
+
+$HysteriaOutboundSettings4RayCopyWith<$Res> get settings;
+
+}
+/// @nodoc
+class __$OutboundSettingsHysteriaCopyWithImpl<$Res>
+    implements _$OutboundSettingsHysteriaCopyWith<$Res> {
+  __$OutboundSettingsHysteriaCopyWithImpl(this._self, this._then);
+
+  final _OutboundSettingsHysteria _self;
+  final $Res Function(_OutboundSettingsHysteria) _then;
+
+/// Create a copy of OutboundSettings4Ray
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? settings = null,}) {
+  return _then(_OutboundSettingsHysteria(
+settings: null == settings ? _self.settings : settings // ignore: cast_nullable_to_non_nullable
+as HysteriaOutboundSettings4Ray,
+  ));
+}
+
+/// Create a copy of OutboundSettings4Ray
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$HysteriaOutboundSettings4RayCopyWith<$Res> get settings {
+  
+  return $HysteriaOutboundSettings4RayCopyWith<$Res>(_self.settings, (value) {
     return _then(_self.copyWith(settings: value));
   });
 }

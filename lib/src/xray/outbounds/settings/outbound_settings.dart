@@ -3,6 +3,7 @@ import 'package:x_config_gen/src/xray/outbounds/settings/blackhole.dart';
 import 'package:x_config_gen/src/xray/outbounds/settings/dns.dart';
 import 'package:x_config_gen/src/xray/outbounds/settings/freedom.dart';
 import 'package:x_config_gen/src/xray/outbounds/settings/http.dart';
+import 'package:x_config_gen/src/xray/outbounds/settings/hysteria.dart';
 import 'package:x_config_gen/src/xray/outbounds/settings/loopback.dart';
 import 'package:x_config_gen/src/xray/outbounds/settings/shadowsocks.dart';
 import 'package:x_config_gen/src/xray/outbounds/settings/socks.dart';
@@ -15,6 +16,7 @@ export 'package:x_config_gen/src/xray/outbounds/settings/blackhole.dart';
 export 'package:x_config_gen/src/xray/outbounds/settings/dns.dart';
 export 'package:x_config_gen/src/xray/outbounds/settings/freedom.dart';
 export 'package:x_config_gen/src/xray/outbounds/settings/http.dart';
+export 'package:x_config_gen/src/xray/outbounds/settings/hysteria.dart';
 export 'package:x_config_gen/src/xray/outbounds/settings/loopback.dart';
 export 'package:x_config_gen/src/xray/outbounds/settings/shadowsocks.dart';
 export 'package:x_config_gen/src/xray/outbounds/settings/socks.dart';
@@ -70,6 +72,10 @@ sealed class OutboundSettings4Ray with _$OutboundSettings4Ray {
   const factory OutboundSettings4Ray.wireguard({
     required WireguardOutboundSettings4Ray settings,
   }) = _OutboundSettingsWireguard;
+
+  const factory OutboundSettings4Ray.hysteria({
+    required HysteriaOutboundSettings4Ray settings,
+  }) = _OutboundSettingsHysteria;
 }
 
 class OutboundSettingsConverter
@@ -131,6 +137,10 @@ class OutboundSettingsConverter
         return OutboundSettings4Ray.wireguard(
           settings: WireguardOutboundSettings4Ray.fromJson(settingsJson),
         );
+      case 'hysteria':
+        return OutboundSettings4Ray.hysteria(
+          settings: HysteriaOutboundSettings4Ray.fromJson(settingsJson),
+        );
       default:
         throw UnimplementedError(
           'Outbound settings for protocol $protocol is not implemented.',
@@ -153,6 +163,7 @@ class OutboundSettingsConverter
       vmess: (value) => value.settings.toJson(),
       shadowsocks: (value) => value.settings.toJson(),
       wireguard: (value) => value.settings.toJson(),
+      hysteria: (value) => value.settings.toJson(),
     );
   }
 }

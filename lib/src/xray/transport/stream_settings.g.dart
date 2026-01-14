@@ -43,6 +43,14 @@ _StreamSettings4Ray _$StreamSettings4RayFromJson(
       : HttpUpgradeTransport4Ray.fromJson(
           json['httpupgradeSettings'] as Map<String, dynamic>,
         ),
+  hysteriaSettings: json['hysteriaSettings'] == null
+      ? null
+      : HysteriaTransport4Ray.fromJson(
+          json['hysteriaSettings'] as Map<String, dynamic>,
+        ),
+  udpmasks: (json['udpmasks'] as List<dynamic>?)
+      ?.map((e) => UdpMask4Ray.fromJson(e as Map<String, dynamic>))
+      .toList(),
   sockopt: json['sockopt'] == null
       ? null
       : Sockopt4Ray.fromJson(json['sockopt'] as Map<String, dynamic>),
@@ -60,5 +68,7 @@ Map<String, dynamic> _$StreamSettings4RayToJson(_StreamSettings4Ray instance) =>
       'grpcSettings': ?instance.grpcSettings?.toJson(),
       'wsSettings': ?instance.wsSettings?.toJson(),
       'httpupgradeSettings': ?instance.httpupgradeSettings?.toJson(),
+      'hysteriaSettings': ?instance.hysteriaSettings?.toJson(),
+      'udpmasks': ?instance.udpmasks?.map((e) => e.toJson()).toList(),
       'sockopt': ?instance.sockopt?.toJson(),
     };
