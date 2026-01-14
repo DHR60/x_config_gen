@@ -23,10 +23,7 @@ _Tls4Ray _$Tls4RayFromJson(Map<String, dynamic> json) => _Tls4Ray(
   disableSystemRoot: json['disableSystemRoot'] as bool?,
   enableSessionResumption: json['enableSessionResumption'] as bool?,
   fingerprint: json['fingerprint'] as String?,
-  pinnedPeerCertificateChainSha256:
-      (json['pinnedPeerCertificateChainSha256'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
+  pinnedPeerCertSha256: json['pinnedPeerCertSha256'] as String?,
   curvePreferences: (json['curvePreferences'] as List<dynamic>?)
       ?.map((e) => e as String)
       .toList(),
@@ -52,8 +49,7 @@ Map<String, dynamic> _$Tls4RayToJson(_Tls4Ray instance) => <String, dynamic>{
   'disableSystemRoot': ?instance.disableSystemRoot,
   'enableSessionResumption': ?instance.enableSessionResumption,
   'fingerprint': ?instance.fingerprint,
-  'pinnedPeerCertificateChainSha256':
-      ?instance.pinnedPeerCertificateChainSha256,
+  'pinnedPeerCertSha256': ?instance.pinnedPeerCertSha256,
   'curvePreferences': ?instance.curvePreferences,
   'masterKeyLog': ?instance.masterKeyLog,
   'echServerKeys': ?instance.echServerKeys,

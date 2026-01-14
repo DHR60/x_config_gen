@@ -20,7 +20,7 @@ abstract class Tls4Ray with _$Tls4Ray {
     bool? disableSystemRoot,
     bool? enableSessionResumption,
     String? fingerprint,
-    List<String>? pinnedPeerCertificateChainSha256,
+    String? pinnedPeerCertSha256,
     List<String>? curvePreferences,
     String? masterKeyLog,
     String? echServerKeys,
