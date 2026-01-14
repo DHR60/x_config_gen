@@ -1,3 +1,9 @@
+## 0.1.1
+
+- feat: add pinnedPeerCertSha256
+- feat: add hysteria
+- feat: add tun inbound
+
 ## 0.1.0
 
 - feat: update dns settings fields
