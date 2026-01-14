@@ -3,6 +3,7 @@ import 'package:x_config_gen/src/xray/inbounds/settings/http.dart';
 import 'package:x_config_gen/src/xray/inbounds/settings/socks.dart';
 import 'package:x_config_gen/src/xray/inbounds/settings/shadowsocks.dart';
 import 'package:x_config_gen/src/xray/inbounds/settings/trojan.dart';
+import 'package:x_config_gen/src/xray/inbounds/settings/tun.dart';
 import 'package:x_config_gen/src/xray/inbounds/settings/vless.dart';
 import 'package:x_config_gen/src/xray/inbounds/settings/vmess.dart';
 import 'package:x_config_gen/src/xray/inbounds/settings/wireguard.dart';
@@ -11,6 +12,7 @@ export 'package:x_config_gen/src/xray/inbounds/settings/http.dart';
 export 'package:x_config_gen/src/xray/inbounds/settings/socks.dart';
 export 'package:x_config_gen/src/xray/inbounds/settings/shadowsocks.dart';
 export 'package:x_config_gen/src/xray/inbounds/settings/trojan.dart';
+export 'package:x_config_gen/src/xray/inbounds/settings/tun.dart';
 export 'package:x_config_gen/src/xray/inbounds/settings/vless.dart';
 export 'package:x_config_gen/src/xray/inbounds/settings/vmess.dart';
 export 'package:x_config_gen/src/xray/inbounds/settings/wireguard.dart';
@@ -46,6 +48,10 @@ sealed class InboundSettings4Ray with _$InboundSettings4Ray {
   const factory InboundSettings4Ray.wireguard({
     required WireguardInboundSettings4Ray settings,
   }) = _InboundSettingsWireguard;
+
+  const factory InboundSettings4Ray.tun({
+    required TunInboundSettings4Ray settings,
+  }) = _InboundSettingsTun;
 }
 
 class InboundSettingsConverter
@@ -91,6 +97,10 @@ class InboundSettingsConverter
         return InboundSettings4Ray.wireguard(
           settings: WireguardInboundSettings4Ray.fromJson(settingsJson),
         );
+      case 'tun':
+        return InboundSettings4Ray.tun(
+          settings: TunInboundSettings4Ray.fromJson(settingsJson),
+        );
       default:
         throw UnsupportedError('Unsupported inbound protocol: $protocol');
     }
@@ -107,6 +117,7 @@ class InboundSettingsConverter
       trojan: (value) => value.settings.toJson(),
       vmess: (value) => value.settings.toJson(),
       wireguard: (value) => value.settings.toJson(),
+      tun: (value) => value.settings.toJson(),
     );
   }
 }

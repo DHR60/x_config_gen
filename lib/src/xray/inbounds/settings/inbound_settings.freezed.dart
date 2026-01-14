@@ -55,7 +55,7 @@ extension InboundSettings4RayPatterns on InboundSettings4Ray {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _InboundSettingsSocks value)?  socks,TResult Function( _InboundSettingsHttp value)?  http,TResult Function( _InboundSettingsShadowsocks value)?  shadowsocks,TResult Function( _InboundSettingsVless value)?  vless,TResult Function( _InboundSettingsTrojan value)?  trojan,TResult Function( _InboundSettingsVmess value)?  vmess,TResult Function( _InboundSettingsWireguard value)?  wireguard,required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _InboundSettingsSocks value)?  socks,TResult Function( _InboundSettingsHttp value)?  http,TResult Function( _InboundSettingsShadowsocks value)?  shadowsocks,TResult Function( _InboundSettingsVless value)?  vless,TResult Function( _InboundSettingsTrojan value)?  trojan,TResult Function( _InboundSettingsVmess value)?  vmess,TResult Function( _InboundSettingsWireguard value)?  wireguard,TResult Function( _InboundSettingsTun value)?  tun,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
 case _InboundSettingsSocks() when socks != null:
@@ -65,7 +65,8 @@ return shadowsocks(_that);case _InboundSettingsVless() when vless != null:
 return vless(_that);case _InboundSettingsTrojan() when trojan != null:
 return trojan(_that);case _InboundSettingsVmess() when vmess != null:
 return vmess(_that);case _InboundSettingsWireguard() when wireguard != null:
-return wireguard(_that);case _:
+return wireguard(_that);case _InboundSettingsTun() when tun != null:
+return tun(_that);case _:
   return orElse();
 
 }
@@ -83,7 +84,7 @@ return wireguard(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _InboundSettingsSocks value)  socks,required TResult Function( _InboundSettingsHttp value)  http,required TResult Function( _InboundSettingsShadowsocks value)  shadowsocks,required TResult Function( _InboundSettingsVless value)  vless,required TResult Function( _InboundSettingsTrojan value)  trojan,required TResult Function( _InboundSettingsVmess value)  vmess,required TResult Function( _InboundSettingsWireguard value)  wireguard,}){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _InboundSettingsSocks value)  socks,required TResult Function( _InboundSettingsHttp value)  http,required TResult Function( _InboundSettingsShadowsocks value)  shadowsocks,required TResult Function( _InboundSettingsVless value)  vless,required TResult Function( _InboundSettingsTrojan value)  trojan,required TResult Function( _InboundSettingsVmess value)  vmess,required TResult Function( _InboundSettingsWireguard value)  wireguard,required TResult Function( _InboundSettingsTun value)  tun,}){
 final _that = this;
 switch (_that) {
 case _InboundSettingsSocks():
@@ -93,7 +94,8 @@ return shadowsocks(_that);case _InboundSettingsVless():
 return vless(_that);case _InboundSettingsTrojan():
 return trojan(_that);case _InboundSettingsVmess():
 return vmess(_that);case _InboundSettingsWireguard():
-return wireguard(_that);}
+return wireguard(_that);case _InboundSettingsTun():
+return tun(_that);}
 }
 /// A variant of `map` that fallback to returning `null`.
 ///
@@ -107,7 +109,7 @@ return wireguard(_that);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _InboundSettingsSocks value)?  socks,TResult? Function( _InboundSettingsHttp value)?  http,TResult? Function( _InboundSettingsShadowsocks value)?  shadowsocks,TResult? Function( _InboundSettingsVless value)?  vless,TResult? Function( _InboundSettingsTrojan value)?  trojan,TResult? Function( _InboundSettingsVmess value)?  vmess,TResult? Function( _InboundSettingsWireguard value)?  wireguard,}){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _InboundSettingsSocks value)?  socks,TResult? Function( _InboundSettingsHttp value)?  http,TResult? Function( _InboundSettingsShadowsocks value)?  shadowsocks,TResult? Function( _InboundSettingsVless value)?  vless,TResult? Function( _InboundSettingsTrojan value)?  trojan,TResult? Function( _InboundSettingsVmess value)?  vmess,TResult? Function( _InboundSettingsWireguard value)?  wireguard,TResult? Function( _InboundSettingsTun value)?  tun,}){
 final _that = this;
 switch (_that) {
 case _InboundSettingsSocks() when socks != null:
@@ -117,7 +119,8 @@ return shadowsocks(_that);case _InboundSettingsVless() when vless != null:
 return vless(_that);case _InboundSettingsTrojan() when trojan != null:
 return trojan(_that);case _InboundSettingsVmess() when vmess != null:
 return vmess(_that);case _InboundSettingsWireguard() when wireguard != null:
-return wireguard(_that);case _:
+return wireguard(_that);case _InboundSettingsTun() when tun != null:
+return tun(_that);case _:
   return null;
 
 }
@@ -134,7 +137,7 @@ return wireguard(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( SocksInboundSettings4Ray settings)?  socks,TResult Function( HttpInboundSettings4Ray settings)?  http,TResult Function( ShadowsocksInboundSettings4Ray settings)?  shadowsocks,TResult Function( VlessInboundSettings4Ray settings)?  vless,TResult Function( TrojanInboundSettings4Ray settings)?  trojan,TResult Function( VmessInboundSettings4Ray settings)?  vmess,TResult Function( WireguardInboundSettings4Ray settings)?  wireguard,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( SocksInboundSettings4Ray settings)?  socks,TResult Function( HttpInboundSettings4Ray settings)?  http,TResult Function( ShadowsocksInboundSettings4Ray settings)?  shadowsocks,TResult Function( VlessInboundSettings4Ray settings)?  vless,TResult Function( TrojanInboundSettings4Ray settings)?  trojan,TResult Function( VmessInboundSettings4Ray settings)?  vmess,TResult Function( WireguardInboundSettings4Ray settings)?  wireguard,TResult Function( TunInboundSettings4Ray settings)?  tun,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _InboundSettingsSocks() when socks != null:
 return socks(_that.settings);case _InboundSettingsHttp() when http != null:
@@ -143,7 +146,8 @@ return shadowsocks(_that.settings);case _InboundSettingsVless() when vless != nu
 return vless(_that.settings);case _InboundSettingsTrojan() when trojan != null:
 return trojan(_that.settings);case _InboundSettingsVmess() when vmess != null:
 return vmess(_that.settings);case _InboundSettingsWireguard() when wireguard != null:
-return wireguard(_that.settings);case _:
+return wireguard(_that.settings);case _InboundSettingsTun() when tun != null:
+return tun(_that.settings);case _:
   return orElse();
 
 }
@@ -161,7 +165,7 @@ return wireguard(_that.settings);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( SocksInboundSettings4Ray settings)  socks,required TResult Function( HttpInboundSettings4Ray settings)  http,required TResult Function( ShadowsocksInboundSettings4Ray settings)  shadowsocks,required TResult Function( VlessInboundSettings4Ray settings)  vless,required TResult Function( TrojanInboundSettings4Ray settings)  trojan,required TResult Function( VmessInboundSettings4Ray settings)  vmess,required TResult Function( WireguardInboundSettings4Ray settings)  wireguard,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( SocksInboundSettings4Ray settings)  socks,required TResult Function( HttpInboundSettings4Ray settings)  http,required TResult Function( ShadowsocksInboundSettings4Ray settings)  shadowsocks,required TResult Function( VlessInboundSettings4Ray settings)  vless,required TResult Function( TrojanInboundSettings4Ray settings)  trojan,required TResult Function( VmessInboundSettings4Ray settings)  vmess,required TResult Function( WireguardInboundSettings4Ray settings)  wireguard,required TResult Function( TunInboundSettings4Ray settings)  tun,}) {final _that = this;
 switch (_that) {
 case _InboundSettingsSocks():
 return socks(_that.settings);case _InboundSettingsHttp():
@@ -170,7 +174,8 @@ return shadowsocks(_that.settings);case _InboundSettingsVless():
 return vless(_that.settings);case _InboundSettingsTrojan():
 return trojan(_that.settings);case _InboundSettingsVmess():
 return vmess(_that.settings);case _InboundSettingsWireguard():
-return wireguard(_that.settings);}
+return wireguard(_that.settings);case _InboundSettingsTun():
+return tun(_that.settings);}
 }
 /// A variant of `when` that fallback to returning `null`
 ///
@@ -184,7 +189,7 @@ return wireguard(_that.settings);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( SocksInboundSettings4Ray settings)?  socks,TResult? Function( HttpInboundSettings4Ray settings)?  http,TResult? Function( ShadowsocksInboundSettings4Ray settings)?  shadowsocks,TResult? Function( VlessInboundSettings4Ray settings)?  vless,TResult? Function( TrojanInboundSettings4Ray settings)?  trojan,TResult? Function( VmessInboundSettings4Ray settings)?  vmess,TResult? Function( WireguardInboundSettings4Ray settings)?  wireguard,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( SocksInboundSettings4Ray settings)?  socks,TResult? Function( HttpInboundSettings4Ray settings)?  http,TResult? Function( ShadowsocksInboundSettings4Ray settings)?  shadowsocks,TResult? Function( VlessInboundSettings4Ray settings)?  vless,TResult? Function( TrojanInboundSettings4Ray settings)?  trojan,TResult? Function( VmessInboundSettings4Ray settings)?  vmess,TResult? Function( WireguardInboundSettings4Ray settings)?  wireguard,TResult? Function( TunInboundSettings4Ray settings)?  tun,}) {final _that = this;
 switch (_that) {
 case _InboundSettingsSocks() when socks != null:
 return socks(_that.settings);case _InboundSettingsHttp() when http != null:
@@ -193,7 +198,8 @@ return shadowsocks(_that.settings);case _InboundSettingsVless() when vless != nu
 return vless(_that.settings);case _InboundSettingsTrojan() when trojan != null:
 return trojan(_that.settings);case _InboundSettingsVmess() when vmess != null:
 return vmess(_that.settings);case _InboundSettingsWireguard() when wireguard != null:
-return wireguard(_that.settings);case _:
+return wireguard(_that.settings);case _InboundSettingsTun() when tun != null:
+return tun(_that.settings);case _:
   return null;
 
 }
@@ -721,6 +727,81 @@ as WireguardInboundSettings4Ray,
 $WireguardInboundSettings4RayCopyWith<$Res> get settings {
   
   return $WireguardInboundSettings4RayCopyWith<$Res>(_self.settings, (value) {
+    return _then(_self.copyWith(settings: value));
+  });
+}
+}
+
+/// @nodoc
+
+
+class _InboundSettingsTun implements InboundSettings4Ray {
+  const _InboundSettingsTun({required this.settings});
+  
+
+@override final  TunInboundSettings4Ray settings;
+
+/// Create a copy of InboundSettings4Ray
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$InboundSettingsTunCopyWith<_InboundSettingsTun> get copyWith => __$InboundSettingsTunCopyWithImpl<_InboundSettingsTun>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _InboundSettingsTun&&(identical(other.settings, settings) || other.settings == settings));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,settings);
+
+@override
+String toString() {
+  return 'InboundSettings4Ray.tun(settings: $settings)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$InboundSettingsTunCopyWith<$Res> implements $InboundSettings4RayCopyWith<$Res> {
+  factory _$InboundSettingsTunCopyWith(_InboundSettingsTun value, $Res Function(_InboundSettingsTun) _then) = __$InboundSettingsTunCopyWithImpl;
+@useResult
+$Res call({
+ TunInboundSettings4Ray settings
+});
+
+
+$TunInboundSettings4RayCopyWith<$Res> get settings;
+
+}
+/// @nodoc
+class __$InboundSettingsTunCopyWithImpl<$Res>
+    implements _$InboundSettingsTunCopyWith<$Res> {
+  __$InboundSettingsTunCopyWithImpl(this._self, this._then);
+
+  final _InboundSettingsTun _self;
+  final $Res Function(_InboundSettingsTun) _then;
+
+/// Create a copy of InboundSettings4Ray
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? settings = null,}) {
+  return _then(_InboundSettingsTun(
+settings: null == settings ? _self.settings : settings // ignore: cast_nullable_to_non_nullable
+as TunInboundSettings4Ray,
+  ));
+}
+
+/// Create a copy of InboundSettings4Ray
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$TunInboundSettings4RayCopyWith<$Res> get settings {
+  
+  return $TunInboundSettings4RayCopyWith<$Res>(_self.settings, (value) {
     return _then(_self.copyWith(settings: value));
   });
 }
