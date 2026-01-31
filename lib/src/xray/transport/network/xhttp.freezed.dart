@@ -311,7 +311,7 @@ $XHttpExtra4RayCopyWith<$Res>? get extra {
 /// @nodoc
 mixin _$XHttpExtra4Ray {
 
- Map<String, MultiValueString>? get headers; String? get xPaddingBytes; bool? get noGRPCHeader; bool? get noSSEHeader; int? get scMaxEachPostBytes; int? get scMinPostsIntervalMs; int? get scMaxBufferedPosts; String? get scStreamUpServerSecs; XHttpExtraXmux4Ray? get xmux; XHttpExtraDownload4Ray? get downloadSettings;
+ Map<String, MultiValueString>? get headers; String? get xPaddingBytes; bool? get xPaddingObfsMode; String? get xPaddingKey; String? get xPaddingHeader; String? get xPaddingPlacement; String? get xPaddingMethod; String? get uplinkHTTPMethod; String? get sessionPlacement; String? get sessionKey; String? get seqPlacement; String? get seqKey; String? get uplinkDataPlacement; String? get uplinkDataKey; int? get uplinkChunkSize; bool? get noGRPCHeader; bool? get noSSEHeader; int? get scMaxEachPostBytes; int? get scMinPostsIntervalMs; int? get scMaxBufferedPosts; String? get scStreamUpServerSecs; XHttpExtraXmux4Ray? get xmux; XHttpExtraDownload4Ray? get downloadSettings;
 /// Create a copy of XHttpExtra4Ray
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -324,16 +324,16 @@ $XHttpExtra4RayCopyWith<XHttpExtra4Ray> get copyWith => _$XHttpExtra4RayCopyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is XHttpExtra4Ray&&const DeepCollectionEquality().equals(other.headers, headers)&&(identical(other.xPaddingBytes, xPaddingBytes) || other.xPaddingBytes == xPaddingBytes)&&(identical(other.noGRPCHeader, noGRPCHeader) || other.noGRPCHeader == noGRPCHeader)&&(identical(other.noSSEHeader, noSSEHeader) || other.noSSEHeader == noSSEHeader)&&(identical(other.scMaxEachPostBytes, scMaxEachPostBytes) || other.scMaxEachPostBytes == scMaxEachPostBytes)&&(identical(other.scMinPostsIntervalMs, scMinPostsIntervalMs) || other.scMinPostsIntervalMs == scMinPostsIntervalMs)&&(identical(other.scMaxBufferedPosts, scMaxBufferedPosts) || other.scMaxBufferedPosts == scMaxBufferedPosts)&&(identical(other.scStreamUpServerSecs, scStreamUpServerSecs) || other.scStreamUpServerSecs == scStreamUpServerSecs)&&(identical(other.xmux, xmux) || other.xmux == xmux)&&(identical(other.downloadSettings, downloadSettings) || other.downloadSettings == downloadSettings));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is XHttpExtra4Ray&&const DeepCollectionEquality().equals(other.headers, headers)&&(identical(other.xPaddingBytes, xPaddingBytes) || other.xPaddingBytes == xPaddingBytes)&&(identical(other.xPaddingObfsMode, xPaddingObfsMode) || other.xPaddingObfsMode == xPaddingObfsMode)&&(identical(other.xPaddingKey, xPaddingKey) || other.xPaddingKey == xPaddingKey)&&(identical(other.xPaddingHeader, xPaddingHeader) || other.xPaddingHeader == xPaddingHeader)&&(identical(other.xPaddingPlacement, xPaddingPlacement) || other.xPaddingPlacement == xPaddingPlacement)&&(identical(other.xPaddingMethod, xPaddingMethod) || other.xPaddingMethod == xPaddingMethod)&&(identical(other.uplinkHTTPMethod, uplinkHTTPMethod) || other.uplinkHTTPMethod == uplinkHTTPMethod)&&(identical(other.sessionPlacement, sessionPlacement) || other.sessionPlacement == sessionPlacement)&&(identical(other.sessionKey, sessionKey) || other.sessionKey == sessionKey)&&(identical(other.seqPlacement, seqPlacement) || other.seqPlacement == seqPlacement)&&(identical(other.seqKey, seqKey) || other.seqKey == seqKey)&&(identical(other.uplinkDataPlacement, uplinkDataPlacement) || other.uplinkDataPlacement == uplinkDataPlacement)&&(identical(other.uplinkDataKey, uplinkDataKey) || other.uplinkDataKey == uplinkDataKey)&&(identical(other.uplinkChunkSize, uplinkChunkSize) || other.uplinkChunkSize == uplinkChunkSize)&&(identical(other.noGRPCHeader, noGRPCHeader) || other.noGRPCHeader == noGRPCHeader)&&(identical(other.noSSEHeader, noSSEHeader) || other.noSSEHeader == noSSEHeader)&&(identical(other.scMaxEachPostBytes, scMaxEachPostBytes) || other.scMaxEachPostBytes == scMaxEachPostBytes)&&(identical(other.scMinPostsIntervalMs, scMinPostsIntervalMs) || other.scMinPostsIntervalMs == scMinPostsIntervalMs)&&(identical(other.scMaxBufferedPosts, scMaxBufferedPosts) || other.scMaxBufferedPosts == scMaxBufferedPosts)&&(identical(other.scStreamUpServerSecs, scStreamUpServerSecs) || other.scStreamUpServerSecs == scStreamUpServerSecs)&&(identical(other.xmux, xmux) || other.xmux == xmux)&&(identical(other.downloadSettings, downloadSettings) || other.downloadSettings == downloadSettings));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(headers),xPaddingBytes,noGRPCHeader,noSSEHeader,scMaxEachPostBytes,scMinPostsIntervalMs,scMaxBufferedPosts,scStreamUpServerSecs,xmux,downloadSettings);
+int get hashCode => Object.hashAll([runtimeType,const DeepCollectionEquality().hash(headers),xPaddingBytes,xPaddingObfsMode,xPaddingKey,xPaddingHeader,xPaddingPlacement,xPaddingMethod,uplinkHTTPMethod,sessionPlacement,sessionKey,seqPlacement,seqKey,uplinkDataPlacement,uplinkDataKey,uplinkChunkSize,noGRPCHeader,noSSEHeader,scMaxEachPostBytes,scMinPostsIntervalMs,scMaxBufferedPosts,scStreamUpServerSecs,xmux,downloadSettings]);
 
 @override
 String toString() {
-  return 'XHttpExtra4Ray(headers: $headers, xPaddingBytes: $xPaddingBytes, noGRPCHeader: $noGRPCHeader, noSSEHeader: $noSSEHeader, scMaxEachPostBytes: $scMaxEachPostBytes, scMinPostsIntervalMs: $scMinPostsIntervalMs, scMaxBufferedPosts: $scMaxBufferedPosts, scStreamUpServerSecs: $scStreamUpServerSecs, xmux: $xmux, downloadSettings: $downloadSettings)';
+  return 'XHttpExtra4Ray(headers: $headers, xPaddingBytes: $xPaddingBytes, xPaddingObfsMode: $xPaddingObfsMode, xPaddingKey: $xPaddingKey, xPaddingHeader: $xPaddingHeader, xPaddingPlacement: $xPaddingPlacement, xPaddingMethod: $xPaddingMethod, uplinkHTTPMethod: $uplinkHTTPMethod, sessionPlacement: $sessionPlacement, sessionKey: $sessionKey, seqPlacement: $seqPlacement, seqKey: $seqKey, uplinkDataPlacement: $uplinkDataPlacement, uplinkDataKey: $uplinkDataKey, uplinkChunkSize: $uplinkChunkSize, noGRPCHeader: $noGRPCHeader, noSSEHeader: $noSSEHeader, scMaxEachPostBytes: $scMaxEachPostBytes, scMinPostsIntervalMs: $scMinPostsIntervalMs, scMaxBufferedPosts: $scMaxBufferedPosts, scStreamUpServerSecs: $scStreamUpServerSecs, xmux: $xmux, downloadSettings: $downloadSettings)';
 }
 
 
@@ -344,7 +344,7 @@ abstract mixin class $XHttpExtra4RayCopyWith<$Res>  {
   factory $XHttpExtra4RayCopyWith(XHttpExtra4Ray value, $Res Function(XHttpExtra4Ray) _then) = _$XHttpExtra4RayCopyWithImpl;
 @useResult
 $Res call({
- Map<String, MultiValueString>? headers, String? xPaddingBytes, bool? noGRPCHeader, bool? noSSEHeader, int? scMaxEachPostBytes, int? scMinPostsIntervalMs, int? scMaxBufferedPosts, String? scStreamUpServerSecs, XHttpExtraXmux4Ray? xmux, XHttpExtraDownload4Ray? downloadSettings
+ Map<String, MultiValueString>? headers, String? xPaddingBytes, bool? xPaddingObfsMode, String? xPaddingKey, String? xPaddingHeader, String? xPaddingPlacement, String? xPaddingMethod, String? uplinkHTTPMethod, String? sessionPlacement, String? sessionKey, String? seqPlacement, String? seqKey, String? uplinkDataPlacement, String? uplinkDataKey, int? uplinkChunkSize, bool? noGRPCHeader, bool? noSSEHeader, int? scMaxEachPostBytes, int? scMinPostsIntervalMs, int? scMaxBufferedPosts, String? scStreamUpServerSecs, XHttpExtraXmux4Ray? xmux, XHttpExtraDownload4Ray? downloadSettings
 });
 
 
@@ -361,11 +361,24 @@ class _$XHttpExtra4RayCopyWithImpl<$Res>
 
 /// Create a copy of XHttpExtra4Ray
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? headers = freezed,Object? xPaddingBytes = freezed,Object? noGRPCHeader = freezed,Object? noSSEHeader = freezed,Object? scMaxEachPostBytes = freezed,Object? scMinPostsIntervalMs = freezed,Object? scMaxBufferedPosts = freezed,Object? scStreamUpServerSecs = freezed,Object? xmux = freezed,Object? downloadSettings = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? headers = freezed,Object? xPaddingBytes = freezed,Object? xPaddingObfsMode = freezed,Object? xPaddingKey = freezed,Object? xPaddingHeader = freezed,Object? xPaddingPlacement = freezed,Object? xPaddingMethod = freezed,Object? uplinkHTTPMethod = freezed,Object? sessionPlacement = freezed,Object? sessionKey = freezed,Object? seqPlacement = freezed,Object? seqKey = freezed,Object? uplinkDataPlacement = freezed,Object? uplinkDataKey = freezed,Object? uplinkChunkSize = freezed,Object? noGRPCHeader = freezed,Object? noSSEHeader = freezed,Object? scMaxEachPostBytes = freezed,Object? scMinPostsIntervalMs = freezed,Object? scMaxBufferedPosts = freezed,Object? scStreamUpServerSecs = freezed,Object? xmux = freezed,Object? downloadSettings = freezed,}) {
   return _then(_self.copyWith(
 headers: freezed == headers ? _self.headers : headers // ignore: cast_nullable_to_non_nullable
 as Map<String, MultiValueString>?,xPaddingBytes: freezed == xPaddingBytes ? _self.xPaddingBytes : xPaddingBytes // ignore: cast_nullable_to_non_nullable
-as String?,noGRPCHeader: freezed == noGRPCHeader ? _self.noGRPCHeader : noGRPCHeader // ignore: cast_nullable_to_non_nullable
+as String?,xPaddingObfsMode: freezed == xPaddingObfsMode ? _self.xPaddingObfsMode : xPaddingObfsMode // ignore: cast_nullable_to_non_nullable
+as bool?,xPaddingKey: freezed == xPaddingKey ? _self.xPaddingKey : xPaddingKey // ignore: cast_nullable_to_non_nullable
+as String?,xPaddingHeader: freezed == xPaddingHeader ? _self.xPaddingHeader : xPaddingHeader // ignore: cast_nullable_to_non_nullable
+as String?,xPaddingPlacement: freezed == xPaddingPlacement ? _self.xPaddingPlacement : xPaddingPlacement // ignore: cast_nullable_to_non_nullable
+as String?,xPaddingMethod: freezed == xPaddingMethod ? _self.xPaddingMethod : xPaddingMethod // ignore: cast_nullable_to_non_nullable
+as String?,uplinkHTTPMethod: freezed == uplinkHTTPMethod ? _self.uplinkHTTPMethod : uplinkHTTPMethod // ignore: cast_nullable_to_non_nullable
+as String?,sessionPlacement: freezed == sessionPlacement ? _self.sessionPlacement : sessionPlacement // ignore: cast_nullable_to_non_nullable
+as String?,sessionKey: freezed == sessionKey ? _self.sessionKey : sessionKey // ignore: cast_nullable_to_non_nullable
+as String?,seqPlacement: freezed == seqPlacement ? _self.seqPlacement : seqPlacement // ignore: cast_nullable_to_non_nullable
+as String?,seqKey: freezed == seqKey ? _self.seqKey : seqKey // ignore: cast_nullable_to_non_nullable
+as String?,uplinkDataPlacement: freezed == uplinkDataPlacement ? _self.uplinkDataPlacement : uplinkDataPlacement // ignore: cast_nullable_to_non_nullable
+as String?,uplinkDataKey: freezed == uplinkDataKey ? _self.uplinkDataKey : uplinkDataKey // ignore: cast_nullable_to_non_nullable
+as String?,uplinkChunkSize: freezed == uplinkChunkSize ? _self.uplinkChunkSize : uplinkChunkSize // ignore: cast_nullable_to_non_nullable
+as int?,noGRPCHeader: freezed == noGRPCHeader ? _self.noGRPCHeader : noGRPCHeader // ignore: cast_nullable_to_non_nullable
 as bool?,noSSEHeader: freezed == noSSEHeader ? _self.noSSEHeader : noSSEHeader // ignore: cast_nullable_to_non_nullable
 as bool?,scMaxEachPostBytes: freezed == scMaxEachPostBytes ? _self.scMaxEachPostBytes : scMaxEachPostBytes // ignore: cast_nullable_to_non_nullable
 as int?,scMinPostsIntervalMs: freezed == scMinPostsIntervalMs ? _self.scMinPostsIntervalMs : scMinPostsIntervalMs // ignore: cast_nullable_to_non_nullable
@@ -482,10 +495,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Map<String, MultiValueString>? headers,  String? xPaddingBytes,  bool? noGRPCHeader,  bool? noSSEHeader,  int? scMaxEachPostBytes,  int? scMinPostsIntervalMs,  int? scMaxBufferedPosts,  String? scStreamUpServerSecs,  XHttpExtraXmux4Ray? xmux,  XHttpExtraDownload4Ray? downloadSettings)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( Map<String, MultiValueString>? headers,  String? xPaddingBytes,  bool? xPaddingObfsMode,  String? xPaddingKey,  String? xPaddingHeader,  String? xPaddingPlacement,  String? xPaddingMethod,  String? uplinkHTTPMethod,  String? sessionPlacement,  String? sessionKey,  String? seqPlacement,  String? seqKey,  String? uplinkDataPlacement,  String? uplinkDataKey,  int? uplinkChunkSize,  bool? noGRPCHeader,  bool? noSSEHeader,  int? scMaxEachPostBytes,  int? scMinPostsIntervalMs,  int? scMaxBufferedPosts,  String? scStreamUpServerSecs,  XHttpExtraXmux4Ray? xmux,  XHttpExtraDownload4Ray? downloadSettings)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _XHttpExtra4Ray() when $default != null:
-return $default(_that.headers,_that.xPaddingBytes,_that.noGRPCHeader,_that.noSSEHeader,_that.scMaxEachPostBytes,_that.scMinPostsIntervalMs,_that.scMaxBufferedPosts,_that.scStreamUpServerSecs,_that.xmux,_that.downloadSettings);case _:
+return $default(_that.headers,_that.xPaddingBytes,_that.xPaddingObfsMode,_that.xPaddingKey,_that.xPaddingHeader,_that.xPaddingPlacement,_that.xPaddingMethod,_that.uplinkHTTPMethod,_that.sessionPlacement,_that.sessionKey,_that.seqPlacement,_that.seqKey,_that.uplinkDataPlacement,_that.uplinkDataKey,_that.uplinkChunkSize,_that.noGRPCHeader,_that.noSSEHeader,_that.scMaxEachPostBytes,_that.scMinPostsIntervalMs,_that.scMaxBufferedPosts,_that.scStreamUpServerSecs,_that.xmux,_that.downloadSettings);case _:
   return orElse();
 
 }
@@ -503,10 +516,10 @@ return $default(_that.headers,_that.xPaddingBytes,_that.noGRPCHeader,_that.noSSE
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Map<String, MultiValueString>? headers,  String? xPaddingBytes,  bool? noGRPCHeader,  bool? noSSEHeader,  int? scMaxEachPostBytes,  int? scMinPostsIntervalMs,  int? scMaxBufferedPosts,  String? scStreamUpServerSecs,  XHttpExtraXmux4Ray? xmux,  XHttpExtraDownload4Ray? downloadSettings)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( Map<String, MultiValueString>? headers,  String? xPaddingBytes,  bool? xPaddingObfsMode,  String? xPaddingKey,  String? xPaddingHeader,  String? xPaddingPlacement,  String? xPaddingMethod,  String? uplinkHTTPMethod,  String? sessionPlacement,  String? sessionKey,  String? seqPlacement,  String? seqKey,  String? uplinkDataPlacement,  String? uplinkDataKey,  int? uplinkChunkSize,  bool? noGRPCHeader,  bool? noSSEHeader,  int? scMaxEachPostBytes,  int? scMinPostsIntervalMs,  int? scMaxBufferedPosts,  String? scStreamUpServerSecs,  XHttpExtraXmux4Ray? xmux,  XHttpExtraDownload4Ray? downloadSettings)  $default,) {final _that = this;
 switch (_that) {
 case _XHttpExtra4Ray():
-return $default(_that.headers,_that.xPaddingBytes,_that.noGRPCHeader,_that.noSSEHeader,_that.scMaxEachPostBytes,_that.scMinPostsIntervalMs,_that.scMaxBufferedPosts,_that.scStreamUpServerSecs,_that.xmux,_that.downloadSettings);case _:
+return $default(_that.headers,_that.xPaddingBytes,_that.xPaddingObfsMode,_that.xPaddingKey,_that.xPaddingHeader,_that.xPaddingPlacement,_that.xPaddingMethod,_that.uplinkHTTPMethod,_that.sessionPlacement,_that.sessionKey,_that.seqPlacement,_that.seqKey,_that.uplinkDataPlacement,_that.uplinkDataKey,_that.uplinkChunkSize,_that.noGRPCHeader,_that.noSSEHeader,_that.scMaxEachPostBytes,_that.scMinPostsIntervalMs,_that.scMaxBufferedPosts,_that.scStreamUpServerSecs,_that.xmux,_that.downloadSettings);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -523,10 +536,10 @@ return $default(_that.headers,_that.xPaddingBytes,_that.noGRPCHeader,_that.noSSE
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Map<String, MultiValueString>? headers,  String? xPaddingBytes,  bool? noGRPCHeader,  bool? noSSEHeader,  int? scMaxEachPostBytes,  int? scMinPostsIntervalMs,  int? scMaxBufferedPosts,  String? scStreamUpServerSecs,  XHttpExtraXmux4Ray? xmux,  XHttpExtraDownload4Ray? downloadSettings)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( Map<String, MultiValueString>? headers,  String? xPaddingBytes,  bool? xPaddingObfsMode,  String? xPaddingKey,  String? xPaddingHeader,  String? xPaddingPlacement,  String? xPaddingMethod,  String? uplinkHTTPMethod,  String? sessionPlacement,  String? sessionKey,  String? seqPlacement,  String? seqKey,  String? uplinkDataPlacement,  String? uplinkDataKey,  int? uplinkChunkSize,  bool? noGRPCHeader,  bool? noSSEHeader,  int? scMaxEachPostBytes,  int? scMinPostsIntervalMs,  int? scMaxBufferedPosts,  String? scStreamUpServerSecs,  XHttpExtraXmux4Ray? xmux,  XHttpExtraDownload4Ray? downloadSettings)?  $default,) {final _that = this;
 switch (_that) {
 case _XHttpExtra4Ray() when $default != null:
-return $default(_that.headers,_that.xPaddingBytes,_that.noGRPCHeader,_that.noSSEHeader,_that.scMaxEachPostBytes,_that.scMinPostsIntervalMs,_that.scMaxBufferedPosts,_that.scStreamUpServerSecs,_that.xmux,_that.downloadSettings);case _:
+return $default(_that.headers,_that.xPaddingBytes,_that.xPaddingObfsMode,_that.xPaddingKey,_that.xPaddingHeader,_that.xPaddingPlacement,_that.xPaddingMethod,_that.uplinkHTTPMethod,_that.sessionPlacement,_that.sessionKey,_that.seqPlacement,_that.seqKey,_that.uplinkDataPlacement,_that.uplinkDataKey,_that.uplinkChunkSize,_that.noGRPCHeader,_that.noSSEHeader,_that.scMaxEachPostBytes,_that.scMinPostsIntervalMs,_that.scMaxBufferedPosts,_that.scStreamUpServerSecs,_that.xmux,_that.downloadSettings);case _:
   return null;
 
 }
@@ -538,7 +551,7 @@ return $default(_that.headers,_that.xPaddingBytes,_that.noGRPCHeader,_that.noSSE
 
 @JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _XHttpExtra4Ray implements XHttpExtra4Ray {
-  const _XHttpExtra4Ray({final  Map<String, MultiValueString>? headers, this.xPaddingBytes, this.noGRPCHeader, this.noSSEHeader, this.scMaxEachPostBytes, this.scMinPostsIntervalMs, this.scMaxBufferedPosts, this.scStreamUpServerSecs, this.xmux, this.downloadSettings}): _headers = headers;
+  const _XHttpExtra4Ray({final  Map<String, MultiValueString>? headers, this.xPaddingBytes, this.xPaddingObfsMode, this.xPaddingKey, this.xPaddingHeader, this.xPaddingPlacement, this.xPaddingMethod, this.uplinkHTTPMethod, this.sessionPlacement, this.sessionKey, this.seqPlacement, this.seqKey, this.uplinkDataPlacement, this.uplinkDataKey, this.uplinkChunkSize, this.noGRPCHeader, this.noSSEHeader, this.scMaxEachPostBytes, this.scMinPostsIntervalMs, this.scMaxBufferedPosts, this.scStreamUpServerSecs, this.xmux, this.downloadSettings}): _headers = headers;
   factory _XHttpExtra4Ray.fromJson(Map<String, dynamic> json) => _$XHttpExtra4RayFromJson(json);
 
  final  Map<String, MultiValueString>? _headers;
@@ -551,6 +564,19 @@ class _XHttpExtra4Ray implements XHttpExtra4Ray {
 }
 
 @override final  String? xPaddingBytes;
+@override final  bool? xPaddingObfsMode;
+@override final  String? xPaddingKey;
+@override final  String? xPaddingHeader;
+@override final  String? xPaddingPlacement;
+@override final  String? xPaddingMethod;
+@override final  String? uplinkHTTPMethod;
+@override final  String? sessionPlacement;
+@override final  String? sessionKey;
+@override final  String? seqPlacement;
+@override final  String? seqKey;
+@override final  String? uplinkDataPlacement;
+@override final  String? uplinkDataKey;
+@override final  int? uplinkChunkSize;
 @override final  bool? noGRPCHeader;
 @override final  bool? noSSEHeader;
 @override final  int? scMaxEachPostBytes;
@@ -573,16 +599,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _XHttpExtra4Ray&&const DeepCollectionEquality().equals(other._headers, _headers)&&(identical(other.xPaddingBytes, xPaddingBytes) || other.xPaddingBytes == xPaddingBytes)&&(identical(other.noGRPCHeader, noGRPCHeader) || other.noGRPCHeader == noGRPCHeader)&&(identical(other.noSSEHeader, noSSEHeader) || other.noSSEHeader == noSSEHeader)&&(identical(other.scMaxEachPostBytes, scMaxEachPostBytes) || other.scMaxEachPostBytes == scMaxEachPostBytes)&&(identical(other.scMinPostsIntervalMs, scMinPostsIntervalMs) || other.scMinPostsIntervalMs == scMinPostsIntervalMs)&&(identical(other.scMaxBufferedPosts, scMaxBufferedPosts) || other.scMaxBufferedPosts == scMaxBufferedPosts)&&(identical(other.scStreamUpServerSecs, scStreamUpServerSecs) || other.scStreamUpServerSecs == scStreamUpServerSecs)&&(identical(other.xmux, xmux) || other.xmux == xmux)&&(identical(other.downloadSettings, downloadSettings) || other.downloadSettings == downloadSettings));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _XHttpExtra4Ray&&const DeepCollectionEquality().equals(other._headers, _headers)&&(identical(other.xPaddingBytes, xPaddingBytes) || other.xPaddingBytes == xPaddingBytes)&&(identical(other.xPaddingObfsMode, xPaddingObfsMode) || other.xPaddingObfsMode == xPaddingObfsMode)&&(identical(other.xPaddingKey, xPaddingKey) || other.xPaddingKey == xPaddingKey)&&(identical(other.xPaddingHeader, xPaddingHeader) || other.xPaddingHeader == xPaddingHeader)&&(identical(other.xPaddingPlacement, xPaddingPlacement) || other.xPaddingPlacement == xPaddingPlacement)&&(identical(other.xPaddingMethod, xPaddingMethod) || other.xPaddingMethod == xPaddingMethod)&&(identical(other.uplinkHTTPMethod, uplinkHTTPMethod) || other.uplinkHTTPMethod == uplinkHTTPMethod)&&(identical(other.sessionPlacement, sessionPlacement) || other.sessionPlacement == sessionPlacement)&&(identical(other.sessionKey, sessionKey) || other.sessionKey == sessionKey)&&(identical(other.seqPlacement, seqPlacement) || other.seqPlacement == seqPlacement)&&(identical(other.seqKey, seqKey) || other.seqKey == seqKey)&&(identical(other.uplinkDataPlacement, uplinkDataPlacement) || other.uplinkDataPlacement == uplinkDataPlacement)&&(identical(other.uplinkDataKey, uplinkDataKey) || other.uplinkDataKey == uplinkDataKey)&&(identical(other.uplinkChunkSize, uplinkChunkSize) || other.uplinkChunkSize == uplinkChunkSize)&&(identical(other.noGRPCHeader, noGRPCHeader) || other.noGRPCHeader == noGRPCHeader)&&(identical(other.noSSEHeader, noSSEHeader) || other.noSSEHeader == noSSEHeader)&&(identical(other.scMaxEachPostBytes, scMaxEachPostBytes) || other.scMaxEachPostBytes == scMaxEachPostBytes)&&(identical(other.scMinPostsIntervalMs, scMinPostsIntervalMs) || other.scMinPostsIntervalMs == scMinPostsIntervalMs)&&(identical(other.scMaxBufferedPosts, scMaxBufferedPosts) || other.scMaxBufferedPosts == scMaxBufferedPosts)&&(identical(other.scStreamUpServerSecs, scStreamUpServerSecs) || other.scStreamUpServerSecs == scStreamUpServerSecs)&&(identical(other.xmux, xmux) || other.xmux == xmux)&&(identical(other.downloadSettings, downloadSettings) || other.downloadSettings == downloadSettings));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_headers),xPaddingBytes,noGRPCHeader,noSSEHeader,scMaxEachPostBytes,scMinPostsIntervalMs,scMaxBufferedPosts,scStreamUpServerSecs,xmux,downloadSettings);
+int get hashCode => Object.hashAll([runtimeType,const DeepCollectionEquality().hash(_headers),xPaddingBytes,xPaddingObfsMode,xPaddingKey,xPaddingHeader,xPaddingPlacement,xPaddingMethod,uplinkHTTPMethod,sessionPlacement,sessionKey,seqPlacement,seqKey,uplinkDataPlacement,uplinkDataKey,uplinkChunkSize,noGRPCHeader,noSSEHeader,scMaxEachPostBytes,scMinPostsIntervalMs,scMaxBufferedPosts,scStreamUpServerSecs,xmux,downloadSettings]);
 
 @override
 String toString() {
-  return 'XHttpExtra4Ray(headers: $headers, xPaddingBytes: $xPaddingBytes, noGRPCHeader: $noGRPCHeader, noSSEHeader: $noSSEHeader, scMaxEachPostBytes: $scMaxEachPostBytes, scMinPostsIntervalMs: $scMinPostsIntervalMs, scMaxBufferedPosts: $scMaxBufferedPosts, scStreamUpServerSecs: $scStreamUpServerSecs, xmux: $xmux, downloadSettings: $downloadSettings)';
+  return 'XHttpExtra4Ray(headers: $headers, xPaddingBytes: $xPaddingBytes, xPaddingObfsMode: $xPaddingObfsMode, xPaddingKey: $xPaddingKey, xPaddingHeader: $xPaddingHeader, xPaddingPlacement: $xPaddingPlacement, xPaddingMethod: $xPaddingMethod, uplinkHTTPMethod: $uplinkHTTPMethod, sessionPlacement: $sessionPlacement, sessionKey: $sessionKey, seqPlacement: $seqPlacement, seqKey: $seqKey, uplinkDataPlacement: $uplinkDataPlacement, uplinkDataKey: $uplinkDataKey, uplinkChunkSize: $uplinkChunkSize, noGRPCHeader: $noGRPCHeader, noSSEHeader: $noSSEHeader, scMaxEachPostBytes: $scMaxEachPostBytes, scMinPostsIntervalMs: $scMinPostsIntervalMs, scMaxBufferedPosts: $scMaxBufferedPosts, scStreamUpServerSecs: $scStreamUpServerSecs, xmux: $xmux, downloadSettings: $downloadSettings)';
 }
 
 
@@ -593,7 +619,7 @@ abstract mixin class _$XHttpExtra4RayCopyWith<$Res> implements $XHttpExtra4RayCo
   factory _$XHttpExtra4RayCopyWith(_XHttpExtra4Ray value, $Res Function(_XHttpExtra4Ray) _then) = __$XHttpExtra4RayCopyWithImpl;
 @override @useResult
 $Res call({
- Map<String, MultiValueString>? headers, String? xPaddingBytes, bool? noGRPCHeader, bool? noSSEHeader, int? scMaxEachPostBytes, int? scMinPostsIntervalMs, int? scMaxBufferedPosts, String? scStreamUpServerSecs, XHttpExtraXmux4Ray? xmux, XHttpExtraDownload4Ray? downloadSettings
+ Map<String, MultiValueString>? headers, String? xPaddingBytes, bool? xPaddingObfsMode, String? xPaddingKey, String? xPaddingHeader, String? xPaddingPlacement, String? xPaddingMethod, String? uplinkHTTPMethod, String? sessionPlacement, String? sessionKey, String? seqPlacement, String? seqKey, String? uplinkDataPlacement, String? uplinkDataKey, int? uplinkChunkSize, bool? noGRPCHeader, bool? noSSEHeader, int? scMaxEachPostBytes, int? scMinPostsIntervalMs, int? scMaxBufferedPosts, String? scStreamUpServerSecs, XHttpExtraXmux4Ray? xmux, XHttpExtraDownload4Ray? downloadSettings
 });
 
 
@@ -610,11 +636,24 @@ class __$XHttpExtra4RayCopyWithImpl<$Res>
 
 /// Create a copy of XHttpExtra4Ray
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? headers = freezed,Object? xPaddingBytes = freezed,Object? noGRPCHeader = freezed,Object? noSSEHeader = freezed,Object? scMaxEachPostBytes = freezed,Object? scMinPostsIntervalMs = freezed,Object? scMaxBufferedPosts = freezed,Object? scStreamUpServerSecs = freezed,Object? xmux = freezed,Object? downloadSettings = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? headers = freezed,Object? xPaddingBytes = freezed,Object? xPaddingObfsMode = freezed,Object? xPaddingKey = freezed,Object? xPaddingHeader = freezed,Object? xPaddingPlacement = freezed,Object? xPaddingMethod = freezed,Object? uplinkHTTPMethod = freezed,Object? sessionPlacement = freezed,Object? sessionKey = freezed,Object? seqPlacement = freezed,Object? seqKey = freezed,Object? uplinkDataPlacement = freezed,Object? uplinkDataKey = freezed,Object? uplinkChunkSize = freezed,Object? noGRPCHeader = freezed,Object? noSSEHeader = freezed,Object? scMaxEachPostBytes = freezed,Object? scMinPostsIntervalMs = freezed,Object? scMaxBufferedPosts = freezed,Object? scStreamUpServerSecs = freezed,Object? xmux = freezed,Object? downloadSettings = freezed,}) {
   return _then(_XHttpExtra4Ray(
 headers: freezed == headers ? _self._headers : headers // ignore: cast_nullable_to_non_nullable
 as Map<String, MultiValueString>?,xPaddingBytes: freezed == xPaddingBytes ? _self.xPaddingBytes : xPaddingBytes // ignore: cast_nullable_to_non_nullable
-as String?,noGRPCHeader: freezed == noGRPCHeader ? _self.noGRPCHeader : noGRPCHeader // ignore: cast_nullable_to_non_nullable
+as String?,xPaddingObfsMode: freezed == xPaddingObfsMode ? _self.xPaddingObfsMode : xPaddingObfsMode // ignore: cast_nullable_to_non_nullable
+as bool?,xPaddingKey: freezed == xPaddingKey ? _self.xPaddingKey : xPaddingKey // ignore: cast_nullable_to_non_nullable
+as String?,xPaddingHeader: freezed == xPaddingHeader ? _self.xPaddingHeader : xPaddingHeader // ignore: cast_nullable_to_non_nullable
+as String?,xPaddingPlacement: freezed == xPaddingPlacement ? _self.xPaddingPlacement : xPaddingPlacement // ignore: cast_nullable_to_non_nullable
+as String?,xPaddingMethod: freezed == xPaddingMethod ? _self.xPaddingMethod : xPaddingMethod // ignore: cast_nullable_to_non_nullable
+as String?,uplinkHTTPMethod: freezed == uplinkHTTPMethod ? _self.uplinkHTTPMethod : uplinkHTTPMethod // ignore: cast_nullable_to_non_nullable
+as String?,sessionPlacement: freezed == sessionPlacement ? _self.sessionPlacement : sessionPlacement // ignore: cast_nullable_to_non_nullable
+as String?,sessionKey: freezed == sessionKey ? _self.sessionKey : sessionKey // ignore: cast_nullable_to_non_nullable
+as String?,seqPlacement: freezed == seqPlacement ? _self.seqPlacement : seqPlacement // ignore: cast_nullable_to_non_nullable
+as String?,seqKey: freezed == seqKey ? _self.seqKey : seqKey // ignore: cast_nullable_to_non_nullable
+as String?,uplinkDataPlacement: freezed == uplinkDataPlacement ? _self.uplinkDataPlacement : uplinkDataPlacement // ignore: cast_nullable_to_non_nullable
+as String?,uplinkDataKey: freezed == uplinkDataKey ? _self.uplinkDataKey : uplinkDataKey // ignore: cast_nullable_to_non_nullable
+as String?,uplinkChunkSize: freezed == uplinkChunkSize ? _self.uplinkChunkSize : uplinkChunkSize // ignore: cast_nullable_to_non_nullable
+as int?,noGRPCHeader: freezed == noGRPCHeader ? _self.noGRPCHeader : noGRPCHeader // ignore: cast_nullable_to_non_nullable
 as bool?,noSSEHeader: freezed == noSSEHeader ? _self.noSSEHeader : noSSEHeader // ignore: cast_nullable_to_non_nullable
 as bool?,scMaxEachPostBytes: freezed == scMaxEachPostBytes ? _self.scMaxEachPostBytes : scMaxEachPostBytes // ignore: cast_nullable_to_non_nullable
 as int?,scMinPostsIntervalMs: freezed == scMinPostsIntervalMs ? _self.scMinPostsIntervalMs : scMinPostsIntervalMs // ignore: cast_nullable_to_non_nullable
