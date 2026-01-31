@@ -1,3 +1,9 @@
+## 0.1.2
+
+- feat: add verifyPeerCertByName to tls
+- feat: add finalmask
+- feat: add xhttp new options
+
 ## 0.1.1
 
 - feat: add pinnedPeerCertSha256
