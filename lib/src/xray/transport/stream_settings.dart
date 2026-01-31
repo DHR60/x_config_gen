@@ -10,7 +10,7 @@ import 'package:x_config_gen/src/xray/transport/sockopt/sockopt.dart';
 import 'package:x_config_gen/src/xray/transport/network/websocket.dart';
 import 'package:x_config_gen/src/xray/transport/network/httpupgrade.dart';
 import 'package:x_config_gen/src/xray/transport/network/hysteria.dart';
-import 'package:x_config_gen/src/xray/transport/masks/udp_mask.dart';
+import 'package:x_config_gen/src/xray/transport/masks/mask.dart';
 
 export 'package:x_config_gen/src/xray/transport/security/tls.dart';
 export 'package:x_config_gen/src/xray/transport/security/reality.dart';
@@ -22,7 +22,7 @@ export 'package:x_config_gen/src/xray/transport/sockopt/sockopt.dart';
 export 'package:x_config_gen/src/xray/transport/network/websocket.dart';
 export 'package:x_config_gen/src/xray/transport/network/httpupgrade.dart';
 export 'package:x_config_gen/src/xray/transport/network/hysteria.dart';
-export 'package:x_config_gen/src/xray/transport/masks/udp_mask.dart';
+export 'package:x_config_gen/src/xray/transport/masks/mask.dart';
 
 part 'stream_settings.freezed.dart';
 part 'stream_settings.g.dart';
@@ -42,7 +42,7 @@ abstract class StreamSettings4Ray with _$StreamSettings4Ray {
     WebSocketTransport4Ray? wsSettings,
     HttpUpgradeTransport4Ray? httpupgradeSettings,
     HysteriaTransport4Ray? hysteriaSettings,
-    List<UdpMask4Ray>? udpmasks,
+    FinalMask4Ray? finalmask,
     Sockopt4Ray? sockopt,
   }) = _StreamSettings4Ray;
 
