@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Tls4Ray {
 
- String? get serverName; List<String>? get verifyPeerCertInNames; bool? get rejectUnknownSni; bool? get allowInsecure; List<String>? get alpn; String? get minVersion; String? get maxVersion; String? get cipherSuites; List<Certificate4Ray>? get certificates; bool? get disableSystemRoot; bool? get enableSessionResumption; String? get fingerprint; String? get pinnedPeerCertSha256; List<String>? get curvePreferences; String? get masterKeyLog; String? get echServerKeys; String? get echConfigList; String? get echForceQuery; Sockopt4Ray? get echSockopt;
+ String? get serverName; List<String>? get verifyPeerCertInNames; String? get verifyPeerCertByName; bool? get rejectUnknownSni; bool? get allowInsecure; List<String>? get alpn; String? get minVersion; String? get maxVersion; String? get cipherSuites; List<Certificate4Ray>? get certificates; bool? get disableSystemRoot; bool? get enableSessionResumption; String? get fingerprint; String? get pinnedPeerCertSha256; List<String>? get curvePreferences; String? get masterKeyLog; String? get echServerKeys; String? get echConfigList; String? get echForceQuery; Sockopt4Ray? get echSockopt;
 /// Create a copy of Tls4Ray
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $Tls4RayCopyWith<Tls4Ray> get copyWith => _$Tls4RayCopyWithImpl<Tls4Ray>(this as
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Tls4Ray&&(identical(other.serverName, serverName) || other.serverName == serverName)&&const DeepCollectionEquality().equals(other.verifyPeerCertInNames, verifyPeerCertInNames)&&(identical(other.rejectUnknownSni, rejectUnknownSni) || other.rejectUnknownSni == rejectUnknownSni)&&(identical(other.allowInsecure, allowInsecure) || other.allowInsecure == allowInsecure)&&const DeepCollectionEquality().equals(other.alpn, alpn)&&(identical(other.minVersion, minVersion) || other.minVersion == minVersion)&&(identical(other.maxVersion, maxVersion) || other.maxVersion == maxVersion)&&(identical(other.cipherSuites, cipherSuites) || other.cipherSuites == cipherSuites)&&const DeepCollectionEquality().equals(other.certificates, certificates)&&(identical(other.disableSystemRoot, disableSystemRoot) || other.disableSystemRoot == disableSystemRoot)&&(identical(other.enableSessionResumption, enableSessionResumption) || other.enableSessionResumption == enableSessionResumption)&&(identical(other.fingerprint, fingerprint) || other.fingerprint == fingerprint)&&(identical(other.pinnedPeerCertSha256, pinnedPeerCertSha256) || other.pinnedPeerCertSha256 == pinnedPeerCertSha256)&&const DeepCollectionEquality().equals(other.curvePreferences, curvePreferences)&&(identical(other.masterKeyLog, masterKeyLog) || other.masterKeyLog == masterKeyLog)&&(identical(other.echServerKeys, echServerKeys) || other.echServerKeys == echServerKeys)&&(identical(other.echConfigList, echConfigList) || other.echConfigList == echConfigList)&&(identical(other.echForceQuery, echForceQuery) || other.echForceQuery == echForceQuery)&&(identical(other.echSockopt, echSockopt) || other.echSockopt == echSockopt));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Tls4Ray&&(identical(other.serverName, serverName) || other.serverName == serverName)&&const DeepCollectionEquality().equals(other.verifyPeerCertInNames, verifyPeerCertInNames)&&(identical(other.verifyPeerCertByName, verifyPeerCertByName) || other.verifyPeerCertByName == verifyPeerCertByName)&&(identical(other.rejectUnknownSni, rejectUnknownSni) || other.rejectUnknownSni == rejectUnknownSni)&&(identical(other.allowInsecure, allowInsecure) || other.allowInsecure == allowInsecure)&&const DeepCollectionEquality().equals(other.alpn, alpn)&&(identical(other.minVersion, minVersion) || other.minVersion == minVersion)&&(identical(other.maxVersion, maxVersion) || other.maxVersion == maxVersion)&&(identical(other.cipherSuites, cipherSuites) || other.cipherSuites == cipherSuites)&&const DeepCollectionEquality().equals(other.certificates, certificates)&&(identical(other.disableSystemRoot, disableSystemRoot) || other.disableSystemRoot == disableSystemRoot)&&(identical(other.enableSessionResumption, enableSessionResumption) || other.enableSessionResumption == enableSessionResumption)&&(identical(other.fingerprint, fingerprint) || other.fingerprint == fingerprint)&&(identical(other.pinnedPeerCertSha256, pinnedPeerCertSha256) || other.pinnedPeerCertSha256 == pinnedPeerCertSha256)&&const DeepCollectionEquality().equals(other.curvePreferences, curvePreferences)&&(identical(other.masterKeyLog, masterKeyLog) || other.masterKeyLog == masterKeyLog)&&(identical(other.echServerKeys, echServerKeys) || other.echServerKeys == echServerKeys)&&(identical(other.echConfigList, echConfigList) || other.echConfigList == echConfigList)&&(identical(other.echForceQuery, echForceQuery) || other.echForceQuery == echForceQuery)&&(identical(other.echSockopt, echSockopt) || other.echSockopt == echSockopt));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,serverName,const DeepCollectionEquality().hash(verifyPeerCertInNames),rejectUnknownSni,allowInsecure,const DeepCollectionEquality().hash(alpn),minVersion,maxVersion,cipherSuites,const DeepCollectionEquality().hash(certificates),disableSystemRoot,enableSessionResumption,fingerprint,pinnedPeerCertSha256,const DeepCollectionEquality().hash(curvePreferences),masterKeyLog,echServerKeys,echConfigList,echForceQuery,echSockopt]);
+int get hashCode => Object.hashAll([runtimeType,serverName,const DeepCollectionEquality().hash(verifyPeerCertInNames),verifyPeerCertByName,rejectUnknownSni,allowInsecure,const DeepCollectionEquality().hash(alpn),minVersion,maxVersion,cipherSuites,const DeepCollectionEquality().hash(certificates),disableSystemRoot,enableSessionResumption,fingerprint,pinnedPeerCertSha256,const DeepCollectionEquality().hash(curvePreferences),masterKeyLog,echServerKeys,echConfigList,echForceQuery,echSockopt]);
 
 @override
 String toString() {
-  return 'Tls4Ray(serverName: $serverName, verifyPeerCertInNames: $verifyPeerCertInNames, rejectUnknownSni: $rejectUnknownSni, allowInsecure: $allowInsecure, alpn: $alpn, minVersion: $minVersion, maxVersion: $maxVersion, cipherSuites: $cipherSuites, certificates: $certificates, disableSystemRoot: $disableSystemRoot, enableSessionResumption: $enableSessionResumption, fingerprint: $fingerprint, pinnedPeerCertSha256: $pinnedPeerCertSha256, curvePreferences: $curvePreferences, masterKeyLog: $masterKeyLog, echServerKeys: $echServerKeys, echConfigList: $echConfigList, echForceQuery: $echForceQuery, echSockopt: $echSockopt)';
+  return 'Tls4Ray(serverName: $serverName, verifyPeerCertInNames: $verifyPeerCertInNames, verifyPeerCertByName: $verifyPeerCertByName, rejectUnknownSni: $rejectUnknownSni, allowInsecure: $allowInsecure, alpn: $alpn, minVersion: $minVersion, maxVersion: $maxVersion, cipherSuites: $cipherSuites, certificates: $certificates, disableSystemRoot: $disableSystemRoot, enableSessionResumption: $enableSessionResumption, fingerprint: $fingerprint, pinnedPeerCertSha256: $pinnedPeerCertSha256, curvePreferences: $curvePreferences, masterKeyLog: $masterKeyLog, echServerKeys: $echServerKeys, echConfigList: $echConfigList, echForceQuery: $echForceQuery, echSockopt: $echSockopt)';
 }
 
 
@@ -48,7 +48,7 @@ abstract mixin class $Tls4RayCopyWith<$Res>  {
   factory $Tls4RayCopyWith(Tls4Ray value, $Res Function(Tls4Ray) _then) = _$Tls4RayCopyWithImpl;
 @useResult
 $Res call({
- String? serverName, List<String>? verifyPeerCertInNames, bool? rejectUnknownSni, bool? allowInsecure, List<String>? alpn, String? minVersion, String? maxVersion, String? cipherSuites, List<Certificate4Ray>? certificates, bool? disableSystemRoot, bool? enableSessionResumption, String? fingerprint, String? pinnedPeerCertSha256, List<String>? curvePreferences, String? masterKeyLog, String? echServerKeys, String? echConfigList, String? echForceQuery, Sockopt4Ray? echSockopt
+ String? serverName, List<String>? verifyPeerCertInNames, String? verifyPeerCertByName, bool? rejectUnknownSni, bool? allowInsecure, List<String>? alpn, String? minVersion, String? maxVersion, String? cipherSuites, List<Certificate4Ray>? certificates, bool? disableSystemRoot, bool? enableSessionResumption, String? fingerprint, String? pinnedPeerCertSha256, List<String>? curvePreferences, String? masterKeyLog, String? echServerKeys, String? echConfigList, String? echForceQuery, Sockopt4Ray? echSockopt
 });
 
 
@@ -65,11 +65,12 @@ class _$Tls4RayCopyWithImpl<$Res>
 
 /// Create a copy of Tls4Ray
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? serverName = freezed,Object? verifyPeerCertInNames = freezed,Object? rejectUnknownSni = freezed,Object? allowInsecure = freezed,Object? alpn = freezed,Object? minVersion = freezed,Object? maxVersion = freezed,Object? cipherSuites = freezed,Object? certificates = freezed,Object? disableSystemRoot = freezed,Object? enableSessionResumption = freezed,Object? fingerprint = freezed,Object? pinnedPeerCertSha256 = freezed,Object? curvePreferences = freezed,Object? masterKeyLog = freezed,Object? echServerKeys = freezed,Object? echConfigList = freezed,Object? echForceQuery = freezed,Object? echSockopt = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? serverName = freezed,Object? verifyPeerCertInNames = freezed,Object? verifyPeerCertByName = freezed,Object? rejectUnknownSni = freezed,Object? allowInsecure = freezed,Object? alpn = freezed,Object? minVersion = freezed,Object? maxVersion = freezed,Object? cipherSuites = freezed,Object? certificates = freezed,Object? disableSystemRoot = freezed,Object? enableSessionResumption = freezed,Object? fingerprint = freezed,Object? pinnedPeerCertSha256 = freezed,Object? curvePreferences = freezed,Object? masterKeyLog = freezed,Object? echServerKeys = freezed,Object? echConfigList = freezed,Object? echForceQuery = freezed,Object? echSockopt = freezed,}) {
   return _then(_self.copyWith(
 serverName: freezed == serverName ? _self.serverName : serverName // ignore: cast_nullable_to_non_nullable
 as String?,verifyPeerCertInNames: freezed == verifyPeerCertInNames ? _self.verifyPeerCertInNames : verifyPeerCertInNames // ignore: cast_nullable_to_non_nullable
-as List<String>?,rejectUnknownSni: freezed == rejectUnknownSni ? _self.rejectUnknownSni : rejectUnknownSni // ignore: cast_nullable_to_non_nullable
+as List<String>?,verifyPeerCertByName: freezed == verifyPeerCertByName ? _self.verifyPeerCertByName : verifyPeerCertByName // ignore: cast_nullable_to_non_nullable
+as String?,rejectUnknownSni: freezed == rejectUnknownSni ? _self.rejectUnknownSni : rejectUnknownSni // ignore: cast_nullable_to_non_nullable
 as bool?,allowInsecure: freezed == allowInsecure ? _self.allowInsecure : allowInsecure // ignore: cast_nullable_to_non_nullable
 as bool?,alpn: freezed == alpn ? _self.alpn : alpn // ignore: cast_nullable_to_non_nullable
 as List<String>?,minVersion: freezed == minVersion ? _self.minVersion : minVersion // ignore: cast_nullable_to_non_nullable
@@ -183,10 +184,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? serverName,  List<String>? verifyPeerCertInNames,  bool? rejectUnknownSni,  bool? allowInsecure,  List<String>? alpn,  String? minVersion,  String? maxVersion,  String? cipherSuites,  List<Certificate4Ray>? certificates,  bool? disableSystemRoot,  bool? enableSessionResumption,  String? fingerprint,  String? pinnedPeerCertSha256,  List<String>? curvePreferences,  String? masterKeyLog,  String? echServerKeys,  String? echConfigList,  String? echForceQuery,  Sockopt4Ray? echSockopt)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? serverName,  List<String>? verifyPeerCertInNames,  String? verifyPeerCertByName,  bool? rejectUnknownSni,  bool? allowInsecure,  List<String>? alpn,  String? minVersion,  String? maxVersion,  String? cipherSuites,  List<Certificate4Ray>? certificates,  bool? disableSystemRoot,  bool? enableSessionResumption,  String? fingerprint,  String? pinnedPeerCertSha256,  List<String>? curvePreferences,  String? masterKeyLog,  String? echServerKeys,  String? echConfigList,  String? echForceQuery,  Sockopt4Ray? echSockopt)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Tls4Ray() when $default != null:
-return $default(_that.serverName,_that.verifyPeerCertInNames,_that.rejectUnknownSni,_that.allowInsecure,_that.alpn,_that.minVersion,_that.maxVersion,_that.cipherSuites,_that.certificates,_that.disableSystemRoot,_that.enableSessionResumption,_that.fingerprint,_that.pinnedPeerCertSha256,_that.curvePreferences,_that.masterKeyLog,_that.echServerKeys,_that.echConfigList,_that.echForceQuery,_that.echSockopt);case _:
+return $default(_that.serverName,_that.verifyPeerCertInNames,_that.verifyPeerCertByName,_that.rejectUnknownSni,_that.allowInsecure,_that.alpn,_that.minVersion,_that.maxVersion,_that.cipherSuites,_that.certificates,_that.disableSystemRoot,_that.enableSessionResumption,_that.fingerprint,_that.pinnedPeerCertSha256,_that.curvePreferences,_that.masterKeyLog,_that.echServerKeys,_that.echConfigList,_that.echForceQuery,_that.echSockopt);case _:
   return orElse();
 
 }
@@ -204,10 +205,10 @@ return $default(_that.serverName,_that.verifyPeerCertInNames,_that.rejectUnknown
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? serverName,  List<String>? verifyPeerCertInNames,  bool? rejectUnknownSni,  bool? allowInsecure,  List<String>? alpn,  String? minVersion,  String? maxVersion,  String? cipherSuites,  List<Certificate4Ray>? certificates,  bool? disableSystemRoot,  bool? enableSessionResumption,  String? fingerprint,  String? pinnedPeerCertSha256,  List<String>? curvePreferences,  String? masterKeyLog,  String? echServerKeys,  String? echConfigList,  String? echForceQuery,  Sockopt4Ray? echSockopt)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? serverName,  List<String>? verifyPeerCertInNames,  String? verifyPeerCertByName,  bool? rejectUnknownSni,  bool? allowInsecure,  List<String>? alpn,  String? minVersion,  String? maxVersion,  String? cipherSuites,  List<Certificate4Ray>? certificates,  bool? disableSystemRoot,  bool? enableSessionResumption,  String? fingerprint,  String? pinnedPeerCertSha256,  List<String>? curvePreferences,  String? masterKeyLog,  String? echServerKeys,  String? echConfigList,  String? echForceQuery,  Sockopt4Ray? echSockopt)  $default,) {final _that = this;
 switch (_that) {
 case _Tls4Ray():
-return $default(_that.serverName,_that.verifyPeerCertInNames,_that.rejectUnknownSni,_that.allowInsecure,_that.alpn,_that.minVersion,_that.maxVersion,_that.cipherSuites,_that.certificates,_that.disableSystemRoot,_that.enableSessionResumption,_that.fingerprint,_that.pinnedPeerCertSha256,_that.curvePreferences,_that.masterKeyLog,_that.echServerKeys,_that.echConfigList,_that.echForceQuery,_that.echSockopt);case _:
+return $default(_that.serverName,_that.verifyPeerCertInNames,_that.verifyPeerCertByName,_that.rejectUnknownSni,_that.allowInsecure,_that.alpn,_that.minVersion,_that.maxVersion,_that.cipherSuites,_that.certificates,_that.disableSystemRoot,_that.enableSessionResumption,_that.fingerprint,_that.pinnedPeerCertSha256,_that.curvePreferences,_that.masterKeyLog,_that.echServerKeys,_that.echConfigList,_that.echForceQuery,_that.echSockopt);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -224,10 +225,10 @@ return $default(_that.serverName,_that.verifyPeerCertInNames,_that.rejectUnknown
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? serverName,  List<String>? verifyPeerCertInNames,  bool? rejectUnknownSni,  bool? allowInsecure,  List<String>? alpn,  String? minVersion,  String? maxVersion,  String? cipherSuites,  List<Certificate4Ray>? certificates,  bool? disableSystemRoot,  bool? enableSessionResumption,  String? fingerprint,  String? pinnedPeerCertSha256,  List<String>? curvePreferences,  String? masterKeyLog,  String? echServerKeys,  String? echConfigList,  String? echForceQuery,  Sockopt4Ray? echSockopt)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? serverName,  List<String>? verifyPeerCertInNames,  String? verifyPeerCertByName,  bool? rejectUnknownSni,  bool? allowInsecure,  List<String>? alpn,  String? minVersion,  String? maxVersion,  String? cipherSuites,  List<Certificate4Ray>? certificates,  bool? disableSystemRoot,  bool? enableSessionResumption,  String? fingerprint,  String? pinnedPeerCertSha256,  List<String>? curvePreferences,  String? masterKeyLog,  String? echServerKeys,  String? echConfigList,  String? echForceQuery,  Sockopt4Ray? echSockopt)?  $default,) {final _that = this;
 switch (_that) {
 case _Tls4Ray() when $default != null:
-return $default(_that.serverName,_that.verifyPeerCertInNames,_that.rejectUnknownSni,_that.allowInsecure,_that.alpn,_that.minVersion,_that.maxVersion,_that.cipherSuites,_that.certificates,_that.disableSystemRoot,_that.enableSessionResumption,_that.fingerprint,_that.pinnedPeerCertSha256,_that.curvePreferences,_that.masterKeyLog,_that.echServerKeys,_that.echConfigList,_that.echForceQuery,_that.echSockopt);case _:
+return $default(_that.serverName,_that.verifyPeerCertInNames,_that.verifyPeerCertByName,_that.rejectUnknownSni,_that.allowInsecure,_that.alpn,_that.minVersion,_that.maxVersion,_that.cipherSuites,_that.certificates,_that.disableSystemRoot,_that.enableSessionResumption,_that.fingerprint,_that.pinnedPeerCertSha256,_that.curvePreferences,_that.masterKeyLog,_that.echServerKeys,_that.echConfigList,_that.echForceQuery,_that.echSockopt);case _:
   return null;
 
 }
@@ -239,7 +240,7 @@ return $default(_that.serverName,_that.verifyPeerCertInNames,_that.rejectUnknown
 
 @JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _Tls4Ray implements Tls4Ray {
-  const _Tls4Ray({this.serverName, final  List<String>? verifyPeerCertInNames, this.rejectUnknownSni, this.allowInsecure, final  List<String>? alpn, this.minVersion, this.maxVersion, this.cipherSuites, final  List<Certificate4Ray>? certificates, this.disableSystemRoot, this.enableSessionResumption, this.fingerprint, this.pinnedPeerCertSha256, final  List<String>? curvePreferences, this.masterKeyLog, this.echServerKeys, this.echConfigList, this.echForceQuery, this.echSockopt}): _verifyPeerCertInNames = verifyPeerCertInNames,_alpn = alpn,_certificates = certificates,_curvePreferences = curvePreferences;
+  const _Tls4Ray({this.serverName, final  List<String>? verifyPeerCertInNames, this.verifyPeerCertByName, this.rejectUnknownSni, this.allowInsecure, final  List<String>? alpn, this.minVersion, this.maxVersion, this.cipherSuites, final  List<Certificate4Ray>? certificates, this.disableSystemRoot, this.enableSessionResumption, this.fingerprint, this.pinnedPeerCertSha256, final  List<String>? curvePreferences, this.masterKeyLog, this.echServerKeys, this.echConfigList, this.echForceQuery, this.echSockopt}): _verifyPeerCertInNames = verifyPeerCertInNames,_alpn = alpn,_certificates = certificates,_curvePreferences = curvePreferences;
   factory _Tls4Ray.fromJson(Map<String, dynamic> json) => _$Tls4RayFromJson(json);
 
 @override final  String? serverName;
@@ -252,6 +253,7 @@ class _Tls4Ray implements Tls4Ray {
   return EqualUnmodifiableListView(value);
 }
 
+@override final  String? verifyPeerCertByName;
 @override final  bool? rejectUnknownSni;
 @override final  bool? allowInsecure;
  final  List<String>? _alpn;
@@ -307,16 +309,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Tls4Ray&&(identical(other.serverName, serverName) || other.serverName == serverName)&&const DeepCollectionEquality().equals(other._verifyPeerCertInNames, _verifyPeerCertInNames)&&(identical(other.rejectUnknownSni, rejectUnknownSni) || other.rejectUnknownSni == rejectUnknownSni)&&(identical(other.allowInsecure, allowInsecure) || other.allowInsecure == allowInsecure)&&const DeepCollectionEquality().equals(other._alpn, _alpn)&&(identical(other.minVersion, minVersion) || other.minVersion == minVersion)&&(identical(other.maxVersion, maxVersion) || other.maxVersion == maxVersion)&&(identical(other.cipherSuites, cipherSuites) || other.cipherSuites == cipherSuites)&&const DeepCollectionEquality().equals(other._certificates, _certificates)&&(identical(other.disableSystemRoot, disableSystemRoot) || other.disableSystemRoot == disableSystemRoot)&&(identical(other.enableSessionResumption, enableSessionResumption) || other.enableSessionResumption == enableSessionResumption)&&(identical(other.fingerprint, fingerprint) || other.fingerprint == fingerprint)&&(identical(other.pinnedPeerCertSha256, pinnedPeerCertSha256) || other.pinnedPeerCertSha256 == pinnedPeerCertSha256)&&const DeepCollectionEquality().equals(other._curvePreferences, _curvePreferences)&&(identical(other.masterKeyLog, masterKeyLog) || other.masterKeyLog == masterKeyLog)&&(identical(other.echServerKeys, echServerKeys) || other.echServerKeys == echServerKeys)&&(identical(other.echConfigList, echConfigList) || other.echConfigList == echConfigList)&&(identical(other.echForceQuery, echForceQuery) || other.echForceQuery == echForceQuery)&&(identical(other.echSockopt, echSockopt) || other.echSockopt == echSockopt));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Tls4Ray&&(identical(other.serverName, serverName) || other.serverName == serverName)&&const DeepCollectionEquality().equals(other._verifyPeerCertInNames, _verifyPeerCertInNames)&&(identical(other.verifyPeerCertByName, verifyPeerCertByName) || other.verifyPeerCertByName == verifyPeerCertByName)&&(identical(other.rejectUnknownSni, rejectUnknownSni) || other.rejectUnknownSni == rejectUnknownSni)&&(identical(other.allowInsecure, allowInsecure) || other.allowInsecure == allowInsecure)&&const DeepCollectionEquality().equals(other._alpn, _alpn)&&(identical(other.minVersion, minVersion) || other.minVersion == minVersion)&&(identical(other.maxVersion, maxVersion) || other.maxVersion == maxVersion)&&(identical(other.cipherSuites, cipherSuites) || other.cipherSuites == cipherSuites)&&const DeepCollectionEquality().equals(other._certificates, _certificates)&&(identical(other.disableSystemRoot, disableSystemRoot) || other.disableSystemRoot == disableSystemRoot)&&(identical(other.enableSessionResumption, enableSessionResumption) || other.enableSessionResumption == enableSessionResumption)&&(identical(other.fingerprint, fingerprint) || other.fingerprint == fingerprint)&&(identical(other.pinnedPeerCertSha256, pinnedPeerCertSha256) || other.pinnedPeerCertSha256 == pinnedPeerCertSha256)&&const DeepCollectionEquality().equals(other._curvePreferences, _curvePreferences)&&(identical(other.masterKeyLog, masterKeyLog) || other.masterKeyLog == masterKeyLog)&&(identical(other.echServerKeys, echServerKeys) || other.echServerKeys == echServerKeys)&&(identical(other.echConfigList, echConfigList) || other.echConfigList == echConfigList)&&(identical(other.echForceQuery, echForceQuery) || other.echForceQuery == echForceQuery)&&(identical(other.echSockopt, echSockopt) || other.echSockopt == echSockopt));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hashAll([runtimeType,serverName,const DeepCollectionEquality().hash(_verifyPeerCertInNames),rejectUnknownSni,allowInsecure,const DeepCollectionEquality().hash(_alpn),minVersion,maxVersion,cipherSuites,const DeepCollectionEquality().hash(_certificates),disableSystemRoot,enableSessionResumption,fingerprint,pinnedPeerCertSha256,const DeepCollectionEquality().hash(_curvePreferences),masterKeyLog,echServerKeys,echConfigList,echForceQuery,echSockopt]);
+int get hashCode => Object.hashAll([runtimeType,serverName,const DeepCollectionEquality().hash(_verifyPeerCertInNames),verifyPeerCertByName,rejectUnknownSni,allowInsecure,const DeepCollectionEquality().hash(_alpn),minVersion,maxVersion,cipherSuites,const DeepCollectionEquality().hash(_certificates),disableSystemRoot,enableSessionResumption,fingerprint,pinnedPeerCertSha256,const DeepCollectionEquality().hash(_curvePreferences),masterKeyLog,echServerKeys,echConfigList,echForceQuery,echSockopt]);
 
 @override
 String toString() {
-  return 'Tls4Ray(serverName: $serverName, verifyPeerCertInNames: $verifyPeerCertInNames, rejectUnknownSni: $rejectUnknownSni, allowInsecure: $allowInsecure, alpn: $alpn, minVersion: $minVersion, maxVersion: $maxVersion, cipherSuites: $cipherSuites, certificates: $certificates, disableSystemRoot: $disableSystemRoot, enableSessionResumption: $enableSessionResumption, fingerprint: $fingerprint, pinnedPeerCertSha256: $pinnedPeerCertSha256, curvePreferences: $curvePreferences, masterKeyLog: $masterKeyLog, echServerKeys: $echServerKeys, echConfigList: $echConfigList, echForceQuery: $echForceQuery, echSockopt: $echSockopt)';
+  return 'Tls4Ray(serverName: $serverName, verifyPeerCertInNames: $verifyPeerCertInNames, verifyPeerCertByName: $verifyPeerCertByName, rejectUnknownSni: $rejectUnknownSni, allowInsecure: $allowInsecure, alpn: $alpn, minVersion: $minVersion, maxVersion: $maxVersion, cipherSuites: $cipherSuites, certificates: $certificates, disableSystemRoot: $disableSystemRoot, enableSessionResumption: $enableSessionResumption, fingerprint: $fingerprint, pinnedPeerCertSha256: $pinnedPeerCertSha256, curvePreferences: $curvePreferences, masterKeyLog: $masterKeyLog, echServerKeys: $echServerKeys, echConfigList: $echConfigList, echForceQuery: $echForceQuery, echSockopt: $echSockopt)';
 }
 
 
@@ -327,7 +329,7 @@ abstract mixin class _$Tls4RayCopyWith<$Res> implements $Tls4RayCopyWith<$Res> {
   factory _$Tls4RayCopyWith(_Tls4Ray value, $Res Function(_Tls4Ray) _then) = __$Tls4RayCopyWithImpl;
 @override @useResult
 $Res call({
- String? serverName, List<String>? verifyPeerCertInNames, bool? rejectUnknownSni, bool? allowInsecure, List<String>? alpn, String? minVersion, String? maxVersion, String? cipherSuites, List<Certificate4Ray>? certificates, bool? disableSystemRoot, bool? enableSessionResumption, String? fingerprint, String? pinnedPeerCertSha256, List<String>? curvePreferences, String? masterKeyLog, String? echServerKeys, String? echConfigList, String? echForceQuery, Sockopt4Ray? echSockopt
+ String? serverName, List<String>? verifyPeerCertInNames, String? verifyPeerCertByName, bool? rejectUnknownSni, bool? allowInsecure, List<String>? alpn, String? minVersion, String? maxVersion, String? cipherSuites, List<Certificate4Ray>? certificates, bool? disableSystemRoot, bool? enableSessionResumption, String? fingerprint, String? pinnedPeerCertSha256, List<String>? curvePreferences, String? masterKeyLog, String? echServerKeys, String? echConfigList, String? echForceQuery, Sockopt4Ray? echSockopt
 });
 
 
@@ -344,11 +346,12 @@ class __$Tls4RayCopyWithImpl<$Res>
 
 /// Create a copy of Tls4Ray
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? serverName = freezed,Object? verifyPeerCertInNames = freezed,Object? rejectUnknownSni = freezed,Object? allowInsecure = freezed,Object? alpn = freezed,Object? minVersion = freezed,Object? maxVersion = freezed,Object? cipherSuites = freezed,Object? certificates = freezed,Object? disableSystemRoot = freezed,Object? enableSessionResumption = freezed,Object? fingerprint = freezed,Object? pinnedPeerCertSha256 = freezed,Object? curvePreferences = freezed,Object? masterKeyLog = freezed,Object? echServerKeys = freezed,Object? echConfigList = freezed,Object? echForceQuery = freezed,Object? echSockopt = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? serverName = freezed,Object? verifyPeerCertInNames = freezed,Object? verifyPeerCertByName = freezed,Object? rejectUnknownSni = freezed,Object? allowInsecure = freezed,Object? alpn = freezed,Object? minVersion = freezed,Object? maxVersion = freezed,Object? cipherSuites = freezed,Object? certificates = freezed,Object? disableSystemRoot = freezed,Object? enableSessionResumption = freezed,Object? fingerprint = freezed,Object? pinnedPeerCertSha256 = freezed,Object? curvePreferences = freezed,Object? masterKeyLog = freezed,Object? echServerKeys = freezed,Object? echConfigList = freezed,Object? echForceQuery = freezed,Object? echSockopt = freezed,}) {
   return _then(_Tls4Ray(
 serverName: freezed == serverName ? _self.serverName : serverName // ignore: cast_nullable_to_non_nullable
 as String?,verifyPeerCertInNames: freezed == verifyPeerCertInNames ? _self._verifyPeerCertInNames : verifyPeerCertInNames // ignore: cast_nullable_to_non_nullable
-as List<String>?,rejectUnknownSni: freezed == rejectUnknownSni ? _self.rejectUnknownSni : rejectUnknownSni // ignore: cast_nullable_to_non_nullable
+as List<String>?,verifyPeerCertByName: freezed == verifyPeerCertByName ? _self.verifyPeerCertByName : verifyPeerCertByName // ignore: cast_nullable_to_non_nullable
+as String?,rejectUnknownSni: freezed == rejectUnknownSni ? _self.rejectUnknownSni : rejectUnknownSni // ignore: cast_nullable_to_non_nullable
 as bool?,allowInsecure: freezed == allowInsecure ? _self.allowInsecure : allowInsecure // ignore: cast_nullable_to_non_nullable
 as bool?,alpn: freezed == alpn ? _self._alpn : alpn // ignore: cast_nullable_to_non_nullable
 as List<String>?,minVersion: freezed == minVersion ? _self.minVersion : minVersion // ignore: cast_nullable_to_non_nullable
