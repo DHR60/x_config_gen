@@ -1,3 +1,7 @@
+## 0.1.3
+
+- feat: add xicmp support and remove deprecated fields
+
 ## 0.1.2
 
 - feat: add verifyPeerCertByName to tls
@@ -16,7 +20,7 @@
 
 ## 0.0.8
 
-- fix. missing xhttp extra reality settings
+- fix: missing xhttp extra reality settings
 
 ## 0.0.7
 
