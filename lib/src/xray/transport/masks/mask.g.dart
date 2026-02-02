@@ -24,16 +24,28 @@ Map<String, dynamic> _$FinalMask4RayToJson(_FinalMask4Ray instance) =>
 
 _Mask4Ray _$Mask4RayFromJson(Map<String, dynamic> json) => _Mask4Ray(
   type: json['type'] as String,
-  settings: MaskSettings4Ray.fromJson(json['settings'] as Map<String, dynamic>),
+  settings: json['settings'] == null
+      ? null
+      : MaskSettings4Ray.fromJson(json['settings'] as Map<String, dynamic>),
 );
 
 Map<String, dynamic> _$Mask4RayToJson(_Mask4Ray instance) => <String, dynamic>{
   'type': instance.type,
-  'settings': instance.settings.toJson(),
+  'settings': ?instance.settings?.toJson(),
 };
 
 _MaskSettings4Ray _$MaskSettings4RayFromJson(Map<String, dynamic> json) =>
-    _MaskSettings4Ray(password: json['password'] as String);
+    _MaskSettings4Ray(
+      password: json['password'] as String?,
+      domain: json['domain'] as String?,
+      listenIp: json['listenIp'] as String?,
+      id: (json['id'] as num?)?.toInt(),
+    );
 
 Map<String, dynamic> _$MaskSettings4RayToJson(_MaskSettings4Ray instance) =>
-    <String, dynamic>{'password': instance.password};
+    <String, dynamic>{
+      'password': ?instance.password,
+      'domain': ?instance.domain,
+      'listenIp': ?instance.listenIp,
+      'id': ?instance.id,
+    };

@@ -297,7 +297,7 @@ as List<Mask4Ray>?,
 /// @nodoc
 mixin _$Mask4Ray {
 
- String get type; MaskSettings4Ray get settings;
+ String get type; MaskSettings4Ray? get settings;
 /// Create a copy of Mask4Ray
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -330,11 +330,11 @@ abstract mixin class $Mask4RayCopyWith<$Res>  {
   factory $Mask4RayCopyWith(Mask4Ray value, $Res Function(Mask4Ray) _then) = _$Mask4RayCopyWithImpl;
 @useResult
 $Res call({
- String type, MaskSettings4Ray settings
+ String type, MaskSettings4Ray? settings
 });
 
 
-$MaskSettings4RayCopyWith<$Res> get settings;
+$MaskSettings4RayCopyWith<$Res>? get settings;
 
 }
 /// @nodoc
@@ -347,20 +347,23 @@ class _$Mask4RayCopyWithImpl<$Res>
 
 /// Create a copy of Mask4Ray
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? type = null,Object? settings = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? type = null,Object? settings = freezed,}) {
   return _then(_self.copyWith(
 type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as String,settings: null == settings ? _self.settings : settings // ignore: cast_nullable_to_non_nullable
-as MaskSettings4Ray,
+as String,settings: freezed == settings ? _self.settings : settings // ignore: cast_nullable_to_non_nullable
+as MaskSettings4Ray?,
   ));
 }
 /// Create a copy of Mask4Ray
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$MaskSettings4RayCopyWith<$Res> get settings {
-  
-  return $MaskSettings4RayCopyWith<$Res>(_self.settings, (value) {
+$MaskSettings4RayCopyWith<$Res>? get settings {
+    if (_self.settings == null) {
+    return null;
+  }
+
+  return $MaskSettings4RayCopyWith<$Res>(_self.settings!, (value) {
     return _then(_self.copyWith(settings: value));
   });
 }
@@ -445,7 +448,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String type,  MaskSettings4Ray settings)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String type,  MaskSettings4Ray? settings)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Mask4Ray() when $default != null:
 return $default(_that.type,_that.settings);case _:
@@ -466,7 +469,7 @@ return $default(_that.type,_that.settings);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String type,  MaskSettings4Ray settings)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String type,  MaskSettings4Ray? settings)  $default,) {final _that = this;
 switch (_that) {
 case _Mask4Ray():
 return $default(_that.type,_that.settings);case _:
@@ -486,7 +489,7 @@ return $default(_that.type,_that.settings);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String type,  MaskSettings4Ray settings)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String type,  MaskSettings4Ray? settings)?  $default,) {final _that = this;
 switch (_that) {
 case _Mask4Ray() when $default != null:
 return $default(_that.type,_that.settings);case _:
@@ -501,11 +504,11 @@ return $default(_that.type,_that.settings);case _:
 
 @JsonSerializable(includeIfNull: false, explicitToJson: true)
 class _Mask4Ray implements Mask4Ray {
-  const _Mask4Ray({required this.type, required this.settings});
+  const _Mask4Ray({required this.type, this.settings});
   factory _Mask4Ray.fromJson(Map<String, dynamic> json) => _$Mask4RayFromJson(json);
 
 @override final  String type;
-@override final  MaskSettings4Ray settings;
+@override final  MaskSettings4Ray? settings;
 
 /// Create a copy of Mask4Ray
 /// with the given fields replaced by the non-null parameter values.
@@ -540,11 +543,11 @@ abstract mixin class _$Mask4RayCopyWith<$Res> implements $Mask4RayCopyWith<$Res>
   factory _$Mask4RayCopyWith(_Mask4Ray value, $Res Function(_Mask4Ray) _then) = __$Mask4RayCopyWithImpl;
 @override @useResult
 $Res call({
- String type, MaskSettings4Ray settings
+ String type, MaskSettings4Ray? settings
 });
 
 
-@override $MaskSettings4RayCopyWith<$Res> get settings;
+@override $MaskSettings4RayCopyWith<$Res>? get settings;
 
 }
 /// @nodoc
@@ -557,11 +560,11 @@ class __$Mask4RayCopyWithImpl<$Res>
 
 /// Create a copy of Mask4Ray
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? type = null,Object? settings = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? type = null,Object? settings = freezed,}) {
   return _then(_Mask4Ray(
 type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
-as String,settings: null == settings ? _self.settings : settings // ignore: cast_nullable_to_non_nullable
-as MaskSettings4Ray,
+as String,settings: freezed == settings ? _self.settings : settings // ignore: cast_nullable_to_non_nullable
+as MaskSettings4Ray?,
   ));
 }
 
@@ -569,9 +572,12 @@ as MaskSettings4Ray,
 /// with the given fields replaced by the non-null parameter values.
 @override
 @pragma('vm:prefer-inline')
-$MaskSettings4RayCopyWith<$Res> get settings {
-  
-  return $MaskSettings4RayCopyWith<$Res>(_self.settings, (value) {
+$MaskSettings4RayCopyWith<$Res>? get settings {
+    if (_self.settings == null) {
+    return null;
+  }
+
+  return $MaskSettings4RayCopyWith<$Res>(_self.settings!, (value) {
     return _then(_self.copyWith(settings: value));
   });
 }
@@ -581,7 +587,7 @@ $MaskSettings4RayCopyWith<$Res> get settings {
 /// @nodoc
 mixin _$MaskSettings4Ray {
 
- String get password;
+ String? get password; String? get domain; String? get listenIp; int? get id;
 /// Create a copy of MaskSettings4Ray
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -594,16 +600,16 @@ $MaskSettings4RayCopyWith<MaskSettings4Ray> get copyWith => _$MaskSettings4RayCo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is MaskSettings4Ray&&(identical(other.password, password) || other.password == password));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is MaskSettings4Ray&&(identical(other.password, password) || other.password == password)&&(identical(other.domain, domain) || other.domain == domain)&&(identical(other.listenIp, listenIp) || other.listenIp == listenIp)&&(identical(other.id, id) || other.id == id));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,password);
+int get hashCode => Object.hash(runtimeType,password,domain,listenIp,id);
 
 @override
 String toString() {
-  return 'MaskSettings4Ray(password: $password)';
+  return 'MaskSettings4Ray(password: $password, domain: $domain, listenIp: $listenIp, id: $id)';
 }
 
 
@@ -614,7 +620,7 @@ abstract mixin class $MaskSettings4RayCopyWith<$Res>  {
   factory $MaskSettings4RayCopyWith(MaskSettings4Ray value, $Res Function(MaskSettings4Ray) _then) = _$MaskSettings4RayCopyWithImpl;
 @useResult
 $Res call({
- String password
+ String? password, String? domain, String? listenIp, int? id
 });
 
 
@@ -631,10 +637,13 @@ class _$MaskSettings4RayCopyWithImpl<$Res>
 
 /// Create a copy of MaskSettings4Ray
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? password = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? password = freezed,Object? domain = freezed,Object? listenIp = freezed,Object? id = freezed,}) {
   return _then(_self.copyWith(
-password: null == password ? _self.password : password // ignore: cast_nullable_to_non_nullable
-as String,
+password: freezed == password ? _self.password : password // ignore: cast_nullable_to_non_nullable
+as String?,domain: freezed == domain ? _self.domain : domain // ignore: cast_nullable_to_non_nullable
+as String?,listenIp: freezed == listenIp ? _self.listenIp : listenIp // ignore: cast_nullable_to_non_nullable
+as String?,id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as int?,
   ));
 }
 
@@ -719,10 +728,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String password)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? password,  String? domain,  String? listenIp,  int? id)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _MaskSettings4Ray() when $default != null:
-return $default(_that.password);case _:
+return $default(_that.password,_that.domain,_that.listenIp,_that.id);case _:
   return orElse();
 
 }
@@ -740,10 +749,10 @@ return $default(_that.password);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String password)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? password,  String? domain,  String? listenIp,  int? id)  $default,) {final _that = this;
 switch (_that) {
 case _MaskSettings4Ray():
-return $default(_that.password);case _:
+return $default(_that.password,_that.domain,_that.listenIp,_that.id);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -760,10 +769,10 @@ return $default(_that.password);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String password)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? password,  String? domain,  String? listenIp,  int? id)?  $default,) {final _that = this;
 switch (_that) {
 case _MaskSettings4Ray() when $default != null:
-return $default(_that.password);case _:
+return $default(_that.password,_that.domain,_that.listenIp,_that.id);case _:
   return null;
 
 }
@@ -775,10 +784,13 @@ return $default(_that.password);case _:
 
 @JsonSerializable(includeIfNull: false)
 class _MaskSettings4Ray implements MaskSettings4Ray {
-  const _MaskSettings4Ray({required this.password});
+  const _MaskSettings4Ray({this.password, this.domain, this.listenIp, this.id});
   factory _MaskSettings4Ray.fromJson(Map<String, dynamic> json) => _$MaskSettings4RayFromJson(json);
 
-@override final  String password;
+@override final  String? password;
+@override final  String? domain;
+@override final  String? listenIp;
+@override final  int? id;
 
 /// Create a copy of MaskSettings4Ray
 /// with the given fields replaced by the non-null parameter values.
@@ -793,16 +805,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _MaskSettings4Ray&&(identical(other.password, password) || other.password == password));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _MaskSettings4Ray&&(identical(other.password, password) || other.password == password)&&(identical(other.domain, domain) || other.domain == domain)&&(identical(other.listenIp, listenIp) || other.listenIp == listenIp)&&(identical(other.id, id) || other.id == id));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,password);
+int get hashCode => Object.hash(runtimeType,password,domain,listenIp,id);
 
 @override
 String toString() {
-  return 'MaskSettings4Ray(password: $password)';
+  return 'MaskSettings4Ray(password: $password, domain: $domain, listenIp: $listenIp, id: $id)';
 }
 
 
@@ -813,7 +825,7 @@ abstract mixin class _$MaskSettings4RayCopyWith<$Res> implements $MaskSettings4R
   factory _$MaskSettings4RayCopyWith(_MaskSettings4Ray value, $Res Function(_MaskSettings4Ray) _then) = __$MaskSettings4RayCopyWithImpl;
 @override @useResult
 $Res call({
- String password
+ String? password, String? domain, String? listenIp, int? id
 });
 
 
@@ -830,10 +842,13 @@ class __$MaskSettings4RayCopyWithImpl<$Res>
 
 /// Create a copy of MaskSettings4Ray
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? password = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? password = freezed,Object? domain = freezed,Object? listenIp = freezed,Object? id = freezed,}) {
   return _then(_MaskSettings4Ray(
-password: null == password ? _self.password : password // ignore: cast_nullable_to_non_nullable
-as String,
+password: freezed == password ? _self.password : password // ignore: cast_nullable_to_non_nullable
+as String?,domain: freezed == domain ? _self.domain : domain // ignore: cast_nullable_to_non_nullable
+as String?,listenIp: freezed == listenIp ? _self.listenIp : listenIp // ignore: cast_nullable_to_non_nullable
+as String?,id: freezed == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as int?,
   ));
 }
 

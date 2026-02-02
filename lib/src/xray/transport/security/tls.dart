@@ -9,7 +9,6 @@ abstract class Tls4Ray with _$Tls4Ray {
   @JsonSerializable(includeIfNull: false, explicitToJson: true)
   const factory Tls4Ray({
     String? serverName,
-    List<String>? verifyPeerCertInNames,
     String? verifyPeerCertByName,
     bool? rejectUnknownSni,
     bool? allowInsecure,

@@ -8,9 +8,6 @@ part of 'tls.dart';
 
 _Tls4Ray _$Tls4RayFromJson(Map<String, dynamic> json) => _Tls4Ray(
   serverName: json['serverName'] as String?,
-  verifyPeerCertInNames: (json['verifyPeerCertInNames'] as List<dynamic>?)
-      ?.map((e) => e as String)
-      .toList(),
   verifyPeerCertByName: json['verifyPeerCertByName'] as String?,
   rejectUnknownSni: json['rejectUnknownSni'] as bool?,
   allowInsecure: json['allowInsecure'] as bool?,
@@ -39,7 +36,6 @@ _Tls4Ray _$Tls4RayFromJson(Map<String, dynamic> json) => _Tls4Ray(
 
 Map<String, dynamic> _$Tls4RayToJson(_Tls4Ray instance) => <String, dynamic>{
   'serverName': ?instance.serverName,
-  'verifyPeerCertInNames': ?instance.verifyPeerCertInNames,
   'verifyPeerCertByName': ?instance.verifyPeerCertByName,
   'rejectUnknownSni': ?instance.rejectUnknownSni,
   'allowInsecure': ?instance.allowInsecure,
